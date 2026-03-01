@@ -1,0 +1,155 @@
+import torch
+import torch.optim as optim
+from functools import partial
+import numpy as np
+
+from src.models.sac_agent import SACAgent
+from src.algorithms.sac import SAC
+from src.environments.make_env import make_env
+
+class SACAdapterLogger:
+    def __init__(self, tb_logger, eval_callback=None):
+        self.tb = tb_logger
+        self.eval_callback = eval_callback
+
+    def log_rollout_step(self, infos, global_step):
+        if "_episode" in infos and "episode" in infos:
+            mask = infos["_episode"]
+            if mask.any():
+                for idx in range(len(mask)):
+                    if mask[idx]:
+                        r = infos["episode"]["r"][idx]
+                        print(
+                            f"global_step={global_step}, episodic_return={r:.2f}",
+                            flush=True,
+                        )
+                        self.tb.log_scalar("teacher/train_reward", r, global_step)
+
+    def log_policy_update(self, update_results, global_step):
+        self.tb.log_scalar("teacher/qf1_loss", update_results["qf1_loss"], global_step)
+        self.tb.log_scalar("teacher/qf2_loss", update_results["qf2_loss"], global_step)
+        self.tb.log_scalar("teacher/policy_loss", update_results["policy_loss"], global_step)
+        self.tb.log_scalar("teacher/alpha", update_results["alpha_value"], global_step)
+        self.tb.log_scalar("teacher/alpha_loss", update_results["alpha_loss"], global_step)
+        
+        if self.eval_callback is not None:
+            self.eval_callback(global_step)
+
+def get_eval_callback(cfg, env, teacher, device, logger, agent_class):
+    eval_envs = make_env(cfg.env, num_envs=1, seed=cfg.seed + 1000)
+    eval_teacher = agent_class(eval_envs, env_name=cfg.env.name).to(device)
+
+    def callback(global_step):
+        # We only want to run evaluation every roughly N steps
+        if not hasattr(callback, "last_eval"):
+            callback.last_eval = 0
+        if global_step - callback.last_eval < getattr(cfg.algo, "eval_interval", 10000):
+            return
+        callback.last_eval = global_step
+
+        eval_teacher.load_state_dict(teacher.state_dict())
+        eval_teacher.eval()
+        
+        env.sync_obs_norm_rms(eval_envs)
+        for i in range(eval_envs.num_envs):
+            eval_envs.freeze_norm_stats(i)
+        
+        obs, _ = eval_envs.reset()
+        eval_episodes = 0
+        rewards = []
+        
+        while eval_episodes < 10:
+            with torch.no_grad():
+                actions = eval_teacher.act(torch.Tensor(obs).to(device), deterministic=True)
+            obs, _, _, _, infos = eval_envs.step(actions.cpu().numpy())
+            
+            if "_episode" in infos and "episode" in infos:
+                mask = infos["_episode"]
+                if mask.any():
+                    for idx in range(len(mask)):
+                        if mask[idx]:
+                            rewards.append(infos["episode"]["r"][idx])
+                            eval_episodes += 1
+                            
+        mean_reward = np.mean(rewards)
+        std_reward = np.std(rewards)
+        
+        logger.log_scalar("teacher/eval_reward_mean", mean_reward, global_step)
+        logger.log_scalar("teacher/eval_reward_std", std_reward, global_step)
+        print(f"SAC Eval: global_step={global_step}, reward={mean_reward:.2f} +/- {std_reward:.2f}", flush=True)
+
+    return callback
+
+def evaluate_teacher(cfg, env, teacher, device, total_timesteps, logger, agent_class):
+    eval_envs = make_env(cfg.env, num_envs=1, seed=cfg.seed + 1000)
+    
+    eval_teacher = agent_class(eval_envs, env_name=cfg.env.name).to(device)
+    eval_teacher.load_state_dict(teacher.state_dict())
+    eval_teacher.eval()
+    
+    env.sync_obs_norm_rms(eval_envs)
+    for i in range(eval_envs.num_envs):
+        eval_envs.freeze_norm_stats(i)
+
+    obs, _ = eval_envs.reset()
+    eval_episodes = 0
+    total_eval_returns = 0
+    
+    while eval_episodes < 5:
+        with torch.no_grad():
+            actions = eval_teacher.act(torch.Tensor(obs).to(device), deterministic=True)
+        obs, _, _, _, infos = eval_envs.step(actions.cpu().numpy())
+        
+        if "_episode" in infos and "episode" in infos:
+            mask = infos["_episode"]
+            if mask.any():
+                for idx in range(len(mask)):
+                    if mask[idx]:
+                        total_eval_returns += infos["episode"]["r"][idx]
+                        eval_episodes += 1
+
+    eval_reward = total_eval_returns / max(1, eval_episodes)
+    logger.log_scalar("teacher/eval_reward", eval_reward, total_timesteps)
+    eval_envs.close()
+
+def train_teacher(cfg, env, logger):
+    print(f"Starting SAC Teacher Training on {cfg.env.name}...")
+    
+    device = torch.device(cfg.device if torch.cuda.is_available() and cfg.device != "cpu" else "cpu")
+    if cfg.env.type == "discrete":
+        raise ValueError("SAC requires a continuous action space environment")
+    
+    neurons = cfg.model.get("neurons", 256)
+    layers = cfg.model.get("layers", 2)
+    
+    agent_class = partial(SACAgent, neurons=neurons, layers=layers)
+    teacher = agent_class(env, env_name=cfg.env.name).to(device)
+
+    num_envs = getattr(cfg.algo, "num_envs", 1)
+    total_timesteps = cfg.algo.total_timesteps
+
+    eval_cb = get_eval_callback(cfg, env, teacher, device, logger, agent_class)
+    adapted_logger = SACAdapterLogger(logger, eval_callback=eval_cb)
+
+    sac = SAC(
+        agent=teacher,
+        envs=env,
+        learning_rate=cfg.algo.lr,
+        buffer_size=getattr(cfg.algo, "buffer_size", 1000000),
+        batch_size=getattr(cfg.algo, "batch_size", 256),
+        gamma=cfg.algo.gamma,
+        tau=getattr(cfg.algo, "tau", 0.005),
+        alpha=getattr(cfg.algo, "alpha", 0.2),
+        automatic_entropy_tuning=getattr(cfg.algo, "automatic_entropy_tuning", True),
+        target_update_interval=getattr(cfg.algo, "target_update_interval", 1),
+        updates_per_step=getattr(cfg.algo, "updates_per_step", 1),
+        start_steps=getattr(cfg.algo, "start_steps", 10000),
+        seed=cfg.seed,
+        logger=adapted_logger,
+    )
+    
+    trained_teacher = sac.learn(total_timesteps)
+    
+    evaluate_teacher(cfg, env, trained_teacher, device, total_timesteps, logger, agent_class)
+    
+    return trained_teacher

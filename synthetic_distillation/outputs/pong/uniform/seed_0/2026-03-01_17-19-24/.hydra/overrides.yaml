@@ -1,0 +1,11 @@
+- env=pong
+- algo=ppo
+- distill=uniform
+- +distill.sampling.mode=uniform_global
+- +distill.sampling.low=0
+- +distill.sampling.high=255
+- algo.total_timesteps=2000000
+- distill.epochs=100
+- distill.distil_samples=[10000, 25000, 50000, 100000]
+- model.distil_neurons=[1.0, 0.5, 0.25]
+- device=cuda:4

@@ -153,6 +153,72 @@ class DiscreteAgent(BaseAgent):
         entropy = action_dist.entropy()
         return log_prob, entropy
 
+class DiscreteConvAgent(BaseAgent):
+    """
+    An agent for environments with image-based discrete action spaces (e.g. Atari).
+    Uses the standard Nature CNN architecture. It optionally scales down the channel
+    and linear dimensions for student distillation models.
+    """
+    def __init__(self, envs, scale: float = 1.0, **kwargs):
+        super().__init__()
+        
+        # Assumption: envs.single_observation_space is image shaped like (C, H, W)
+        action_dim = envs.single_action_space.n
+
+        c1 = max(1, int(32 * scale))
+        c2 = max(1, int(64 * scale))
+        c3 = max(1, int(64 * scale))
+        l1 = max(1, int(512 * scale))
+
+        self.network = nn.Sequential(
+            layer_init(nn.Conv2d(envs.single_observation_space.shape[0], c1, 8, stride=4)),
+            nn.ReLU(),
+            layer_init(nn.Conv2d(c1, c2, 4, stride=2)),
+            nn.ReLU(),
+            layer_init(nn.Conv2d(c2, c3, 3, stride=1)),
+            nn.ReLU(),
+            nn.Flatten(),
+            layer_init(nn.Linear(c3 * 7 * 7, l1)),
+            nn.ReLU(),
+        )
+
+        self.actor = layer_init(nn.Linear(l1, action_dim), std=0.01)
+        self.critic = layer_init(nn.Linear(l1, 1), std=1.0)
+        
+    def _get_features(self, x):
+        return self.network(x / 255.0)
+
+    def forward(self, states):
+        hidden = self._get_features(states)
+        return self.actor(hidden)
+
+    def act(self, state, deterministic=True):
+        logits = self.forward(state)
+        if deterministic:
+            return logits.argmax(dim=-1)
+        else:
+            return Categorical(logits=logits).sample()
+
+    def estimate_value_from_observation(self, observation: torch.Tensor) -> torch.Tensor:
+        hidden = self._get_features(observation)
+        return self.critic(hidden)
+
+    def get_action_distribution(self, observation):
+        logits = self.forward(observation)
+        return Categorical(logits=logits)
+
+    def sample_action_and_compute_log_prob(self, observations):
+        action_dist = self.get_action_distribution(observations)
+        action = action_dist.sample()
+        log_prob = action_dist.log_prob(action)
+        return action, log_prob
+
+    def compute_action_log_probabilities_and_entropy(self, observations, actions):
+        action_dist = self.get_action_distribution(observations)
+        log_prob = action_dist.log_prob(actions)
+        entropy = action_dist.entropy()
+        return log_prob, entropy
+
 
 class ContinuousAgent(BaseAgent):
     """
@@ -181,14 +247,7 @@ class ContinuousAgent(BaseAgent):
         self.critic = make_mlp(obs_dim, 1, neurons, layers, last_std=1.0)
         self.actor_mean = make_mlp(obs_dim, action_dim, neurons, layers, last_std=0.01)
         
-        # Set logstd based on environment name
-        if "hopper" in env_name.lower():
-            logstd_val = 0.0
-        else:
-            logstd_val = -1.0
-        
-        self.actor_logstd = nn.Parameter(logstd_val * torch.ones(1, action_dim))
-        print(f"Initialized ContinuousAgent for {env_name} with actor_logstd = {logstd_val}")
+        self.actor_logstd = nn.Parameter(torch.ones(1, action_dim))
 
     def forward(self, states):
         action_mean = self.actor_mean(states)

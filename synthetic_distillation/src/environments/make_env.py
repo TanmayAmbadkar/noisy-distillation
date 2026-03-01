@@ -58,6 +58,33 @@ def sync_obs_norm_rms(self, target_envs):
 
 def make_env(env_cfg, num_envs=1, seed=0, capture_video=False, run_name="run", gamma=0.99):
     env_id = env_cfg.name
+    if env_cfg.type == "atari":
+        from ale_py.vector_env import AtariVectorEnv
+        
+        # Build kwargs using sensible defaults and config overrides
+        kwargs = dict(
+            game=env_id,
+            num_envs=num_envs,
+            frameskip=4,
+            grayscale=True,
+            stack_num=4,
+            img_height=84,
+            img_width=84,
+            maxpool=True,
+            reward_clipping=True,
+            noop_max=30,
+            use_fire_reset=True,
+            episodic_life=False,
+            life_loss_info=False,
+            num_threads=1,
+            repeat_action_probability=0.0
+        )
+        
+        envs = AtariVectorEnv(**kwargs)
+        envs.action_space.seed(seed)
+        envs.observation_space.seed(seed)
+        return envs
+        
     env_is_discrete = env_cfg.type == "discrete"
 
     if env_is_discrete:

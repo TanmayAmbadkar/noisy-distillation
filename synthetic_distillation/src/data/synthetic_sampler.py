@@ -51,12 +51,18 @@ class SyntheticSampler:
         return self.trajectory_states[indices].to(self.device)
 
     def _sample_uniform_global(self, batch_size):
-        low = torch.tensor(self.cfg.distill.sampling.low, dtype=torch.float32, device=self.device)
-        high = torch.tensor(self.cfg.distill.sampling.high, dtype=torch.float32, device=self.device)
+        low_val = self.cfg.distill.sampling.low
+        high_val = self.cfg.distill.sampling.high
         
-        # uniform between low and high
-        rand = torch.rand((batch_size, len(low)), device=self.device)
-        return low + rand * (high - low)
+        # If trajectory states are available, infer the exact state shape
+        if self.trajectory_states is not None:
+            state_shape = self.trajectory_states.shape[1:]
+        else:
+            state_shape = (1,)  # Fallback
+            
+        # Create uniform random tensor of the correct shape
+        rand = torch.rand((batch_size, *state_shape), device=self.device)
+        return low_val + rand * (high_val - low_val)
 
     def _sample_uniform_data_bounds(self, batch_size):
         alpha = self.cfg.distill.sampling.expansion if "expansion" in self.cfg.distill.sampling else 0.1
@@ -64,10 +70,11 @@ class SyntheticSampler:
         span = self.max_dim - self.min_dim
         low = self.min_dim - alpha * span
         high = self.max_dim + alpha * span
-        low = low.to(self.device)
-        high = high.to(self.device)
+        low = low.to(self.device).unsqueeze(0)
+        high = high.to(self.device).unsqueeze(0)
         
-        rand = torch.rand((batch_size, len(low)), device=self.device)
+        state_shape = self.trajectory_states.shape[1:]
+        rand = torch.rand((batch_size, *state_shape), device=self.device)
         return low + rand * (high - low)
 
     def _sample_gaussian(self, batch_size):

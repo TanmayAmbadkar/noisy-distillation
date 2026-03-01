@@ -40,6 +40,7 @@ def main(cfg: DictConfig):
     tb_dir = os.path.join(run_dir, "tensorboard")
     logger = TBLogger(tb_dir)
 
+    torch.set_num_threads(1)
     env = make_env(cfg.env, seed=cfg.seed)
     
     teacher = train_teacher(cfg, env, logger)

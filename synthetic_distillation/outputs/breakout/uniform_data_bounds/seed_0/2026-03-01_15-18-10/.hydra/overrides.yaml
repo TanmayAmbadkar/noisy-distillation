@@ -1,0 +1,6 @@
+- env=breakout
+- algo=ppo
+- algo.total_timesteps=128
+- algo.rollout_steps=128
+- algo.minibatch_size=64
+- algo.num_envs=4

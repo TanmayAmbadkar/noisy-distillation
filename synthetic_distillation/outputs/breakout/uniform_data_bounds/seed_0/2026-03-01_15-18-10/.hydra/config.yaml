@@ -1,0 +1,39 @@
+env:
+  name: breakout
+  type: atari
+algo:
+  lr: 0.0003
+  gamma: 0.99
+  gae_lambda: 0.95
+  clip_eps: 0.2
+  entropy_coef: 0.0001
+  ppo_epochs: 10
+  rollout_steps: 128
+  minibatch_size: 64
+  total_timesteps: 128
+  num_envs: 4
+distill:
+  mode: uniform_data_bounds
+  batch_size: 2048
+  epochs: 100
+  distil_samples: 400000
+  loss: mean_mse
+  sampling:
+    mode: uniform_data_bounds
+    expansion: 0.1
+model:
+  neurons: 64
+  layers: 2
+  distil_neurons: 1.0
+  distil_layers: 2
+experiment:
+  name: baseline
+  description: Baseline experiment with default parameters.
+seed: 0
+device: cpu
+log:
+  use_tensorboard: true
+  log_interval: 10
+robustness:
+  noise_levels: '[]'
+  episodes: 100

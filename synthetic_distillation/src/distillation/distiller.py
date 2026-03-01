@@ -24,9 +24,17 @@ class Distiller:
         print(f"Teacher Architecture: {teacher_layers} layers, {teacher_neurons} neurons")
         print(f"Student Architecture: {distil_layers} layers, {student_neurons} neurons (frac: {distil_neurons_fraction})")
         
-        if self.env_type == "discrete":
-            student = DiscreteAgent(env, neurons=student_neurons, layers=distil_layers).to(self.device)
+        if self.env_type in ["discrete", "atari"]:
+            is_atari = getattr(self.cfg.env, "type", "") == "atari" or getattr(self.cfg.env, "name", "").startswith("ALE/") or "NoFrameskip" in getattr(self.cfg.env, "name", "")
+            if is_atari:
+                from src.models.agent import DiscreteConvAgent
+                student = DiscreteConvAgent(env, scale=distil_neurons_fraction).to(self.device)
+                print(f"Student Architecture: DiscreteConvAgent scaled by {distil_neurons_fraction}")
+            else:
+                from src.models.agent import DiscreteAgent
+                student = DiscreteAgent(env, neurons=student_neurons, layers=distil_layers).to(self.device)
         else:
+            from src.models.agent import ContinuousAgent
             student = ContinuousAgent(env, rpo_alpha=None, neurons=student_neurons, layers=distil_layers).to(self.device)
         return student
 
@@ -54,7 +62,7 @@ class Distiller:
         states = batch_states.to(self.device)
         targets = batch_targets.to(self.device)
 
-        if self.env_type == "discrete":
+        if self.env_type in ["discrete", "atari"]:
             student_logits = student(states)
 
             if torch.isnan(student_logits).any():
@@ -108,7 +116,7 @@ class Distiller:
             
             with torch.no_grad():
                 batch_states_dev = batch_states.to(self.device)
-                if self.env_type == "discrete":
+                if self.env_type in ["discrete", "atari"]:
                     out = teacher(batch_states_dev)
                     if self.cfg.distill.loss == "cross_entropy":
                         out = out.argmax(dim=1)

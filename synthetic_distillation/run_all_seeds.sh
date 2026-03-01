@@ -4,7 +4,7 @@
 # conda activate spiceenv
 PYTHON_PATH="/scratch1/tsa5252/anaconda3/envs/spiceenv/bin/python"
 
-ENVS=("hopper" "halfcheetah" "ant" "humanoid")
+ENVS=("ant" "humanoid")
 
 # Create a master directory to store the isolated logs
 mkdir -p sweep_summaries
@@ -44,6 +44,7 @@ for env in "${ENVS[@]}"; do
                 env=$env \
                 seed=$SEED \
                 distill=gaussian \
+                model.neurons=256 \
                 "distill.distil_samples=[10000, 25000, 50000, 100000]" \
                 "model.distil_neurons=[1.0, 0.5, 0.25]" > "$LOG_FILE" 2>&1
                 

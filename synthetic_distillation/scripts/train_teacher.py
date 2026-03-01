@@ -3,7 +3,7 @@ import torch.optim as optim
 from functools import partial
 import numpy as np
 
-from src.models.agent import DiscreteAgent, ContinuousAgent
+from src.models.agent import DiscreteAgent, ContinuousAgent, DiscreteConvAgent
 from src.algorithms.ppo import PPO
 from src.environments.make_env import make_env
 
@@ -118,12 +118,27 @@ def train_teacher(cfg, env, logger):
     print(f"Starting PPO Teacher Training on {cfg.env.name}...")
     
     device = torch.device(cfg.device if torch.cuda.is_available() and cfg.device != "cpu" else "cpu")
+    env_is_atari = cfg.env.type == "atari"
     env_is_discrete = cfg.env.type == "discrete"
-    
+
     neurons = cfg.model.get("neurons", 64)
     layers = cfg.model.get("layers", 2)
     
-    agent_class = partial(DiscreteAgent, neurons=neurons, layers=layers) if env_is_discrete else partial(ContinuousAgent, rpo_alpha=None, neurons=neurons, layers=layers)
+    if env_is_atari:
+        agent_class = DiscreteConvAgent
+        print("Using DiscreteConvAgent for Atari environment.")
+        # Note: ALE environments handles their own vectorization logic so env_is_discrete conceptually remains True for the PPO algorithms internals
+        env_is_discrete = True
+    elif env_is_discrete:
+        is_ale_compat = cfg.env.name.startswith("ALE/") or "NoFrameskip" in cfg.env.name
+        if is_ale_compat:
+            agent_class = DiscreteConvAgent
+            print("Using DiscreteConvAgent for older Atari compatibility.")
+        else:
+            agent_class = partial(DiscreteAgent, neurons=neurons, layers=layers)
+    else:
+        agent_class = partial(ContinuousAgent, rpo_alpha=None, neurons=neurons, layers=layers)
+    
     teacher = agent_class(env, env_name=cfg.env.name).to(device)
 
     optimizer = optim.Adam(teacher.parameters(), lr=cfg.algo.lr, eps=1e-5)

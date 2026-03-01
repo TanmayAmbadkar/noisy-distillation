@@ -1,0 +1,2468 @@
+/scratch1/tsa5252/anaconda3/lib/python3.11/site-packages/hydra/_internal/defaults_list.py:251: UserWarning: In 'config': Defaults list is missing `_self_`. See https://hydra.cc/docs/1.2/upgrades/1.0_to_1.1/default_composition_order for more information
+  warnings.warn(msg, UserWarning)
+[[36m2026-02-28 02:58:58,179[0m][[34mOpenGL.acceleratesupport[0m][[32mINFO[0m] - No OpenGL_accelerate module loaded: No module named 'OpenGL_accelerate'[0m
+Starting PPO Teacher Training on Hopper-v5...
+global_step=60, episodic_return=8.56
+global_step=508, episodic_return=195.60
+global_step=628, episodic_return=22.09
+global_step=776, episodic_return=27.89
+global_step=860, episodic_return=16.44
+global_step=924, episodic_return=12.45
+global_step=1120, episodic_return=66.34
+global_step=1216, episodic_return=21.34
+global_step=1288, episodic_return=10.95
+global_step=1432, episodic_return=31.22
+global_step=1600, episodic_return=46.72
+global_step=1700, episodic_return=18.19
+global_step=1808, episodic_return=10.07
+global_step=1892, episodic_return=14.75
+global_step=1988, episodic_return=20.47
+global_step=2040, episodic_return=7.58
+global_step=2140, episodic_return=15.04
+global_step=2304, episodic_return=46.18
+global_step=2440, episodic_return=32.60
+global_step=2504, episodic_return=13.41
+global_step=2568, episodic_return=10.79
+global_step=2692, episodic_return=17.47
+global_step=2760, episodic_return=14.02
+global_step=2908, episodic_return=30.53
+global_step=2980, episodic_return=13.41
+global_step=3120, episodic_return=16.33
+global_step=3268, episodic_return=31.43
+global_step=3396, episodic_return=27.83
+global_step=3548, episodic_return=30.71
+global_step=3620, episodic_return=13.93
+global_step=3744, episodic_return=21.09
+global_step=3848, episodic_return=18.98
+global_step=4040, episodic_return=49.90
+global_step=4108, episodic_return=10.89
+global_step=4232, episodic_return=33.03
+global_step=4300, episodic_return=10.95
+global_step=4472, episodic_return=32.29
+global_step=4540, episodic_return=12.28
+global_step=4636, episodic_return=19.40
+global_step=4700, episodic_return=7.39
+global_step=4836, episodic_return=27.69
+global_step=4952, episodic_return=18.66
+global_step=5164, episodic_return=47.49
+global_step=5280, episodic_return=16.42
+global_step=5468, episodic_return=50.33
+global_step=5580, episodic_return=14.32
+global_step=5696, episodic_return=18.74
+global_step=5836, episodic_return=26.55
+global_step=5968, episodic_return=21.76
+global_step=6068, episodic_return=16.74
+global_step=6208, episodic_return=35.74
+global_step=6428, episodic_return=38.91
+global_step=6564, episodic_return=23.00
+global_step=6644, episodic_return=9.60
+global_step=6816, episodic_return=58.78
+global_step=6920, episodic_return=27.86
+global_step=7124, episodic_return=48.56
+global_step=7260, episodic_return=30.59
+global_step=7428, episodic_return=26.44
+global_step=7532, episodic_return=17.38
+global_step=7600, episodic_return=13.67
+global_step=7776, episodic_return=44.44
+global_step=7892, episodic_return=32.90
+global_step=7976, episodic_return=17.14
+global_step=8184, episodic_return=33.25
+Eval: global_step=8192, reward=129.63 +/- 1.70
+global_step=8272, episodic_return=12.62
+global_step=8372, episodic_return=25.74
+global_step=8528, episodic_return=10.65
+global_step=8660, episodic_return=42.62
+global_step=8756, episodic_return=23.65
+global_step=8908, episodic_return=39.99
+global_step=9032, episodic_return=35.33
+global_step=9136, episodic_return=15.14
+global_step=9380, episodic_return=89.18
+global_step=9452, episodic_return=14.41
+global_step=9592, episodic_return=41.01
+global_step=9684, episodic_return=12.60
+global_step=9812, episodic_return=31.96
+global_step=10072, episodic_return=89.90
+global_step=10236, episodic_return=29.30
+global_step=10372, episodic_return=43.90
+global_step=10492, episodic_return=21.36
+global_step=10664, episodic_return=45.09
+global_step=10740, episodic_return=11.24
+global_step=10860, episodic_return=22.40
+global_step=11020, episodic_return=34.13
+global_step=11132, episodic_return=22.03
+global_step=11468, episodic_return=57.40
+global_step=11568, episodic_return=25.74
+global_step=11756, episodic_return=46.63
+global_step=11820, episodic_return=10.94
+global_step=11924, episodic_return=11.78
+global_step=11996, episodic_return=12.34
+global_step=12088, episodic_return=22.48
+global_step=12400, episodic_return=70.94
+global_step=12552, episodic_return=18.85
+global_step=12716, episodic_return=31.04
+global_step=12828, episodic_return=30.85
+global_step=12956, episodic_return=22.29
+global_step=13076, episodic_return=32.28
+global_step=13260, episodic_return=62.71
+global_step=13416, episodic_return=35.19
+global_step=13576, episodic_return=49.87
+global_step=13704, episodic_return=18.98
+global_step=13884, episodic_return=33.18
+global_step=14020, episodic_return=23.71
+global_step=14176, episodic_return=41.80
+global_step=14256, episodic_return=17.46
+global_step=14372, episodic_return=19.88
+global_step=14468, episodic_return=19.40
+global_step=14536, episodic_return=8.79
+global_step=14628, episodic_return=17.65
+global_step=14764, episodic_return=33.03
+global_step=14912, episodic_return=8.18
+global_step=15008, episodic_return=12.79
+global_step=15300, episodic_return=79.66
+global_step=15500, episodic_return=67.64
+global_step=15892, episodic_return=158.71
+global_step=16044, episodic_return=52.55
+global_step=16144, episodic_return=19.30
+global_step=16216, episodic_return=16.79
+global_step=16300, episodic_return=12.41
+Eval: global_step=16384, reward=101.02 +/- 1.62
+global_step=16696, episodic_return=172.03
+global_step=16820, episodic_return=32.19
+global_step=17032, episodic_return=52.75
+global_step=17444, episodic_return=176.23
+global_step=17624, episodic_return=60.74
+global_step=17744, episodic_return=33.80
+global_step=18152, episodic_return=158.34
+global_step=18548, episodic_return=158.48
+global_step=18844, episodic_return=80.52
+global_step=19416, episodic_return=226.22
+global_step=19884, episodic_return=219.41
+global_step=20264, episodic_return=97.43
+global_step=20324, episodic_return=11.30
+global_step=20784, episodic_return=196.09
+global_step=20900, episodic_return=28.77
+global_step=21052, episodic_return=59.14
+global_step=21272, episodic_return=70.28
+global_step=21436, episodic_return=41.84
+global_step=21552, episodic_return=35.10
+global_step=21908, episodic_return=131.11
+global_step=22412, episodic_return=250.85
+global_step=23060, episodic_return=233.92
+global_step=23472, episodic_return=173.45
+global_step=23768, episodic_return=112.53
+global_step=24292, episodic_return=193.36
+global_step=24468, episodic_return=30.36
+Eval: global_step=24576, reward=128.08 +/- 2.16
+global_step=24676, episodic_return=51.57
+global_step=24888, episodic_return=92.44
+global_step=25444, episodic_return=238.97
+global_step=25716, episodic_return=96.37
+global_step=26248, episodic_return=218.35
+global_step=26460, episodic_return=84.95
+global_step=26804, episodic_return=167.50
+global_step=27396, episodic_return=228.73
+global_step=27704, episodic_return=142.07
+global_step=28168, episodic_return=249.77
+global_step=28480, episodic_return=129.15
+global_step=28716, episodic_return=104.65
+global_step=29204, episodic_return=184.84
+global_step=29516, episodic_return=134.47
+global_step=29712, episodic_return=59.82
+global_step=30020, episodic_return=142.17
+global_step=30252, episodic_return=62.10
+global_step=30600, episodic_return=140.96
+global_step=30908, episodic_return=140.70
+global_step=31544, episodic_return=270.28
+global_step=31628, episodic_return=20.13
+global_step=32188, episodic_return=273.57
+global_step=32700, episodic_return=236.39
+Eval: global_step=32768, reward=227.00 +/- 0.95
+global_step=33064, episodic_return=201.29
+global_step=33376, episodic_return=144.72
+global_step=33916, episodic_return=277.40
+global_step=34288, episodic_return=199.24
+global_step=34608, episodic_return=167.21
+global_step=34984, episodic_return=183.98
+global_step=35468, episodic_return=243.52
+global_step=35924, episodic_return=236.38
+global_step=36256, episodic_return=174.55
+global_step=36604, episodic_return=162.71
+global_step=36800, episodic_return=79.76
+global_step=37256, episodic_return=228.20
+global_step=37572, episodic_return=143.59
+global_step=37788, episodic_return=91.67
+global_step=38208, episodic_return=218.41
+global_step=38596, episodic_return=172.63
+global_step=38856, episodic_return=101.78
+global_step=39328, episodic_return=215.31
+global_step=39640, episodic_return=140.25
+global_step=40096, episodic_return=230.28
+global_step=40268, episodic_return=71.94
+global_step=40568, episodic_return=52.28
+global_step=40904, episodic_return=168.32
+Eval: global_step=40960, reward=223.42 +/- 1.54
+global_step=41336, episodic_return=243.97
+global_step=41748, episodic_return=222.76
+global_step=42164, episodic_return=215.63
+global_step=42688, episodic_return=249.10
+global_step=43148, episodic_return=239.06
+global_step=43604, episodic_return=236.36
+global_step=44112, episodic_return=250.21
+global_step=44628, episodic_return=262.30
+global_step=45016, episodic_return=208.15
+global_step=45472, episodic_return=230.24
+global_step=45648, episodic_return=69.93
+global_step=45964, episodic_return=144.24
+global_step=46376, episodic_return=228.51
+global_step=46816, episodic_return=240.43
+global_step=47308, episodic_return=246.35
+global_step=47716, episodic_return=218.59
+global_step=48140, episodic_return=223.05
+global_step=48584, episodic_return=230.74
+global_step=49020, episodic_return=212.31
+Eval: global_step=49152, reward=205.90 +/- 1.15
+global_step=49464, episodic_return=232.28
+global_step=49772, episodic_return=145.36
+global_step=50112, episodic_return=156.05
+global_step=50380, episodic_return=119.18
+global_step=50772, episodic_return=210.37
+global_step=51216, episodic_return=223.01
+global_step=51636, episodic_return=224.38
+global_step=51888, episodic_return=111.32
+global_step=52284, episodic_return=183.99
+global_step=52720, episodic_return=230.88
+global_step=53236, episodic_return=247.39
+global_step=53608, episodic_return=193.23
+global_step=54056, episodic_return=236.82
+global_step=54412, episodic_return=174.22
+global_step=54904, episodic_return=249.24
+global_step=55356, episodic_return=237.10
+global_step=55756, episodic_return=196.82
+global_step=56280, episodic_return=258.22
+global_step=56756, episodic_return=224.92
+global_step=57188, episodic_return=214.59
+Eval: global_step=57344, reward=218.39 +/- 1.16
+global_step=57596, episodic_return=213.75
+global_step=58112, episodic_return=277.63
+global_step=58312, episodic_return=84.13
+global_step=58720, episodic_return=218.61
+global_step=59196, episodic_return=259.10
+global_step=59672, episodic_return=261.32
+global_step=59932, episodic_return=118.72
+global_step=60336, episodic_return=206.71
+global_step=60636, episodic_return=142.30
+global_step=61068, episodic_return=220.87
+global_step=61500, episodic_return=220.83
+global_step=61980, episodic_return=282.40
+global_step=62268, episodic_return=131.47
+global_step=62724, episodic_return=234.62
+global_step=63184, episodic_return=237.08
+global_step=63596, episodic_return=219.71
+global_step=64116, episodic_return=288.27
+global_step=64628, episodic_return=256.46
+global_step=64872, episodic_return=108.35
+global_step=65240, episodic_return=174.61
+Eval: global_step=65536, reward=228.04 +/- 0.73
+global_step=65716, episodic_return=241.41
+global_step=66176, episodic_return=243.25
+global_step=66600, episodic_return=234.42
+global_step=66924, episodic_return=151.40
+global_step=67140, episodic_return=91.50
+global_step=67612, episodic_return=243.21
+global_step=68052, episodic_return=211.67
+global_step=68580, episodic_return=280.19
+global_step=69048, episodic_return=246.32
+global_step=69512, episodic_return=243.93
+global_step=69940, episodic_return=220.58
+global_step=70468, episodic_return=294.21
+global_step=71000, episodic_return=302.46
+global_step=71512, episodic_return=263.38
+global_step=71908, episodic_return=195.57
+global_step=72328, episodic_return=231.46
+global_step=72852, episodic_return=279.32
+global_step=73284, episodic_return=209.43
+Eval: global_step=73728, reward=276.03 +/- 1.64
+global_step=73756, episodic_return=274.64
+global_step=74200, episodic_return=254.46
+global_step=74428, episodic_return=101.79
+global_step=74872, episodic_return=245.55
+global_step=75376, episodic_return=274.59
+global_step=75836, episodic_return=238.75
+global_step=76372, episodic_return=268.13
+global_step=76788, episodic_return=239.55
+global_step=77292, episodic_return=276.25
+global_step=77752, episodic_return=256.82
+global_step=78212, episodic_return=209.43
+global_step=78584, episodic_return=195.35
+global_step=79032, episodic_return=248.27
+global_step=79576, episodic_return=298.49
+global_step=80116, episodic_return=312.56
+global_step=80424, episodic_return=145.90
+global_step=80828, episodic_return=212.33
+global_step=81364, episodic_return=279.40
+global_step=81780, episodic_return=227.22
+Eval: global_step=81920, reward=290.80 +/- 2.37
+global_step=82316, episodic_return=300.72
+global_step=82860, episodic_return=317.07
+global_step=83280, episodic_return=216.61
+global_step=83792, episodic_return=297.41
+global_step=84284, episodic_return=267.99
+global_step=84820, episodic_return=313.23
+global_step=85336, episodic_return=302.16
+global_step=85840, episodic_return=298.84
+global_step=86308, episodic_return=261.52
+global_step=86796, episodic_return=271.80
+global_step=87264, episodic_return=263.75
+global_step=87700, episodic_return=208.86
+global_step=88200, episodic_return=286.79
+global_step=88712, episodic_return=290.06
+global_step=89128, episodic_return=217.21
+global_step=89616, episodic_return=257.78
+global_step=90088, episodic_return=279.32
+Eval: global_step=90112, reward=286.02 +/- 1.38
+global_step=90588, episodic_return=280.09
+global_step=90892, episodic_return=145.35
+global_step=91420, episodic_return=303.72
+global_step=91944, episodic_return=283.79
+global_step=92404, episodic_return=264.54
+global_step=92916, episodic_return=295.94
+global_step=93440, episodic_return=283.47
+global_step=93940, episodic_return=284.25
+global_step=94456, episodic_return=309.10
+global_step=94968, episodic_return=288.56
+global_step=95452, episodic_return=269.58
+global_step=95932, episodic_return=273.99
+global_step=96416, episodic_return=282.05
+global_step=96708, episodic_return=136.91
+global_step=97224, episodic_return=293.30
+global_step=97700, episodic_return=273.20
+global_step=98184, episodic_return=266.77
+Eval: global_step=98304, reward=295.29 +/- 1.97
+global_step=98720, episodic_return=314.60
+global_step=99240, episodic_return=307.29
+global_step=99712, episodic_return=279.37
+global_step=100200, episodic_return=284.21
+global_step=100704, episodic_return=286.22
+global_step=101176, episodic_return=264.12
+global_step=101636, episodic_return=264.83
+global_step=102188, episodic_return=308.41
+global_step=102712, episodic_return=302.41
+global_step=103224, episodic_return=286.98
+global_step=103736, episodic_return=290.96
+global_step=104268, episodic_return=309.56
+global_step=104796, episodic_return=298.62
+global_step=105348, episodic_return=313.71
+global_step=105884, episodic_return=301.47
+global_step=106376, episodic_return=299.63
+Eval: global_step=106496, reward=291.48 +/- 1.68
+global_step=106884, episodic_return=305.59
+global_step=107408, episodic_return=313.93
+global_step=107916, episodic_return=293.36
+global_step=108436, episodic_return=323.53
+global_step=108952, episodic_return=304.14
+global_step=109464, episodic_return=309.65
+global_step=109984, episodic_return=300.47
+global_step=110532, episodic_return=339.59
+global_step=111088, episodic_return=325.00
+global_step=111608, episodic_return=306.05
+global_step=112112, episodic_return=285.01
+global_step=112584, episodic_return=276.63
+global_step=113120, episodic_return=297.61
+global_step=113636, episodic_return=280.19
+global_step=114176, episodic_return=327.22
+global_step=114664, episodic_return=303.95
+Eval: global_step=114688, reward=305.37 +/- 1.52
+global_step=115236, episodic_return=317.26
+global_step=115588, episodic_return=149.56
+global_step=116136, episodic_return=305.38
+global_step=116676, episodic_return=329.31
+global_step=117216, episodic_return=289.23
+global_step=117736, episodic_return=304.77
+global_step=118272, episodic_return=320.15
+global_step=118532, episodic_return=113.59
+global_step=119080, episodic_return=312.37
+global_step=119676, episodic_return=339.81
+global_step=120180, episodic_return=298.72
+global_step=120716, episodic_return=303.62
+global_step=121216, episodic_return=298.00
+global_step=121712, episodic_return=292.69
+global_step=122024, episodic_return=143.25
+global_step=122384, episodic_return=168.39
+global_step=122684, episodic_return=135.11
+Eval: global_step=122880, reward=301.77 +/- 1.38
+global_step=123192, episodic_return=304.17
+global_step=123692, episodic_return=289.25
+global_step=124256, episodic_return=320.60
+global_step=124828, episodic_return=328.54
+global_step=125372, episodic_return=300.56
+global_step=125884, episodic_return=313.17
+global_step=126412, episodic_return=301.56
+global_step=126928, episodic_return=309.68
+global_step=127452, episodic_return=314.66
+global_step=127992, episodic_return=319.63
+global_step=128536, episodic_return=304.67
+global_step=129096, episodic_return=308.25
+global_step=129616, episodic_return=310.28
+global_step=130152, episodic_return=304.38
+global_step=130688, episodic_return=319.56
+Eval: global_step=131072, reward=309.54 +/- 1.53
+global_step=131312, episodic_return=336.59
+global_step=131804, episodic_return=288.32
+global_step=132344, episodic_return=320.92
+global_step=132836, episodic_return=298.06
+global_step=133388, episodic_return=333.56
+global_step=133932, episodic_return=328.56
+global_step=134580, episodic_return=335.47
+global_step=135152, episodic_return=309.82
+global_step=135724, episodic_return=320.96
+global_step=136296, episodic_return=336.08
+global_step=136772, episodic_return=292.67
+global_step=137304, episodic_return=320.59
+global_step=137512, episodic_return=85.89
+global_step=138020, episodic_return=277.76
+global_step=138508, episodic_return=292.70
+global_step=139076, episodic_return=323.44
+Eval: global_step=139264, reward=317.15 +/- 0.94
+global_step=139700, episodic_return=345.78
+global_step=140248, episodic_return=319.56
+global_step=140792, episodic_return=331.52
+global_step=141276, episodic_return=295.73
+global_step=141808, episodic_return=326.72
+global_step=142392, episodic_return=320.61
+global_step=142916, episodic_return=324.72
+global_step=143444, episodic_return=319.53
+global_step=143960, episodic_return=319.89
+global_step=144552, episodic_return=350.57
+global_step=145092, episodic_return=325.23
+global_step=145624, episodic_return=325.44
+global_step=146148, episodic_return=317.58
+global_step=146688, episodic_return=320.50
+global_step=147240, episodic_return=336.16
+Eval: global_step=147456, reward=325.95 +/- 1.66
+global_step=147748, episodic_return=310.33
+global_step=148276, episodic_return=330.78
+global_step=148816, episodic_return=324.51
+global_step=149360, episodic_return=332.87
+global_step=149896, episodic_return=318.14
+global_step=150440, episodic_return=338.16
+global_step=150976, episodic_return=324.03
+global_step=151524, episodic_return=336.10
+global_step=152076, episodic_return=317.55
+global_step=152636, episodic_return=331.27
+global_step=153100, episodic_return=272.61
+global_step=153608, episodic_return=313.58
+global_step=154176, episodic_return=342.50
+global_step=154680, episodic_return=314.00
+global_step=155240, episodic_return=336.88
+Eval: global_step=155648, reward=331.44 +/- 1.38
+global_step=155780, episodic_return=342.53
+global_step=156328, episodic_return=322.63
+global_step=156808, episodic_return=295.24
+global_step=157316, episodic_return=303.85
+global_step=157828, episodic_return=320.63
+global_step=158332, episodic_return=313.94
+global_step=158856, episodic_return=321.39
+global_step=159408, episodic_return=337.98
+global_step=159920, episodic_return=307.22
+global_step=160468, episodic_return=324.47
+global_step=161012, episodic_return=331.41
+global_step=161560, episodic_return=319.42
+global_step=162140, episodic_return=331.15
+global_step=162408, episodic_return=121.81
+global_step=162944, episodic_return=314.39
+global_step=163472, episodic_return=335.54
+Eval: global_step=163840, reward=339.87 +/- 1.85
+global_step=163992, episodic_return=324.80
+global_step=164472, episodic_return=290.03
+global_step=164992, episodic_return=337.80
+global_step=165516, episodic_return=337.49
+global_step=165940, episodic_return=237.49
+global_step=166432, episodic_return=313.24
+global_step=166904, episodic_return=296.45
+global_step=167364, episodic_return=281.82
+global_step=167872, episodic_return=301.98
+global_step=168400, episodic_return=341.04
+global_step=168928, episodic_return=324.55
+global_step=169452, episodic_return=332.60
+global_step=169992, episodic_return=342.22
+global_step=170524, episodic_return=333.69
+global_step=171044, episodic_return=319.89
+global_step=171552, episodic_return=315.84
+Eval: global_step=172032, reward=343.28 +/- 1.46
+global_step=172084, episodic_return=349.79
+global_step=172584, episodic_return=319.26
+global_step=173140, episodic_return=348.41
+global_step=173684, episodic_return=323.08
+global_step=174208, episodic_return=322.02
+global_step=174744, episodic_return=329.97
+global_step=175236, episodic_return=311.83
+global_step=175772, episodic_return=335.37
+global_step=176316, episodic_return=322.23
+global_step=176816, episodic_return=303.01
+global_step=177364, episodic_return=334.40
+global_step=177872, episodic_return=314.75
+global_step=178368, episodic_return=310.29
+global_step=178904, episodic_return=340.78
+global_step=179428, episodic_return=327.31
+global_step=179964, episodic_return=333.00
+Eval: global_step=180224, reward=346.89 +/- 1.53
+global_step=180504, episodic_return=328.77
+global_step=181084, episodic_return=337.77
+global_step=181632, episodic_return=325.21
+global_step=182148, episodic_return=325.85
+global_step=182692, episodic_return=341.11
+global_step=183216, episodic_return=330.99
+global_step=183768, episodic_return=341.93
+global_step=184288, episodic_return=331.26
+global_step=184848, episodic_return=349.29
+global_step=185372, episodic_return=337.76
+global_step=185912, episodic_return=356.17
+global_step=186452, episodic_return=336.29
+global_step=186972, episodic_return=331.30
+global_step=187544, episodic_return=344.25
+global_step=188060, episodic_return=331.90
+Eval: global_step=188416, reward=343.99 +/- 1.27
+global_step=188580, episodic_return=335.60
+global_step=189124, episodic_return=347.59
+global_step=189668, episodic_return=336.09
+global_step=190208, episodic_return=342.52
+global_step=190728, episodic_return=323.80
+global_step=191284, episodic_return=346.97
+global_step=191808, episodic_return=333.60
+global_step=192332, episodic_return=342.42
+global_step=192852, episodic_return=336.21
+global_step=193364, episodic_return=319.33
+global_step=193888, episodic_return=332.93
+global_step=194460, episodic_return=366.88
+global_step=194984, episodic_return=333.18
+global_step=195520, episodic_return=347.26
+global_step=196000, episodic_return=288.92
+global_step=196508, episodic_return=330.34
+Eval: global_step=196608, reward=355.20 +/- 1.94
+global_step=197052, episodic_return=351.51
+global_step=197568, episodic_return=308.70
+global_step=198100, episodic_return=334.56
+global_step=198624, episodic_return=331.63
+global_step=199148, episodic_return=325.24
+global_step=199668, episodic_return=322.49
+global_step=200200, episodic_return=345.24
+global_step=200736, episodic_return=341.82
+global_step=201264, episodic_return=345.29
+global_step=201804, episodic_return=348.03
+global_step=202344, episodic_return=345.28
+global_step=202896, episodic_return=340.12
+global_step=203412, episodic_return=303.91
+global_step=203952, episodic_return=347.20
+global_step=204500, episodic_return=344.19
+Eval: global_step=204800, reward=361.80 +/- 1.67
+global_step=205028, episodic_return=345.34
+global_step=205568, episodic_return=358.22
+global_step=206096, episodic_return=348.70
+global_step=206632, episodic_return=344.67
+global_step=207148, episodic_return=343.41
+global_step=207688, episodic_return=335.96
+global_step=208220, episodic_return=346.89
+global_step=208732, episodic_return=335.38
+global_step=209264, episodic_return=348.81
+global_step=209800, episodic_return=345.17
+global_step=210332, episodic_return=348.86
+global_step=210872, episodic_return=350.65
+global_step=211408, episodic_return=342.16
+global_step=211948, episodic_return=333.25
+global_step=212520, episodic_return=377.43
+Eval: global_step=212992, reward=364.44 +/- 1.38
+global_step=213056, episodic_return=349.33
+global_step=213608, episodic_return=363.68
+global_step=214144, episodic_return=345.54
+global_step=214708, episodic_return=348.75
+global_step=215272, episodic_return=358.29
+global_step=215800, episodic_return=352.89
+global_step=216320, episodic_return=332.12
+global_step=216892, episodic_return=364.06
+global_step=217456, episodic_return=358.96
+global_step=217984, episodic_return=353.57
+global_step=218512, episodic_return=340.51
+global_step=219076, episodic_return=357.57
+global_step=219604, episodic_return=357.85
+global_step=220144, episodic_return=359.05
+global_step=220680, episodic_return=356.23
+Eval: global_step=221184, reward=369.04 +/- 1.76
+global_step=221216, episodic_return=339.41
+global_step=221776, episodic_return=372.27
+global_step=222316, episodic_return=355.64
+global_step=222832, episodic_return=347.39
+global_step=223372, episodic_return=362.06
+global_step=223920, episodic_return=346.79
+global_step=224476, episodic_return=369.19
+global_step=225008, episodic_return=343.36
+global_step=225556, episodic_return=368.40
+global_step=226056, episodic_return=327.89
+global_step=226600, episodic_return=368.03
+global_step=227144, episodic_return=363.35
+global_step=227684, episodic_return=362.49
+global_step=228204, episodic_return=345.15
+global_step=228732, episodic_return=330.42
+global_step=229280, episodic_return=349.92
+Eval: global_step=229376, reward=374.70 +/- 1.37
+global_step=229812, episodic_return=354.86
+global_step=230332, episodic_return=345.20
+global_step=230860, episodic_return=348.92
+global_step=231408, episodic_return=368.67
+global_step=231932, episodic_return=352.86
+global_step=232468, episodic_return=352.81
+global_step=232960, episodic_return=317.10
+global_step=233504, episodic_return=358.85
+global_step=234044, episodic_return=353.71
+global_step=234572, episodic_return=352.39
+global_step=235096, episodic_return=343.70
+global_step=235628, episodic_return=350.21
+global_step=236136, episodic_return=338.81
+global_step=236672, episodic_return=357.15
+global_step=237224, episodic_return=376.76
+Eval: global_step=237568, reward=375.21 +/- 0.23
+global_step=237752, episodic_return=351.44
+global_step=238296, episodic_return=373.39
+global_step=238836, episodic_return=363.86
+global_step=239396, episodic_return=376.92
+global_step=239936, episodic_return=361.58
+global_step=240468, episodic_return=353.03
+global_step=240996, episodic_return=350.89
+global_step=241524, episodic_return=353.32
+global_step=242076, episodic_return=373.72
+global_step=242636, episodic_return=372.58
+global_step=243188, episodic_return=379.59
+global_step=243740, episodic_return=378.35
+global_step=244256, episodic_return=348.92
+global_step=244780, episodic_return=351.31
+global_step=245336, episodic_return=374.38
+Eval: global_step=245760, reward=384.46 +/- 1.71
+global_step=245872, episodic_return=365.30
+global_step=246404, episodic_return=353.17
+global_step=246952, episodic_return=366.29
+global_step=247504, episodic_return=381.04
+global_step=247760, episodic_return=117.33
+global_step=248324, episodic_return=388.75
+global_step=248876, episodic_return=382.11
+global_step=249416, episodic_return=363.29
+global_step=249988, episodic_return=385.89
+global_step=250540, episodic_return=374.66
+global_step=251064, episodic_return=355.42
+global_step=251624, episodic_return=387.83
+global_step=252168, episodic_return=369.98
+global_step=252712, episodic_return=365.14
+global_step=253264, episodic_return=371.35
+global_step=253808, episodic_return=377.74
+Eval: global_step=253952, reward=390.33 +/- 1.67
+global_step=254364, episodic_return=368.62
+global_step=254912, episodic_return=386.93
+global_step=255460, episodic_return=369.79
+global_step=255992, episodic_return=369.04
+global_step=256548, episodic_return=379.86
+global_step=257084, episodic_return=366.15
+global_step=257640, episodic_return=378.61
+global_step=258176, episodic_return=373.62
+global_step=258712, episodic_return=364.60
+global_step=259264, episodic_return=374.97
+global_step=259816, episodic_return=375.60
+global_step=260360, episodic_return=364.00
+global_step=260892, episodic_return=365.81
+global_step=261412, episodic_return=358.59
+global_step=261960, episodic_return=378.60
+Eval: global_step=262144, reward=399.65 +/- 1.44
+global_step=262540, episodic_return=387.34
+global_step=263100, episodic_return=388.09
+global_step=263648, episodic_return=374.66
+global_step=264208, episodic_return=382.88
+global_step=264800, episodic_return=400.65
+global_step=265364, episodic_return=381.16
+global_step=265912, episodic_return=376.08
+global_step=266424, episodic_return=346.29
+global_step=266980, episodic_return=381.38
+global_step=267548, episodic_return=387.52
+global_step=268096, episodic_return=377.89
+global_step=268652, episodic_return=376.06
+global_step=269208, episodic_return=389.14
+global_step=269760, episodic_return=388.58
+global_step=270316, episodic_return=379.32
+Eval: global_step=270336, reward=408.79 +/- 1.08
+global_step=270864, episodic_return=357.02
+global_step=271428, episodic_return=399.04
+global_step=271980, episodic_return=386.46
+global_step=272540, episodic_return=390.99
+global_step=273092, episodic_return=388.85
+global_step=273648, episodic_return=377.58
+global_step=274208, episodic_return=385.38
+global_step=274756, episodic_return=378.95
+global_step=275328, episodic_return=395.99
+global_step=275884, episodic_return=391.54
+global_step=276440, episodic_return=390.79
+global_step=277000, episodic_return=388.94
+global_step=277560, episodic_return=387.14
+global_step=278148, episodic_return=390.13
+Eval: global_step=278528, reward=415.38 +/- 1.76
+global_step=278716, episodic_return=407.17
+global_step=279292, episodic_return=392.19
+global_step=279868, episodic_return=381.79
+global_step=280448, episodic_return=414.18
+global_step=280988, episodic_return=375.40
+global_step=281552, episodic_return=383.39
+global_step=282120, episodic_return=386.96
+global_step=282672, episodic_return=386.62
+global_step=283228, episodic_return=388.62
+global_step=283816, episodic_return=404.29
+global_step=284376, episodic_return=401.14
+global_step=284936, episodic_return=385.42
+global_step=285456, episodic_return=355.60
+global_step=286028, episodic_return=397.31
+global_step=286580, episodic_return=391.94
+Eval: global_step=286720, reward=415.36 +/- 1.54
+global_step=287128, episodic_return=384.24
+global_step=287672, episodic_return=381.17
+global_step=288196, episodic_return=358.90
+global_step=288744, episodic_return=381.55
+global_step=289316, episodic_return=375.08
+global_step=289896, episodic_return=410.84
+global_step=290476, episodic_return=396.24
+global_step=291036, episodic_return=384.61
+global_step=291640, episodic_return=403.67
+global_step=292204, episodic_return=397.83
+global_step=292772, episodic_return=403.21
+global_step=293332, episodic_return=385.38
+global_step=293892, episodic_return=396.59
+global_step=294436, episodic_return=379.57
+Eval: global_step=294912, reward=418.17 +/- 1.61
+global_step=294996, episodic_return=396.94
+global_step=295576, episodic_return=389.01
+global_step=296140, episodic_return=387.07
+global_step=296680, episodic_return=376.63
+global_step=297228, episodic_return=374.29
+global_step=297820, episodic_return=403.20
+global_step=298396, episodic_return=382.87
+global_step=298976, episodic_return=400.26
+global_step=299540, episodic_return=384.34
+global_step=300124, episodic_return=373.95
+global_step=300676, episodic_return=385.13
+global_step=301232, episodic_return=391.60
+global_step=301804, episodic_return=394.08
+global_step=302372, episodic_return=389.73
+global_step=302944, episodic_return=384.14
+Eval: global_step=303104, reward=421.98 +/- 2.24
+global_step=303528, episodic_return=394.48
+global_step=304164, episodic_return=419.58
+global_step=304732, episodic_return=405.22
+global_step=305288, episodic_return=393.75
+global_step=305888, episodic_return=407.80
+global_step=306492, episodic_return=390.08
+global_step=307080, episodic_return=409.15
+global_step=307656, episodic_return=398.11
+global_step=308224, episodic_return=388.77
+global_step=308820, episodic_return=398.06
+global_step=309396, episodic_return=404.17
+global_step=309964, episodic_return=394.33
+global_step=310548, episodic_return=409.60
+global_step=311132, episodic_return=399.82
+Eval: global_step=311296, reward=422.95 +/- 1.56
+global_step=311708, episodic_return=407.91
+global_step=312280, episodic_return=405.75
+global_step=312832, episodic_return=392.72
+global_step=313408, episodic_return=410.12
+global_step=313964, episodic_return=385.05
+global_step=314524, episodic_return=397.31
+global_step=315120, episodic_return=388.52
+global_step=315680, episodic_return=401.88
+global_step=316268, episodic_return=402.88
+global_step=316868, episodic_return=404.85
+global_step=317428, episodic_return=392.30
+global_step=317996, episodic_return=400.80
+global_step=318556, episodic_return=397.42
+global_step=319152, episodic_return=411.05
+Eval: global_step=319488, reward=422.24 +/- 1.33
+global_step=319716, episodic_return=399.99
+global_step=320284, episodic_return=402.60
+global_step=320896, episodic_return=412.30
+global_step=321464, episodic_return=402.80
+global_step=322032, episodic_return=404.61
+global_step=322600, episodic_return=401.75
+global_step=323184, episodic_return=415.88
+global_step=323740, episodic_return=395.34
+global_step=324324, episodic_return=400.20
+global_step=324912, episodic_return=403.80
+global_step=325508, episodic_return=424.05
+global_step=326108, episodic_return=412.77
+global_step=326700, episodic_return=412.14
+global_step=327276, episodic_return=397.02
+Eval: global_step=327680, reward=423.81 +/- 1.02
+global_step=327864, episodic_return=399.52
+global_step=328460, episodic_return=415.05
+global_step=329056, episodic_return=398.31
+global_step=329644, episodic_return=412.23
+global_step=330212, episodic_return=406.01
+global_step=330656, episodic_return=279.72
+global_step=331236, episodic_return=409.20
+global_step=331816, episodic_return=408.96
+global_step=332408, episodic_return=398.52
+global_step=332976, episodic_return=404.38
+global_step=333560, episodic_return=401.97
+global_step=334136, episodic_return=412.68
+global_step=334704, episodic_return=403.29
+global_step=335288, episodic_return=407.73
+global_step=335860, episodic_return=393.06
+Eval: global_step=335872, reward=422.82 +/- 1.43
+global_step=336444, episodic_return=401.55
+global_step=337004, episodic_return=394.58
+global_step=337188, episodic_return=75.76
+global_step=337772, episodic_return=407.94
+global_step=338360, episodic_return=399.77
+global_step=338932, episodic_return=410.49
+global_step=339500, episodic_return=403.64
+global_step=340048, episodic_return=390.12
+global_step=340616, episodic_return=402.53
+global_step=341180, episodic_return=401.72
+global_step=341776, episodic_return=418.86
+global_step=342372, episodic_return=414.06
+global_step=342960, episodic_return=411.21
+global_step=343540, episodic_return=415.33
+Eval: global_step=344064, reward=424.48 +/- 1.06
+global_step=344116, episodic_return=412.54
+global_step=344712, episodic_return=401.40
+global_step=345292, episodic_return=415.33
+global_step=345888, episodic_return=420.93
+global_step=346464, episodic_return=412.05
+global_step=347020, episodic_return=393.77
+global_step=347584, episodic_return=400.94
+global_step=348156, episodic_return=403.44
+global_step=348744, episodic_return=415.67
+global_step=349332, episodic_return=412.01
+global_step=349900, episodic_return=404.07
+global_step=350472, episodic_return=408.76
+global_step=351032, episodic_return=400.56
+global_step=351644, episodic_return=406.35
+global_step=352208, episodic_return=397.22
+Eval: global_step=352256, reward=420.65 +/- 0.90
+global_step=352776, episodic_return=408.87
+global_step=353352, episodic_return=413.87
+global_step=353928, episodic_return=410.30
+global_step=354496, episodic_return=409.72
+global_step=355092, episodic_return=421.95
+global_step=355660, episodic_return=407.17
+global_step=356236, episodic_return=413.61
+global_step=356804, episodic_return=404.23
+global_step=357364, episodic_return=402.24
+global_step=357932, episodic_return=407.53
+global_step=358496, episodic_return=403.52
+global_step=359068, episodic_return=407.74
+global_step=359636, episodic_return=404.73
+global_step=360208, episodic_return=411.66
+Eval: global_step=360448, reward=422.84 +/- 1.89
+global_step=360792, episodic_return=418.72
+global_step=361380, episodic_return=414.03
+global_step=361948, episodic_return=405.24
+global_step=362524, episodic_return=412.45
+global_step=363088, episodic_return=402.47
+global_step=363676, episodic_return=416.47
+global_step=364260, episodic_return=420.50
+global_step=364832, episodic_return=406.68
+global_step=365416, episodic_return=414.26
+global_step=365984, episodic_return=408.84
+global_step=366544, episodic_return=400.61
+global_step=367108, episodic_return=401.88
+global_step=367688, episodic_return=406.51
+global_step=368244, episodic_return=397.81
+Eval: global_step=368640, reward=424.80 +/- 1.65
+global_step=368804, episodic_return=396.86
+global_step=369404, episodic_return=414.28
+global_step=370004, episodic_return=419.03
+global_step=370580, episodic_return=413.63
+global_step=371164, episodic_return=417.63
+global_step=371740, episodic_return=416.10
+global_step=372312, episodic_return=415.04
+global_step=372884, episodic_return=412.31
+global_step=373444, episodic_return=400.80
+global_step=374012, episodic_return=412.51
+global_step=374588, episodic_return=411.47
+global_step=375004, episodic_return=254.48
+global_step=375576, episodic_return=410.87
+global_step=376152, episodic_return=416.49
+global_step=376748, episodic_return=421.17
+Eval: global_step=376832, reward=428.26 +/- 1.09
+global_step=377340, episodic_return=418.11
+global_step=377912, episodic_return=416.54
+global_step=378504, episodic_return=419.50
+global_step=379068, episodic_return=407.78
+global_step=379652, episodic_return=421.08
+global_step=380228, episodic_return=414.78
+global_step=380812, episodic_return=420.89
+global_step=381404, episodic_return=415.23
+global_step=381996, episodic_return=427.84
+global_step=382596, episodic_return=421.62
+global_step=383168, episodic_return=410.01
+global_step=383768, episodic_return=428.12
+global_step=384364, episodic_return=424.99
+global_step=384940, episodic_return=415.19
+Eval: global_step=385024, reward=429.48 +/- 1.01
+global_step=385524, episodic_return=422.02
+global_step=386116, episodic_return=422.21
+global_step=386704, episodic_return=417.32
+global_step=387296, episodic_return=413.56
+global_step=387904, episodic_return=428.00
+global_step=388512, episodic_return=425.39
+global_step=389096, episodic_return=416.60
+global_step=389684, episodic_return=419.07
+global_step=390272, episodic_return=419.57
+global_step=390852, episodic_return=420.82
+global_step=391432, episodic_return=420.83
+global_step=392016, episodic_return=417.22
+global_step=392592, episodic_return=412.33
+global_step=393188, episodic_return=421.28
+Eval: global_step=393216, reward=428.50 +/- 1.68
+global_step=393768, episodic_return=418.07
+global_step=394356, episodic_return=421.72
+global_step=394940, episodic_return=424.76
+global_step=395516, episodic_return=416.18
+global_step=395912, episodic_return=230.83
+global_step=396512, episodic_return=425.70
+global_step=397092, episodic_return=416.75
+global_step=397684, episodic_return=418.01
+global_step=398256, episodic_return=412.93
+global_step=398844, episodic_return=422.18
+global_step=399428, episodic_return=415.21
+global_step=400012, episodic_return=418.22
+global_step=400620, episodic_return=423.37
+global_step=401200, episodic_return=415.54
+Eval: global_step=401408, reward=424.70 +/- 0.88
+global_step=401784, episodic_return=417.43
+global_step=402360, episodic_return=416.20
+global_step=402948, episodic_return=424.63
+global_step=403528, episodic_return=415.22
+global_step=404100, episodic_return=412.99
+global_step=404684, episodic_return=421.50
+global_step=405256, episodic_return=411.49
+global_step=405848, episodic_return=422.65
+global_step=406416, episodic_return=408.27
+global_step=407004, episodic_return=420.52
+global_step=407604, episodic_return=423.72
+global_step=408192, episodic_return=423.69
+global_step=408768, episodic_return=410.57
+global_step=409352, episodic_return=420.84
+Eval: global_step=409600, reward=423.63 +/- 1.33
+global_step=409928, episodic_return=417.33
+global_step=410532, episodic_return=427.63
+global_step=411120, episodic_return=419.22
+global_step=411708, episodic_return=422.11
+global_step=412296, episodic_return=420.49
+global_step=412880, episodic_return=422.21
+global_step=413472, episodic_return=424.63
+global_step=414048, episodic_return=416.17
+global_step=414636, episodic_return=419.97
+global_step=415208, episodic_return=407.77
+global_step=415800, episodic_return=418.66
+global_step=416388, episodic_return=422.02
+global_step=416976, episodic_return=418.13
+global_step=417556, episodic_return=418.11
+Eval: global_step=417792, reward=425.39 +/- 1.03
+global_step=418144, episodic_return=419.05
+global_step=418724, episodic_return=416.55
+global_step=419312, episodic_return=422.94
+global_step=419896, episodic_return=421.89
+global_step=420492, episodic_return=421.83
+global_step=421104, episodic_return=433.30
+global_step=421688, episodic_return=419.23
+global_step=422284, episodic_return=427.04
+global_step=422860, episodic_return=415.09
+global_step=423436, episodic_return=416.51
+global_step=424016, episodic_return=420.00
+global_step=424596, episodic_return=412.39
+global_step=425188, episodic_return=423.48
+global_step=425776, episodic_return=422.82
+Eval: global_step=425984, reward=424.06 +/- 1.92
+global_step=426360, episodic_return=419.60
+global_step=426948, episodic_return=422.84
+global_step=427528, episodic_return=419.49
+global_step=428112, episodic_return=416.67
+global_step=428696, episodic_return=420.53
+global_step=429272, episodic_return=414.17
+global_step=429852, episodic_return=418.17
+global_step=430440, episodic_return=422.28
+global_step=431020, episodic_return=418.09
+global_step=431592, episodic_return=415.07
+global_step=432188, episodic_return=423.21
+global_step=432804, episodic_return=432.91
+global_step=433392, episodic_return=422.59
+global_step=433980, episodic_return=425.17
+Eval: global_step=434176, reward=425.67 +/- 1.24
+global_step=434556, episodic_return=412.88
+global_step=435144, episodic_return=417.49
+global_step=435740, episodic_return=426.55
+global_step=436336, episodic_return=425.41
+global_step=436916, episodic_return=419.85
+global_step=437520, episodic_return=422.14
+global_step=438108, episodic_return=421.12
+global_step=438700, episodic_return=421.90
+global_step=439296, episodic_return=426.52
+global_step=439884, episodic_return=421.15
+global_step=440496, episodic_return=431.40
+global_step=441112, episodic_return=435.06
+global_step=441712, episodic_return=423.04
+global_step=442320, episodic_return=431.83
+Eval: global_step=442368, reward=427.43 +/- 1.36
+global_step=442900, episodic_return=412.27
+global_step=443492, episodic_return=425.29
+global_step=444080, episodic_return=419.20
+global_step=444656, episodic_return=413.22
+global_step=445240, episodic_return=417.47
+global_step=445828, episodic_return=421.82
+global_step=446412, episodic_return=423.60
+global_step=447016, episodic_return=423.74
+global_step=447604, episodic_return=419.90
+global_step=448212, episodic_return=428.58
+global_step=448808, episodic_return=425.00
+global_step=449388, episodic_return=421.25
+global_step=449976, episodic_return=419.37
+Eval: global_step=450560, reward=430.63 +/- 1.03
+global_step=450572, episodic_return=428.21
+global_step=451152, episodic_return=419.43
+global_step=451760, episodic_return=431.71
+global_step=452356, episodic_return=429.28
+global_step=452976, episodic_return=432.85
+global_step=453556, episodic_return=416.68
+global_step=454140, episodic_return=421.89
+global_step=454724, episodic_return=418.71
+global_step=455348, episodic_return=431.52
+global_step=455964, episodic_return=436.64
+global_step=456580, episodic_return=435.08
+global_step=457180, episodic_return=426.20
+global_step=457776, episodic_return=425.05
+global_step=458368, episodic_return=422.26
+Eval: global_step=458752, reward=425.34 +/- 1.40
+global_step=458972, episodic_return=430.19
+global_step=459552, episodic_return=418.38
+global_step=460136, episodic_return=421.03
+global_step=460720, episodic_return=413.95
+global_step=461308, episodic_return=420.55
+global_step=461884, episodic_return=418.73
+global_step=462460, episodic_return=416.85
+global_step=463052, episodic_return=420.28
+global_step=463648, episodic_return=424.66
+global_step=464224, episodic_return=415.46
+global_step=464808, episodic_return=421.66
+global_step=465404, episodic_return=423.59
+global_step=465996, episodic_return=424.13
+global_step=466596, episodic_return=427.62
+Eval: global_step=466944, reward=422.45 +/- 1.56
+global_step=467180, episodic_return=420.19
+global_step=467756, episodic_return=414.68
+global_step=468340, episodic_return=417.57
+global_step=468936, episodic_return=421.79
+global_step=469520, episodic_return=421.36
+global_step=470100, episodic_return=417.70
+global_step=470688, episodic_return=421.01
+global_step=471268, episodic_return=416.34
+global_step=471852, episodic_return=420.86
+global_step=472428, episodic_return=413.58
+global_step=473004, episodic_return=417.38
+global_step=473604, episodic_return=427.76
+global_step=474184, episodic_return=418.52
+global_step=474768, episodic_return=419.93
+Eval: global_step=475136, reward=422.74 +/- 1.34
+global_step=475344, episodic_return=414.25
+global_step=475948, episodic_return=431.03
+global_step=476548, episodic_return=427.43
+global_step=477116, episodic_return=410.82
+global_step=477688, episodic_return=416.20
+global_step=478272, episodic_return=420.37
+global_step=478860, episodic_return=428.22
+global_step=479440, episodic_return=415.14
+global_step=480028, episodic_return=425.23
+global_step=480600, episodic_return=413.92
+global_step=481176, episodic_return=416.79
+global_step=481756, episodic_return=413.11
+global_step=482348, episodic_return=427.89
+global_step=482944, episodic_return=425.53
+Eval: global_step=483328, reward=425.47 +/- 1.08
+global_step=483528, episodic_return=424.02
+global_step=484108, episodic_return=419.00
+global_step=484692, episodic_return=423.67
+global_step=485272, episodic_return=420.37
+global_step=485852, episodic_return=421.61
+global_step=486444, episodic_return=425.09
+global_step=487024, episodic_return=420.27
+global_step=487612, episodic_return=421.97
+global_step=488188, episodic_return=417.32
+global_step=488768, episodic_return=417.38
+global_step=489356, episodic_return=423.58
+global_step=489936, episodic_return=423.53
+global_step=490516, episodic_return=420.59
+global_step=491104, episodic_return=422.52
+Eval: global_step=491520, reward=430.01 +/- 0.79
+global_step=491704, episodic_return=426.77
+global_step=492296, episodic_return=424.84
+global_step=492896, episodic_return=427.55
+global_step=493504, episodic_return=431.96
+global_step=494088, episodic_return=422.32
+global_step=494684, episodic_return=426.15
+global_step=495296, episodic_return=433.13
+global_step=495884, episodic_return=422.83
+global_step=496472, episodic_return=422.69
+global_step=497060, episodic_return=422.45
+global_step=497644, episodic_return=420.49
+global_step=498236, episodic_return=426.99
+global_step=498820, episodic_return=421.00
+global_step=499424, episodic_return=430.38
+Eval: global_step=499712, reward=433.27 +/- 1.22
+global_step=500032, episodic_return=425.91
+global_step=500644, episodic_return=434.31
+global_step=501240, episodic_return=427.51
+global_step=501860, episodic_return=437.62
+global_step=502456, episodic_return=425.25
+global_step=503032, episodic_return=416.43
+global_step=503628, episodic_return=428.24
+global_step=504248, episodic_return=434.51
+global_step=504828, episodic_return=420.95
+global_step=505424, episodic_return=423.62
+global_step=506024, episodic_return=424.10
+global_step=506624, episodic_return=428.64
+global_step=507216, episodic_return=426.38
+global_step=507820, episodic_return=429.16
+Eval: global_step=507904, reward=435.53 +/- 1.40
+global_step=508432, episodic_return=432.94
+global_step=509020, episodic_return=422.43
+global_step=509632, episodic_return=423.77
+global_step=510224, episodic_return=422.62
+global_step=510832, episodic_return=430.56
+global_step=511424, episodic_return=424.73
+global_step=512016, episodic_return=424.50
+global_step=512628, episodic_return=429.03
+global_step=513220, episodic_return=422.73
+global_step=513824, episodic_return=431.66
+global_step=514440, episodic_return=430.76
+global_step=515048, episodic_return=430.09
+global_step=515652, episodic_return=427.79
+Eval: global_step=516096, reward=435.73 +/- 1.66
+global_step=516256, episodic_return=428.70
+global_step=516876, episodic_return=437.70
+global_step=517304, episodic_return=264.37
+global_step=517900, episodic_return=424.82
+global_step=518512, episodic_return=430.20
+global_step=519096, episodic_return=421.65
+global_step=519684, episodic_return=422.41
+global_step=520300, episodic_return=431.50
+global_step=520904, episodic_return=429.57
+global_step=521508, episodic_return=428.24
+global_step=522104, episodic_return=424.03
+global_step=522524, episodic_return=258.29
+global_step=523136, episodic_return=436.78
+global_step=523744, episodic_return=431.43
+Eval: global_step=524288, reward=440.03 +/- 1.21
+global_step=524344, episodic_return=428.00
+global_step=524968, episodic_return=435.86
+global_step=525568, episodic_return=427.76
+global_step=526168, episodic_return=429.92
+global_step=526780, episodic_return=433.18
+global_step=527380, episodic_return=426.55
+global_step=527984, episodic_return=430.35
+global_step=528600, episodic_return=434.64
+global_step=529208, episodic_return=435.57
+global_step=529808, episodic_return=431.75
+global_step=530424, episodic_return=424.46
+global_step=531044, episodic_return=436.43
+global_step=531656, episodic_return=433.88
+global_step=532276, episodic_return=439.37
+Eval: global_step=532480, reward=443.26 +/- 1.34
+global_step=532884, episodic_return=430.87
+global_step=533504, episodic_return=438.61
+global_step=534120, episodic_return=439.54
+global_step=534740, episodic_return=438.10
+global_step=535364, episodic_return=435.58
+global_step=535988, episodic_return=439.94
+global_step=536608, episodic_return=439.25
+global_step=537228, episodic_return=440.67
+global_step=537844, episodic_return=439.76
+global_step=538268, episodic_return=253.89
+global_step=538884, episodic_return=434.17
+global_step=539496, episodic_return=436.70
+global_step=540104, episodic_return=429.09
+Eval: global_step=540672, reward=443.56 +/- 1.41
+global_step=540716, episodic_return=435.27
+global_step=541348, episodic_return=444.70
+global_step=541956, episodic_return=426.26
+global_step=542564, episodic_return=431.63
+global_step=543184, episodic_return=439.50
+global_step=543824, episodic_return=451.08
+global_step=544448, episodic_return=434.88
+global_step=545056, episodic_return=435.05
+global_step=545676, episodic_return=435.45
+global_step=546292, episodic_return=437.14
+global_step=546916, episodic_return=438.52
+global_step=547544, episodic_return=435.42
+global_step=548164, episodic_return=431.64
+global_step=548764, episodic_return=424.04
+Eval: global_step=548864, reward=446.43 +/- 1.94
+global_step=549400, episodic_return=439.20
+global_step=550024, episodic_return=440.46
+global_step=550632, episodic_return=434.60
+global_step=551236, episodic_return=429.26
+global_step=551860, episodic_return=437.35
+global_step=552492, episodic_return=434.60
+global_step=553112, episodic_return=440.52
+global_step=553720, episodic_return=432.34
+global_step=554352, episodic_return=442.14
+global_step=554968, episodic_return=437.36
+global_step=555580, episodic_return=432.97
+global_step=556184, episodic_return=434.02
+global_step=556780, episodic_return=424.56
+Eval: global_step=557056, reward=445.74 +/- 1.81
+global_step=557400, episodic_return=438.07
+global_step=558028, episodic_return=440.99
+global_step=558628, episodic_return=428.21
+global_step=559232, episodic_return=430.26
+global_step=559852, episodic_return=430.37
+global_step=560488, episodic_return=439.91
+global_step=561112, episodic_return=444.19
+global_step=561740, episodic_return=445.68
+global_step=562380, episodic_return=454.45
+global_step=563008, episodic_return=448.90
+global_step=563624, episodic_return=439.29
+global_step=564232, episodic_return=429.97
+global_step=564852, episodic_return=435.66
+Eval: global_step=565248, reward=446.40 +/- 1.69
+global_step=565464, episodic_return=435.86
+global_step=566092, episodic_return=443.93
+global_step=566704, episodic_return=432.98
+global_step=567324, episodic_return=439.38
+global_step=567920, episodic_return=424.34
+global_step=568532, episodic_return=436.06
+global_step=569136, episodic_return=430.64
+global_step=569752, episodic_return=436.37
+global_step=570364, episodic_return=438.34
+global_step=570992, episodic_return=444.75
+global_step=571616, episodic_return=441.52
+global_step=572236, episodic_return=433.71
+global_step=572868, episodic_return=443.85
+Eval: global_step=573440, reward=452.70 +/- 1.59
+global_step=573492, episodic_return=438.55
+global_step=574108, episodic_return=435.10
+global_step=574712, episodic_return=427.84
+global_step=575328, episodic_return=427.37
+global_step=575944, episodic_return=437.18
+global_step=576544, episodic_return=433.40
+global_step=577172, episodic_return=444.77
+global_step=577792, episodic_return=439.32
+global_step=578392, episodic_return=428.90
+global_step=579016, episodic_return=443.80
+global_step=579620, episodic_return=431.72
+global_step=580236, episodic_return=432.71
+global_step=580852, episodic_return=419.65
+global_step=581480, episodic_return=447.03
+Eval: global_step=581632, reward=455.74 +/- 2.06
+global_step=582096, episodic_return=433.16
+global_step=582732, episodic_return=452.04
+global_step=583368, episodic_return=449.84
+global_step=583976, episodic_return=435.15
+global_step=584564, episodic_return=421.70
+global_step=585188, episodic_return=444.38
+global_step=585804, episodic_return=439.35
+global_step=586412, episodic_return=432.69
+global_step=587044, episodic_return=447.30
+global_step=587680, episodic_return=455.86
+global_step=588288, episodic_return=433.57
+global_step=588896, episodic_return=432.77
+global_step=589528, episodic_return=448.36
+Eval: global_step=589824, reward=472.77 +/- 1.86
+global_step=590208, episodic_return=485.78
+global_step=590876, episodic_return=483.76
+global_step=591488, episodic_return=433.06
+global_step=592132, episodic_return=455.34
+global_step=592752, episodic_return=440.82
+global_step=593420, episodic_return=478.49
+global_step=594044, episodic_return=436.87
+global_step=594664, episodic_return=439.95
+global_step=595300, episodic_return=453.68
+global_step=596000, episodic_return=506.35
+global_step=596624, episodic_return=441.59
+global_step=597280, episodic_return=472.86
+global_step=597940, episodic_return=467.21
+Eval: global_step=598016, reward=461.81 +/- 1.88
+global_step=598612, episodic_return=479.74
+global_step=599284, episodic_return=483.75
+global_step=599908, episodic_return=447.08
+global_step=600532, episodic_return=447.83
+global_step=601168, episodic_return=459.36
+global_step=601820, episodic_return=470.58
+global_step=602464, episodic_return=461.06
+global_step=603104, episodic_return=458.66
+global_step=603732, episodic_return=448.45
+global_step=604364, episodic_return=446.17
+global_step=605020, episodic_return=469.58
+global_step=605648, episodic_return=442.84
+Eval: global_step=606208, reward=479.57 +/- 1.54
+global_step=606300, episodic_return=459.65
+global_step=606984, episodic_return=493.32
+global_step=607620, episodic_return=449.88
+global_step=608268, episodic_return=461.68
+global_step=608948, episodic_return=491.12
+global_step=609660, episodic_return=513.19
+global_step=610408, episodic_return=552.18
+global_step=611044, episodic_return=452.17
+global_step=611692, episodic_return=466.05
+global_step=612316, episodic_return=443.79
+global_step=612956, episodic_return=453.29
+global_step=613608, episodic_return=465.41
+global_step=614228, episodic_return=440.90
+Eval: global_step=614400, reward=492.36 +/- 1.59
+global_step=614860, episodic_return=451.36
+global_step=615536, episodic_return=483.85
+global_step=616188, episodic_return=469.80
+global_step=616836, episodic_return=469.14
+global_step=617488, episodic_return=465.26
+global_step=618116, episodic_return=453.24
+global_step=618768, episodic_return=462.15
+global_step=619424, episodic_return=478.44
+global_step=620056, episodic_return=447.60
+global_step=620720, episodic_return=478.37
+global_step=621448, episodic_return=536.93
+global_step=622108, episodic_return=479.24
+Eval: global_step=622592, reward=502.14 +/- 2.17
+global_step=622732, episodic_return=448.66
+global_step=623424, episodic_return=496.49
+global_step=624068, episodic_return=467.29
+global_step=624764, episodic_return=499.00
+global_step=625396, episodic_return=456.90
+global_step=626104, episodic_return=518.98
+global_step=626764, episodic_return=475.62
+global_step=627432, episodic_return=482.11
+global_step=628152, episodic_return=540.58
+global_step=628840, episodic_return=506.08
+global_step=629468, episodic_return=451.71
+global_step=630124, episodic_return=474.07
+Eval: global_step=630784, reward=535.24 +/- 3.26
+global_step=630788, episodic_return=479.29
+global_step=631476, episodic_return=504.63
+global_step=632120, episodic_return=471.78
+global_step=632832, episodic_return=512.61
+global_step=633464, episodic_return=452.04
+global_step=634184, episodic_return=532.71
+global_step=634836, episodic_return=472.10
+global_step=635548, episodic_return=531.44
+global_step=636264, episodic_return=521.88
+global_step=636964, episodic_return=512.30
+global_step=637648, episodic_return=501.35
+global_step=638356, episodic_return=516.74
+Eval: global_step=638976, reward=566.90 +/- 9.94
+global_step=639080, episodic_return=528.12
+global_step=639756, episodic_return=493.38
+global_step=640496, episodic_return=559.26
+global_step=641232, episodic_return=548.72
+global_step=641892, episodic_return=482.63
+global_step=642588, episodic_return=512.12
+global_step=643312, episodic_return=541.46
+global_step=644024, episodic_return=528.89
+global_step=644692, episodic_return=484.52
+global_step=645380, episodic_return=502.34
+global_step=646108, episodic_return=548.15
+global_step=646856, episodic_return=558.60
+Eval: global_step=647168, reward=590.80 +/- 6.56
+global_step=647584, episodic_return=538.02
+global_step=648280, episodic_return=510.54
+global_step=648972, episodic_return=505.93
+global_step=649684, episodic_return=520.01
+global_step=650368, episodic_return=505.08
+global_step=651088, episodic_return=539.86
+global_step=651832, episodic_return=561.09
+global_step=652544, episodic_return=505.75
+global_step=653288, episodic_return=555.05
+global_step=654052, episodic_return=575.18
+global_step=654808, episodic_return=559.22
+Eval: global_step=655360, reward=596.47 +/- 2.16
+global_step=655580, episodic_return=589.08
+global_step=656304, episodic_return=538.02
+global_step=657016, episodic_return=527.61
+global_step=657748, episodic_return=550.08
+global_step=658492, episodic_return=550.09
+global_step=659212, episodic_return=530.51
+global_step=659928, episodic_return=539.30
+global_step=660620, episodic_return=494.41
+global_step=661304, episodic_return=512.01
+global_step=662052, episodic_return=556.11
+global_step=662796, episodic_return=547.25
+global_step=663528, episodic_return=550.44
+Eval: global_step=663552, reward=614.05 +/- 3.24
+global_step=664244, episodic_return=538.56
+global_step=665028, episodic_return=604.34
+global_step=665864, episodic_return=649.34
+global_step=666584, episodic_return=538.73
+global_step=667432, episodic_return=658.89
+global_step=668228, episodic_return=604.76
+global_step=669072, episodic_return=648.38
+global_step=669856, episodic_return=596.87
+global_step=670644, episodic_return=607.31
+global_step=671388, episodic_return=552.36
+Eval: global_step=671744, reward=654.44 +/- 2.63
+global_step=672192, episodic_return=620.84
+global_step=673060, episodic_return=669.03
+global_step=673812, episodic_return=573.73
+global_step=674668, episodic_return=669.15
+global_step=675536, episodic_return=657.00
+global_step=676340, episodic_return=630.98
+global_step=677132, episodic_return=616.28
+global_step=677896, episodic_return=582.29
+global_step=678688, episodic_return=618.97
+global_step=679484, episodic_return=596.33
+Eval: global_step=679936, reward=668.04 +/- 1.27
+global_step=680344, episodic_return=675.69
+global_step=681164, episodic_return=625.97
+global_step=682020, episodic_return=657.68
+global_step=682860, episodic_return=643.91
+global_step=683676, episodic_return=635.21
+global_step=684504, episodic_return=634.40
+global_step=685320, episodic_return=618.47
+global_step=686080, episodic_return=569.46
+global_step=686952, episodic_return=667.82
+global_step=687756, episodic_return=616.47
+Eval: global_step=688128, reward=672.14 +/- 1.39
+global_step=688616, episodic_return=667.27
+global_step=689452, episodic_return=654.27
+global_step=690252, episodic_return=606.67
+global_step=691044, episodic_return=606.82
+global_step=691888, episodic_return=645.40
+global_step=692768, episodic_return=678.59
+global_step=693656, episodic_return=675.32
+global_step=694508, episodic_return=668.53
+global_step=695340, episodic_return=640.14
+global_step=696208, episodic_return=646.24
+Eval: global_step=696320, reward=684.14 +/- 1.91
+global_step=697068, episodic_return=659.76
+global_step=697932, episodic_return=666.32
+global_step=698788, episodic_return=663.72
+global_step=699624, episodic_return=642.99
+global_step=700460, episodic_return=648.78
+global_step=700856, episodic_return=220.26
+global_step=701720, episodic_return=659.91
+global_step=702556, episodic_return=631.93
+global_step=703396, episodic_return=644.54
+global_step=703804, episodic_return=232.54
+Eval: global_step=704512, reward=677.40 +/- 1.48
+global_step=704632, episodic_return=645.98
+global_step=705488, episodic_return=656.05
+global_step=706332, episodic_return=638.46
+global_step=707196, episodic_return=656.85
+global_step=708088, episodic_return=671.80
+global_step=709004, episodic_return=703.98
+global_step=709876, episodic_return=656.14
+global_step=710768, episodic_return=680.80
+global_step=711600, episodic_return=625.58
+global_step=712476, episodic_return=675.65
+Eval: global_step=712704, reward=670.71 +/- 1.95
+global_step=713356, episodic_return=666.52
+global_step=714192, episodic_return=633.99
+global_step=715064, episodic_return=680.74
+global_step=715892, episodic_return=635.06
+global_step=716748, episodic_return=643.21
+global_step=717628, episodic_return=677.49
+global_step=718476, episodic_return=644.00
+global_step=719312, episodic_return=645.60
+global_step=720144, episodic_return=620.07
+Eval: global_step=720896, reward=671.07 +/- 1.86
+global_step=720992, episodic_return=650.82
+global_step=721864, episodic_return=674.06
+global_step=722724, episodic_return=654.84
+global_step=723620, episodic_return=683.00
+global_step=724476, episodic_return=656.38
+global_step=725364, episodic_return=673.22
+global_step=726236, episodic_return=679.44
+global_step=727088, episodic_return=666.19
+global_step=727936, episodic_return=646.62
+global_step=728812, episodic_return=672.32
+Eval: global_step=729088, reward=680.12 +/- 1.61
+global_step=729680, episodic_return=666.97
+global_step=730552, episodic_return=678.44
+global_step=731432, episodic_return=668.21
+global_step=732296, episodic_return=666.46
+global_step=733188, episodic_return=678.75
+global_step=734064, episodic_return=674.66
+global_step=734936, episodic_return=660.58
+global_step=735792, episodic_return=663.10
+global_step=736652, episodic_return=657.77
+Eval: global_step=737280, reward=678.55 +/- 1.75
+global_step=737528, episodic_return=678.48
+global_step=738392, episodic_return=671.53
+global_step=739232, episodic_return=647.25
+global_step=740120, episodic_return=683.68
+global_step=740960, episodic_return=639.81
+global_step=741844, episodic_return=671.33
+global_step=742700, episodic_return=657.63
+global_step=743572, episodic_return=669.64
+global_step=744388, episodic_return=613.98
+global_step=745272, episodic_return=674.42
+Eval: global_step=745472, reward=678.34 +/- 2.47
+global_step=746124, episodic_return=651.85
+global_step=746988, episodic_return=666.80
+global_step=747824, episodic_return=632.77
+global_step=748696, episodic_return=665.69
+global_step=749600, episodic_return=689.72
+global_step=750456, episodic_return=661.43
+global_step=751340, episodic_return=665.30
+global_step=752168, episodic_return=640.00
+global_step=753020, episodic_return=667.81
+Eval: global_step=753664, reward=678.44 +/- 1.97
+global_step=753904, episodic_return=669.93
+global_step=754776, episodic_return=682.55
+global_step=755676, episodic_return=698.77
+global_step=756528, episodic_return=659.24
+global_step=757412, episodic_return=672.46
+global_step=758252, episodic_return=654.25
+global_step=759116, episodic_return=672.60
+global_step=759972, episodic_return=649.11
+global_step=760780, episodic_return=619.67
+global_step=761620, episodic_return=641.45
+Eval: global_step=761856, reward=677.67 +/- 1.81
+global_step=762028, episodic_return=233.17
+global_step=762928, episodic_return=683.94
+global_step=763748, episodic_return=623.95
+global_step=764608, episodic_return=656.69
+global_step=765488, episodic_return=670.43
+global_step=766364, episodic_return=679.95
+global_step=766796, episodic_return=249.08
+global_step=767200, episodic_return=225.67
+global_step=768096, episodic_return=684.67
+global_step=768992, episodic_return=685.62
+global_step=769884, episodic_return=680.94
+Eval: global_step=770048, reward=687.43 +/- 1.66
+global_step=770744, episodic_return=666.25
+global_step=771592, episodic_return=663.93
+global_step=772488, episodic_return=678.43
+global_step=773356, episodic_return=674.86
+global_step=774216, episodic_return=657.00
+global_step=775144, episodic_return=715.66
+global_step=776032, episodic_return=667.47
+global_step=776940, episodic_return=701.60
+global_step=777824, episodic_return=670.40
+Eval: global_step=778240, reward=692.88 +/- 1.74
+global_step=778692, episodic_return=656.00
+global_step=779604, episodic_return=695.79
+global_step=780484, episodic_return=674.26
+global_step=781372, episodic_return=678.59
+global_step=782208, episodic_return=641.31
+global_step=783120, episodic_return=692.51
+global_step=784024, episodic_return=688.14
+global_step=784916, episodic_return=673.09
+global_step=785756, episodic_return=615.34
+Eval: global_step=786432, reward=690.31 +/- 2.29
+global_step=786664, episodic_return=691.45
+global_step=787596, episodic_return=722.15
+global_step=788468, episodic_return=675.71
+global_step=789416, episodic_return=741.15
+global_step=790336, episodic_return=713.13
+global_step=791228, episodic_return=681.70
+global_step=792136, episodic_return=698.10
+global_step=793008, episodic_return=669.53
+global_step=793964, episodic_return=743.84
+Eval: global_step=794624, reward=713.01 +/- 2.03
+global_step=794836, episodic_return=670.23
+global_step=795760, episodic_return=701.92
+global_step=796628, episodic_return=673.21
+global_step=797508, episodic_return=674.88
+global_step=798460, episodic_return=744.42
+global_step=799364, episodic_return=687.71
+global_step=800244, episodic_return=677.85
+global_step=801136, episodic_return=689.42
+global_step=802024, episodic_return=675.14
+Eval: global_step=802816, reward=718.92 +/- 3.10
+global_step=802908, episodic_return=670.46
+global_step=803820, episodic_return=697.62
+global_step=804732, episodic_return=708.60
+global_step=805648, episodic_return=707.07
+global_step=806344, episodic_return=470.16
+global_step=807220, episodic_return=653.44
+global_step=808136, episodic_return=714.58
+global_step=809032, episodic_return=692.56
+global_step=809912, episodic_return=676.21
+global_step=810804, episodic_return=691.16
+Eval: global_step=811008, reward=706.59 +/- 2.51
+global_step=811696, episodic_return=682.40
+global_step=812628, episodic_return=718.25
+global_step=813532, episodic_return=693.30
+global_step=814428, episodic_return=697.37
+global_step=815316, episodic_return=684.10
+global_step=816260, episodic_return=734.73
+global_step=817160, episodic_return=698.49
+global_step=818040, episodic_return=688.82
+global_step=819000, episodic_return=759.16
+Eval: global_step=819200, reward=730.18 +/- 2.39
+global_step=819872, episodic_return=674.92
+global_step=820812, episodic_return=734.22
+global_step=821704, episodic_return=678.86
+global_step=822668, episodic_return=757.57
+global_step=823364, episodic_return=471.28
+global_step=824284, episodic_return=715.46
+global_step=825164, episodic_return=668.23
+global_step=826152, episodic_return=766.25
+global_step=827092, episodic_return=731.64
+Eval: global_step=827392, reward=747.69 +/- 3.83
+global_step=828020, episodic_return=723.32
+global_step=828984, episodic_return=757.70
+global_step=829912, episodic_return=723.92
+global_step=830872, episodic_return=757.31
+global_step=831812, episodic_return=737.24
+global_step=832780, episodic_return=764.14
+global_step=833712, episodic_return=722.11
+global_step=834700, episodic_return=780.98
+Eval: global_step=835584, reward=717.81 +/- 2.35
+global_step=835684, episodic_return=768.45
+global_step=836532, episodic_return=669.89
+global_step=837492, episodic_return=755.70
+global_step=838420, episodic_return=726.84
+global_step=839400, episodic_return=782.58
+global_step=840416, episodic_return=789.98
+global_step=841364, episodic_return=745.78
+global_step=842260, episodic_return=696.40
+global_step=843204, episodic_return=743.42
+Eval: global_step=843776, reward=747.39 +/- 3.74
+global_step=844100, episodic_return=703.39
+global_step=845028, episodic_return=727.15
+global_step=846016, episodic_return=787.78
+global_step=846980, episodic_return=764.95
+global_step=847984, episodic_return=795.86
+global_step=848912, episodic_return=723.45
+global_step=849888, episodic_return=772.64
+global_step=850804, episodic_return=707.64
+global_step=851780, episodic_return=771.61
+Eval: global_step=851968, reward=777.74 +/- 5.55
+global_step=852732, episodic_return=753.76
+global_step=853656, episodic_return=718.87
+global_step=854668, episodic_return=798.83
+global_step=855580, episodic_return=716.78
+global_step=856564, episodic_return=790.19
+global_step=857476, episodic_return=718.77
+global_step=858452, episodic_return=763.92
+global_step=859436, episodic_return=774.73
+Eval: global_step=860160, reward=782.68 +/- 5.87
+global_step=860368, episodic_return=733.15
+global_step=861324, episodic_return=754.74
+global_step=862264, episodic_return=746.47
+global_step=863228, episodic_return=775.31
+global_step=864132, episodic_return=706.48
+global_step=865068, episodic_return=735.00
+global_step=866016, episodic_return=750.13
+global_step=867020, episodic_return=798.50
+global_step=867972, episodic_return=754.56
+Eval: global_step=868352, reward=808.62 +/- 3.62
+global_step=868944, episodic_return=767.29
+global_step=869872, episodic_return=732.23
+global_step=870804, episodic_return=738.88
+global_step=871780, episodic_return=773.26
+global_step=872784, episodic_return=802.02
+global_step=873752, episodic_return=763.33
+global_step=874748, episodic_return=788.32
+global_step=875740, episodic_return=792.10
+Eval: global_step=876544, reward=833.58 +/- 3.38
+global_step=876740, episodic_return=797.23
+global_step=877764, episodic_return=808.17
+global_step=878764, episodic_return=792.22
+global_step=879724, episodic_return=757.36
+global_step=880764, episodic_return=818.09
+global_step=881800, episodic_return=823.20
+global_step=882788, episodic_return=787.51
+global_step=883764, episodic_return=772.95
+global_step=884728, episodic_return=761.35
+Eval: global_step=884736, reward=846.12 +/- 4.65
+global_step=885692, episodic_return=770.79
+global_step=886676, episodic_return=782.17
+global_step=887704, episodic_return=827.18
+global_step=888644, episodic_return=741.45
+global_step=889344, episodic_return=475.94
+global_step=890340, episodic_return=800.48
+global_step=891336, episodic_return=798.27
+global_step=892356, episodic_return=820.51
+Eval: global_step=892928, reward=820.62 +/- 1.83
+global_step=893364, episodic_return=776.00
+global_step=894284, episodic_return=724.57
+global_step=895216, episodic_return=736.95
+global_step=896248, episodic_return=827.64
+global_step=897208, episodic_return=765.62
+global_step=898244, episodic_return=832.21
+global_step=899248, episodic_return=796.69
+global_step=900216, episodic_return=774.97
+Eval: global_step=901120, reward=834.65 +/- 4.34
+global_step=901188, episodic_return=777.36
+global_step=902232, episodic_return=843.99
+global_step=903304, episodic_return=848.89
+global_step=904244, episodic_return=749.03
+global_step=905248, episodic_return=804.11
+global_step=906260, episodic_return=803.72
+global_step=907284, episodic_return=822.86
+global_step=908316, episodic_return=811.43
+global_step=909284, episodic_return=768.02
+Eval: global_step=909312, reward=871.64 +/- 3.24
+global_step=910388, episodic_return=865.94
+global_step=911408, episodic_return=822.66
+global_step=912436, episodic_return=835.51
+global_step=913448, episodic_return=815.50
+global_step=914488, episodic_return=837.14
+global_step=915568, episodic_return=835.54
+global_step=916600, episodic_return=827.10
+Eval: global_step=917504, reward=900.12 +/- 3.28
+global_step=917632, episodic_return=822.51
+global_step=918744, episodic_return=882.74
+global_step=919800, episodic_return=851.13
+global_step=920848, episodic_return=850.01
+global_step=921892, episodic_return=848.37
+global_step=923016, episodic_return=900.65
+global_step=924132, episodic_return=898.56
+global_step=925164, episodic_return=832.79
+Eval: global_step=925696, reward=905.64 +/- 1.79
+global_step=926288, episodic_return=872.05
+global_step=927388, episodic_return=861.96
+global_step=928508, episodic_return=883.00
+global_step=929600, episodic_return=872.69
+global_step=930664, episodic_return=849.99
+global_step=931780, episodic_return=885.16
+global_step=932872, episodic_return=871.13
+Eval: global_step=933888, reward=916.38 +/- 3.16
+global_step=933952, episodic_return=875.54
+global_step=935064, episodic_return=899.48
+global_step=935744, episodic_return=442.59
+global_step=936868, episodic_return=907.63
+global_step=937968, episodic_return=877.64
+global_step=939100, episodic_return=886.53
+global_step=940268, episodic_return=909.64
+global_step=941284, episodic_return=825.55
+Eval: global_step=942080, reward=912.42 +/- 3.67
+global_step=942360, episodic_return=884.87
+global_step=943484, episodic_return=899.53
+global_step=944616, episodic_return=914.35
+global_step=945696, episodic_return=873.36
+global_step=946792, episodic_return=894.94
+global_step=947896, episodic_return=897.63
+global_step=949004, episodic_return=899.77
+global_step=950044, episodic_return=843.04
+Eval: global_step=950272, reward=908.43 +/- 3.17
+global_step=951176, episodic_return=930.03
+global_step=952308, episodic_return=923.37
+global_step=953428, episodic_return=908.92
+global_step=954508, episodic_return=885.66
+global_step=955708, episodic_return=956.61
+global_step=956840, episodic_return=915.10
+global_step=958020, episodic_return=932.63
+Eval: global_step=958464, reward=907.39 +/- 2.97
+global_step=959112, episodic_return=891.97
+global_step=960216, episodic_return=879.58
+global_step=961324, episodic_return=907.88
+global_step=962440, episodic_return=896.66
+global_step=963528, episodic_return=888.73
+global_step=964600, episodic_return=872.58
+global_step=965780, episodic_return=938.13
+Eval: global_step=966656, reward=921.91 +/- 3.57
+global_step=966928, episodic_return=908.78
+global_step=968092, episodic_return=922.13
+global_step=969144, episodic_return=858.84
+global_step=970320, episodic_return=931.49
+global_step=971420, episodic_return=892.20
+global_step=972500, episodic_return=880.64
+global_step=973528, episodic_return=843.20
+global_step=974568, episodic_return=850.87
+Eval: global_step=974848, reward=927.89 +/- 4.09
+global_step=975656, episodic_return=896.88
+global_step=976736, episodic_return=894.48
+global_step=977876, episodic_return=921.01
+global_step=979004, episodic_return=901.58
+global_step=980120, episodic_return=905.47
+global_step=981260, episodic_return=924.38
+global_step=982464, episodic_return=951.68
+Eval: global_step=983040, reward=910.38 +/- 3.31
+global_step=983552, episodic_return=902.17
+global_step=984672, episodic_return=916.78
+global_step=985772, episodic_return=914.38
+global_step=986880, episodic_return=903.53
+global_step=988008, episodic_return=932.02
+global_step=989148, episodic_return=922.58
+global_step=990184, episodic_return=854.51
+Eval: global_step=991232, reward=916.93 +/- 2.57
+global_step=991240, episodic_return=871.73
+global_step=992352, episodic_return=913.29
+global_step=993496, episodic_return=934.79
+global_step=994600, episodic_return=921.51
+global_step=995728, episodic_return=929.43
+global_step=996840, episodic_return=924.67
+global_step=997968, episodic_return=939.49
+global_step=999108, episodic_return=935.02
+Eval: global_step=999424, reward=919.26 +/- 3.81
+global_step=1000244, episodic_return=923.99
+global_step=1001440, episodic_return=971.78
+global_step=1002576, episodic_return=923.13
+global_step=1003648, episodic_return=875.75
+global_step=1004788, episodic_return=942.42
+global_step=1005832, episodic_return=866.68
+global_step=1006956, episodic_return=923.63
+Eval: global_step=1007616, reward=932.08 +/- 3.10
+global_step=1008072, episodic_return=930.45
+global_step=1009328, episodic_return=1034.74
+global_step=1010488, episodic_return=931.53
+global_step=1011768, episodic_return=1057.74
+global_step=1012888, episodic_return=912.85
+global_step=1014028, episodic_return=926.15
+global_step=1015176, episodic_return=929.65
+Eval: global_step=1015808, reward=936.38 +/- 4.39
+global_step=1016316, episodic_return=922.74
+global_step=1017416, episodic_return=904.41
+global_step=1018560, episodic_return=924.77
+global_step=1019976, episodic_return=1167.86
+global_step=1021288, episodic_return=1076.74
+global_step=1022400, episodic_return=920.05
+global_step=1023604, episodic_return=973.19
+Eval: global_step=1024000, reward=958.05 +/- 10.69
+global_step=1024732, episodic_return=897.05
+global_step=1025952, episodic_return=995.33
+global_step=1027144, episodic_return=960.24
+global_step=1028324, episodic_return=964.47
+global_step=1029464, episodic_return=924.73
+global_step=1030624, episodic_return=932.09
+global_step=1031820, episodic_return=961.98
+Eval: global_step=1032192, reward=953.10 +/- 7.35
+global_step=1032960, episodic_return=924.49
+global_step=1034296, episodic_return=1107.62
+global_step=1035496, episodic_return=976.13
+global_step=1036924, episodic_return=1170.12
+global_step=1038076, episodic_return=937.01
+global_step=1039220, episodic_return=925.01
+Eval: global_step=1040384, reward=996.41 +/- 8.65
+global_step=1040464, episodic_return=1018.72
+global_step=1041632, episodic_return=940.27
+global_step=1042788, episodic_return=923.81
+global_step=1043944, episodic_return=912.80
+global_step=1045168, episodic_return=991.76
+global_step=1046348, episodic_return=940.38
+global_step=1047556, episodic_return=995.67
+Eval: global_step=1048576, reward=994.44 +/- 10.93
+global_step=1048724, episodic_return=929.86
+global_step=1049856, episodic_return=929.52
+global_step=1050984, episodic_return=924.33
+global_step=1052120, episodic_return=945.09
+global_step=1053440, episodic_return=1087.41
+global_step=1054736, episodic_return=1073.46
+global_step=1056036, episodic_return=1068.21
+Eval: global_step=1056768, reward=954.29 +/- 8.06
+global_step=1057256, episodic_return=999.95
+global_step=1058456, episodic_return=964.59
+global_step=1059592, episodic_return=924.93
+global_step=1060744, episodic_return=950.77
+global_step=1061880, episodic_return=923.45
+global_step=1063080, episodic_return=960.66
+global_step=1064204, episodic_return=913.54
+Eval: global_step=1064960, reward=972.63 +/- 11.89
+global_step=1065400, episodic_return=947.48
+global_step=1066524, episodic_return=924.76
+global_step=1067804, episodic_return=1052.09
+global_step=1069092, episodic_return=1076.61
+global_step=1070364, episodic_return=1029.17
+global_step=1071512, episodic_return=948.69
+global_step=1072636, episodic_return=944.59
+Eval: global_step=1073152, reward=1033.20 +/- 30.52
+global_step=1073776, episodic_return=944.42
+global_step=1075132, episodic_return=1137.14
+global_step=1076260, episodic_return=936.13
+global_step=1077560, episodic_return=1064.27
+global_step=1078700, episodic_return=942.67
+global_step=1079892, episodic_return=964.49
+global_step=1081116, episodic_return=998.93
+Eval: global_step=1081344, reward=1047.69 +/- 23.59
+global_step=1082448, episodic_return=1103.64
+global_step=1083612, episodic_return=949.86
+global_step=1084756, episodic_return=929.93
+global_step=1086084, episodic_return=1100.94
+global_step=1087300, episodic_return=985.08
+global_step=1088552, episodic_return=1017.08
+Eval: global_step=1089536, reward=1101.54 +/- 33.96
+global_step=1089700, episodic_return=933.08
+global_step=1090852, episodic_return=948.31
+global_step=1092080, episodic_return=999.22
+global_step=1093464, episodic_return=1157.81
+global_step=1094612, episodic_return=940.91
+global_step=1095812, episodic_return=958.80
+global_step=1097040, episodic_return=984.74
+Eval: global_step=1097728, reward=1096.98 +/- 46.31
+global_step=1098496, episodic_return=1210.86
+global_step=1099748, episodic_return=1018.99
+global_step=1100884, episodic_return=958.34
+global_step=1102352, episodic_return=1213.11
+global_step=1103728, episodic_return=1155.82
+global_step=1104916, episodic_return=961.33
+Eval: global_step=1105920, reward=1006.86 +/- 7.98
+global_step=1106104, episodic_return=960.71
+global_step=1107456, episodic_return=1134.22
+global_step=1108700, episodic_return=1031.25
+global_step=1109880, episodic_return=960.76
+global_step=1111256, episodic_return=1144.77
+global_step=1112812, episodic_return=1308.42
+Eval: global_step=1114112, reward=1022.52 +/- 12.23
+global_step=1114228, episodic_return=1176.54
+global_step=1115820, episodic_return=1346.07
+global_step=1117144, episodic_return=1089.70
+global_step=1118360, episodic_return=998.36
+global_step=1119476, episodic_return=933.84
+global_step=1120692, episodic_return=991.42
+global_step=1121836, episodic_return=941.64
+Eval: global_step=1122304, reward=1124.36 +/- 57.33
+global_step=1123148, episodic_return=1100.97
+global_step=1124568, episodic_return=1197.25
+global_step=1125840, episodic_return=1051.67
+global_step=1127336, episodic_return=1242.12
+global_step=1128488, episodic_return=942.58
+global_step=1129860, episodic_return=1145.19
+Eval: global_step=1130496, reward=1169.55 +/- 25.91
+global_step=1131332, episodic_return=1207.03
+global_step=1132780, episodic_return=1198.71
+global_step=1134224, episodic_return=1197.41
+global_step=1135596, episodic_return=1155.15
+global_step=1136960, episodic_return=1148.51
+global_step=1138424, episodic_return=1209.96
+Eval: global_step=1138688, reward=1244.19 +/- 46.42
+global_step=1139848, episodic_return=1187.42
+global_step=1141152, episodic_return=1097.74
+global_step=1142612, episodic_return=1220.13
+global_step=1143828, episodic_return=1003.31
+global_step=1145104, episodic_return=1041.36
+global_step=1146352, episodic_return=1017.93
+Eval: global_step=1146880, reward=1182.67 +/- 29.24
+global_step=1147860, episodic_return=1250.96
+global_step=1149540, episodic_return=1415.35
+global_step=1150776, episodic_return=1012.11
+global_step=1152028, episodic_return=1013.46
+global_step=1153176, episodic_return=942.63
+global_step=1154380, episodic_return=970.37
+Eval: global_step=1155072, reward=1210.47 +/- 10.31
+global_step=1155576, episodic_return=979.93
+global_step=1156500, episodic_return=745.67
+global_step=1157644, episodic_return=944.00
+global_step=1158832, episodic_return=969.62
+global_step=1160332, episodic_return=1241.58
+global_step=1161792, episodic_return=1212.83
+global_step=1163228, episodic_return=1196.53
+Eval: global_step=1163264, reward=1077.47 +/- 46.60
+global_step=1164492, episodic_return=1042.37
+global_step=1165912, episodic_return=1196.62
+global_step=1167152, episodic_return=1027.96
+global_step=1168448, episodic_return=1071.12
+global_step=1169716, episodic_return=1042.52
+global_step=1171024, episodic_return=1081.26
+Eval: global_step=1171456, reward=1119.40 +/- 50.38
+global_step=1172488, episodic_return=1208.50
+global_step=1175252, episodic_return=2311.43
+global_step=1176996, episodic_return=1473.77
+global_step=1179412, episodic_return=2007.36
+Eval: global_step=1179648, reward=1241.51 +/- 65.88
+global_step=1180864, episodic_return=1192.70
+global_step=1182012, episodic_return=946.06
+global_step=1183212, episodic_return=955.16
+global_step=1184496, episodic_return=1050.63
+global_step=1185832, episodic_return=1105.49
+global_step=1187104, episodic_return=1048.11
+Eval: global_step=1187840, reward=1087.51 +/- 22.46
+global_step=1188388, episodic_return=1038.34
+global_step=1189536, episodic_return=918.92
+global_step=1190936, episodic_return=1171.47
+global_step=1192132, episodic_return=969.02
+global_step=1193340, episodic_return=975.17
+global_step=1194504, episodic_return=942.76
+global_step=1195988, episodic_return=1221.63
+Eval: global_step=1196032, reward=1199.55 +/- 38.23
+global_step=1197416, episodic_return=1185.46
+global_step=1198612, episodic_return=968.05
+global_step=1200024, episodic_return=1165.35
+global_step=1201596, episodic_return=1313.62
+global_step=1202752, episodic_return=934.44
+global_step=1203972, episodic_return=977.73
+Eval: global_step=1204224, reward=1181.40 +/- 43.15
+global_step=1205280, episodic_return=1054.85
+global_step=1207100, episodic_return=1508.90
+global_step=1208384, episodic_return=1050.93
+global_step=1209568, episodic_return=939.71
+global_step=1210884, episodic_return=1082.39
+global_step=1212128, episodic_return=1017.99
+Eval: global_step=1212416, reward=1120.08 +/- 51.02
+global_step=1213404, episodic_return=1024.94
+global_step=1214564, episodic_return=918.83
+global_step=1216152, episodic_return=1327.49
+global_step=1217772, episodic_return=1346.12
+global_step=1219032, episodic_return=1036.24
+global_step=1220468, episodic_return=1190.32
+Eval: global_step=1220608, reward=1075.89 +/- 6.61
+global_step=1221944, episodic_return=1199.93
+global_step=1223332, episodic_return=1145.51
+global_step=1224812, episodic_return=1209.36
+global_step=1226084, episodic_return=1036.20
+global_step=1227300, episodic_return=975.02
+Eval: global_step=1228800, reward=1096.42 +/- 24.50
+global_step=1228840, episodic_return=1265.85
+global_step=1230688, episodic_return=1548.94
+global_step=1232176, episodic_return=1231.18
+global_step=1234396, episodic_return=1849.46
+global_step=1235840, episodic_return=1201.60
+Eval: global_step=1236992, reward=1087.48 +/- 6.10
+global_step=1237132, episodic_return=1063.40
+global_step=1238540, episodic_return=1152.33
+global_step=1239940, episodic_return=1146.17
+global_step=1241256, episodic_return=1063.67
+global_step=1242824, episodic_return=1303.99
+global_step=1244344, episodic_return=1260.06
+Eval: global_step=1245184, reward=1152.52 +/- 42.87
+global_step=1245672, episodic_return=1069.04
+global_step=1248660, episodic_return=2467.88
+global_step=1250160, episodic_return=1219.11
+global_step=1251536, episodic_return=1139.32
+global_step=1252932, episodic_return=1149.59
+Eval: global_step=1253376, reward=1222.82 +/- 17.77
+global_step=1254728, episodic_return=1495.01
+global_step=1256376, episodic_return=1391.12
+global_step=1257920, episodic_return=1275.58
+global_step=1259480, episodic_return=1286.37
+global_step=1260784, episodic_return=1075.91
+Eval: global_step=1261568, reward=1372.58 +/- 117.15
+global_step=1262308, episodic_return=1262.55
+global_step=1263908, episodic_return=1349.77
+global_step=1265244, episodic_return=1120.24
+global_step=1266984, episodic_return=1439.33
+global_step=1268508, episodic_return=1262.31
+Eval: global_step=1269760, reward=1714.78 +/- 511.70
+global_step=1269956, episodic_return=1183.98
+global_step=1271772, episodic_return=1509.71
+global_step=1273088, episodic_return=1054.82
+global_step=1275944, episodic_return=2378.97
+global_step=1277416, episodic_return=1194.96
+Eval: global_step=1277952, reward=2760.06 +/- 718.08
+global_step=1278868, episodic_return=1186.04
+global_step=1280712, episodic_return=1518.17
+global_step=1282156, episodic_return=1193.17
+global_step=1283496, episodic_return=1124.23
+global_step=1285132, episodic_return=1379.78
+Eval: global_step=1286144, reward=2306.04 +/- 788.54
+global_step=1286596, episodic_return=1212.23
+global_step=1288340, episodic_return=1465.57
+global_step=1289796, episodic_return=1191.50
+global_step=1292488, episodic_return=2240.56
+global_step=1293932, episodic_return=1190.67
+Eval: global_step=1294336, reward=2190.75 +/- 862.68
+global_step=1296192, episodic_return=1895.45
+global_step=1297996, episodic_return=1499.01
+global_step=1299208, episodic_return=1000.98
+global_step=1300636, episodic_return=1186.58
+global_step=1301792, episodic_return=959.54
+Eval: global_step=1302528, reward=2321.29 +/- 819.24
+global_step=1303508, episodic_return=1430.99
+global_step=1304696, episodic_return=974.46
+global_step=1306312, episodic_return=1348.08
+global_step=1307876, episodic_return=1292.95
+global_step=1309412, episodic_return=1291.70
+Eval: global_step=1310720, reward=2680.14 +/- 854.42
+global_step=1310852, episodic_return=1199.32
+global_step=1312912, episodic_return=1720.66
+global_step=1314416, episodic_return=1228.41
+global_step=1317748, episodic_return=2755.40
+Eval: global_step=1318912, reward=1051.49 +/- 64.60
+global_step=1319240, episodic_return=1215.39
+global_step=1320808, episodic_return=1323.77
+global_step=1322084, episodic_return=1073.51
+global_step=1323272, episodic_return=981.08
+global_step=1324932, episodic_return=1403.59
+global_step=1326024, episodic_return=925.32
+Eval: global_step=1327104, reward=2817.82 +/- 809.27
+global_step=1327148, episodic_return=950.22
+global_step=1328920, episodic_return=1451.17
+global_step=1330936, episodic_return=1702.35
+global_step=1332104, episodic_return=972.43
+global_step=1333976, episodic_return=1566.71
+Eval: global_step=1335296, reward=866.44 +/- 32.22
+global_step=1335572, episodic_return=1342.52
+global_step=1338400, episodic_return=2394.46
+global_step=1340424, episodic_return=1689.09
+global_step=1341480, episodic_return=895.58
+global_step=1342812, episodic_return=1136.62
+Eval: global_step=1343488, reward=828.57 +/- 16.57
+global_step=1345444, episodic_return=2203.95
+global_step=1346612, episodic_return=976.77
+global_step=1347680, episodic_return=904.88
+Eval: global_step=1351680, reward=800.79 +/- 37.99
+global_step=1351684, episodic_return=3235.92
+global_step=1352644, episodic_return=814.71
+global_step=1353520, episodic_return=723.18
+global_step=1354688, episodic_return=966.54
+global_step=1356024, episodic_return=1139.61
+global_step=1356996, episodic_return=824.55
+global_step=1357952, episodic_return=792.15
+Eval: global_step=1359872, reward=1042.77 +/- 72.58
+global_step=1361956, episodic_return=3224.88
+global_step=1363096, episodic_return=953.52
+global_step=1367100, episodic_return=3238.33
+Eval: global_step=1368064, reward=1777.40 +/- 855.39
+global_step=1368944, episodic_return=1549.18
+global_step=1371128, episodic_return=1832.78
+global_step=1374112, episodic_return=2498.34
+Eval: global_step=1376256, reward=2639.64 +/- 943.35
+global_step=1378116, episodic_return=3246.16
+global_step=1379568, episodic_return=1219.59
+global_step=1383572, episodic_return=3255.56
+Eval: global_step=1384448, reward=2204.39 +/- 1055.29
+global_step=1385176, episodic_return=1348.43
+global_step=1387244, episodic_return=1744.62
+global_step=1389172, episodic_return=1623.79
+global_step=1391716, episodic_return=2156.33
+Eval: global_step=1392640, reward=2043.14 +/- 1083.87
+global_step=1393040, episodic_return=1125.30
+global_step=1394144, episodic_return=933.11
+global_step=1396724, episodic_return=2197.98
+global_step=1398404, episodic_return=1418.34
+global_step=1399388, episodic_return=842.85
+global_step=1400272, episodic_return=729.35
+Eval: global_step=1400832, reward=2661.35 +/- 951.41
+global_step=1402660, episodic_return=2007.36
+global_step=1404124, episodic_return=1216.42
+global_step=1405472, episodic_return=1144.90
+global_step=1406640, episodic_return=973.59
+global_step=1407712, episodic_return=915.10
+Eval: global_step=1409024, reward=1690.61 +/- 536.42
+global_step=1409696, episodic_return=1680.93
+global_step=1412352, episodic_return=2232.18
+global_step=1413560, episodic_return=1007.12
+global_step=1415492, episodic_return=1646.83
+global_step=1417012, episodic_return=1268.45
+Eval: global_step=1417216, reward=1806.89 +/- 752.64
+global_step=1418192, episodic_return=976.62
+global_step=1419540, episodic_return=1155.04
+global_step=1422312, episodic_return=2359.27
+Eval: global_step=1425408, reward=1262.72 +/- 26.60
+global_step=1426112, episodic_return=3199.47
+global_step=1427852, episodic_return=1457.55
+global_step=1431856, episodic_return=3258.61
+global_step=1433224, episodic_return=1121.45
+Eval: global_step=1433600, reward=1396.07 +/- 148.89
+global_step=1436196, episodic_return=2512.66
+global_step=1437956, episodic_return=1470.82
+global_step=1439528, episodic_return=1330.42
+global_step=1441012, episodic_return=1243.32
+Eval: global_step=1441792, reward=1954.53 +/- 888.29
+global_step=1443616, episodic_return=2215.59
+global_step=1445260, episodic_return=1401.57
+global_step=1447028, episodic_return=1477.21
+Eval: global_step=1449984, reward=816.90 +/- 62.78
+global_step=1451032, episodic_return=3343.34
+global_step=1452608, episodic_return=1347.31
+global_step=1453488, episodic_return=733.91
+global_step=1454352, episodic_return=716.06
+global_step=1455648, episodic_return=1100.71
+global_step=1456672, episodic_return=881.97
+global_step=1457540, episodic_return=717.87
+Eval: global_step=1458176, reward=1640.23 +/- 803.98
+global_step=1458436, episodic_return=742.84
+global_step=1459496, episodic_return=876.28
+global_step=1462332, episodic_return=2381.44
+global_step=1465056, episodic_return=2278.85
+global_step=1466096, episodic_return=903.62
+Eval: global_step=1466368, reward=2062.62 +/- 778.10
+global_step=1467996, episodic_return=1612.55
+global_step=1469784, episodic_return=1493.17
+global_step=1472048, episodic_return=1921.52
+Eval: global_step=1474560, reward=2219.85 +/- 681.74
+global_step=1475768, episodic_return=3124.60
+global_step=1478772, episodic_return=2494.41
+global_step=1482396, episodic_return=3016.75
+Eval: global_step=1482752, reward=3229.67 +/- 1.87
+global_step=1486400, episodic_return=3239.18
+global_step=1490404, episodic_return=3212.70
+Eval: global_step=1490944, reward=3220.01 +/- 2.20
+global_step=1494408, episodic_return=3222.30
+global_step=1498340, episodic_return=3267.97
+Eval: global_step=1499136, reward=3234.48 +/- 2.19
+global_step=1502040, episodic_return=3101.21
+global_step=1506044, episodic_return=3249.89
+Eval: global_step=1507328, reward=3233.25 +/- 3.99
+global_step=1507596, episodic_return=1279.02
+global_step=1510512, episodic_return=2415.38
+global_step=1514516, episodic_return=3221.50
+Eval: global_step=1515520, reward=3198.79 +/- 2.32
+global_step=1517760, episodic_return=2734.82
+global_step=1519176, episodic_return=1160.37
+global_step=1520920, episodic_return=1439.88
+Eval: global_step=1523712, reward=3217.18 +/- 1.11
+global_step=1524924, episodic_return=3166.49
+global_step=1528488, episodic_return=2984.38
+global_step=1530252, episodic_return=1463.65
+Eval: global_step=1531904, reward=3200.12 +/- 2.47
+global_step=1534256, episodic_return=3196.58
+global_step=1538260, episodic_return=3179.46
+global_step=1539568, episodic_return=1062.06
+Eval: global_step=1540096, reward=3190.36 +/- 2.12
+global_step=1543572, episodic_return=3185.60
+global_step=1547576, episodic_return=3179.31
+Eval: global_step=1548288, reward=3223.53 +/- 3.12
+global_step=1549520, episodic_return=1593.44
+global_step=1551588, episodic_return=1688.65
+global_step=1553368, episodic_return=1496.37
+global_step=1556472, episodic_return=2553.38
+Eval: global_step=1556480, reward=3226.26 +/- 2.74
+global_step=1559868, episodic_return=2841.21
+global_step=1561912, episodic_return=1702.87
+Eval: global_step=1564672, reward=3188.82 +/- 2.19
+global_step=1565160, episodic_return=2733.10
+global_step=1569164, episodic_return=3174.90
+Eval: global_step=1572864, reward=3169.27 +/- 2.42
+global_step=1573168, episodic_return=3162.38
+global_step=1577172, episodic_return=3117.51
+Eval: global_step=1581056, reward=3119.01 +/- 3.14
+global_step=1581176, episodic_return=3142.98
+global_step=1585180, episodic_return=3081.62
+global_step=1589184, episodic_return=3109.78
+Eval: global_step=1589248, reward=3092.24 +/- 3.08
+global_step=1593188, episodic_return=3053.08
+global_step=1597192, episodic_return=3081.99
+Eval: global_step=1597440, reward=3050.38 +/- 3.07
+global_step=1598272, episodic_return=869.83
+global_step=1602276, episodic_return=3067.19
+Eval: global_step=1605632, reward=3047.52 +/- 1.50
+global_step=1606280, episodic_return=3042.73
+global_step=1610284, episodic_return=3026.16
+Eval: global_step=1613824, reward=3101.64 +/- 1.87
+global_step=1614288, episodic_return=3066.53
+global_step=1618292, episodic_return=3117.47
+Eval: global_step=1622016, reward=3041.39 +/- 2.82
+global_step=1622296, episodic_return=3131.33
+global_step=1626300, episodic_return=3060.34
+Eval: global_step=1630208, reward=3051.40 +/- 1.47
+global_step=1630304, episodic_return=3067.45
+global_step=1634308, episodic_return=3081.53
+global_step=1638312, episodic_return=3065.93
+Eval: global_step=1638400, reward=3036.92 +/- 3.38
+global_step=1639756, episodic_return=1173.06
+global_step=1643760, episodic_return=3084.31
+Eval: global_step=1646592, reward=3046.51 +/- 4.41
+global_step=1647764, episodic_return=3056.48
+global_step=1651768, episodic_return=3083.82
+Eval: global_step=1654784, reward=3068.92 +/- 3.24
+global_step=1655772, episodic_return=3087.05
+global_step=1659776, episodic_return=3051.27
+Eval: global_step=1662976, reward=3070.31 +/- 2.53
+global_step=1663780, episodic_return=3062.34
+global_step=1667784, episodic_return=3068.51
+Eval: global_step=1671168, reward=3069.79 +/- 2.29
+global_step=1671788, episodic_return=3068.91
+global_step=1675792, episodic_return=3066.79
+Eval: global_step=1679360, reward=3083.97 +/- 3.75
+global_step=1679796, episodic_return=3057.40
+global_step=1683800, episodic_return=3080.83
+Eval: global_step=1687552, reward=3068.81 +/- 3.24
+global_step=1687804, episodic_return=3079.14
+global_step=1691808, episodic_return=3068.39
+Eval: global_step=1695744, reward=3054.14 +/- 2.95
+global_step=1695812, episodic_return=3103.30
+global_step=1699816, episodic_return=3061.01
+global_step=1703820, episodic_return=3043.88
+Eval: global_step=1703936, reward=2853.30 +/- 445.70
+global_step=1707824, episodic_return=3047.03
+global_step=1710652, episodic_return=2304.62
+Eval: global_step=1712128, reward=3010.57 +/- 3.73
+global_step=1714656, episodic_return=3026.84
+global_step=1718660, episodic_return=3050.86
+Eval: global_step=1720320, reward=3001.48 +/- 4.87
+global_step=1720472, episodic_return=1465.98
+global_step=1724476, episodic_return=3043.33
+global_step=1728480, episodic_return=3035.22
+Eval: global_step=1728512, reward=3008.83 +/- 5.28
+global_step=1732484, episodic_return=3067.68
+global_step=1736488, episodic_return=3078.72
+Eval: global_step=1736704, reward=2822.24 +/- 557.29
+global_step=1740492, episodic_return=3059.68
+global_step=1744496, episodic_return=3079.17
+Eval: global_step=1744896, reward=3021.47 +/- 3.67
+global_step=1747712, episodic_return=2595.91
+global_step=1750100, episodic_return=1897.08
+Eval: global_step=1753088, reward=3029.26 +/- 8.82
+global_step=1754104, episodic_return=3059.96
+global_step=1757596, episodic_return=2836.30
+Eval: global_step=1761280, reward=3054.51 +/- 9.41
+global_step=1761600, episodic_return=3144.96
+global_step=1765604, episodic_return=3092.48
+global_step=1767764, episodic_return=1819.81
+Eval: global_step=1769472, reward=3054.50 +/- 7.97
+global_step=1771768, episodic_return=3104.26
+global_step=1775772, episodic_return=3102.49
+global_step=1776900, episodic_return=884.54
+Eval: global_step=1777664, reward=3047.17 +/- 5.01
+global_step=1778236, episodic_return=1118.23
+global_step=1782240, episodic_return=3111.34
+Eval: global_step=1785856, reward=3024.87 +/- 4.63
+global_step=1786244, episodic_return=3085.76
+global_step=1787880, episodic_return=1407.59
+global_step=1789404, episodic_return=1258.97
+global_step=1793408, episodic_return=3103.81
+Eval: global_step=1794048, reward=2843.39 +/- 525.76
+global_step=1797412, episodic_return=3047.12
+global_step=1798924, episodic_return=1276.26
+global_step=1800068, episodic_return=902.09
+Eval: global_step=1802240, reward=1253.84 +/- 587.86
+global_step=1804072, episodic_return=3064.14
+global_step=1808076, episodic_return=3022.10
+global_step=1809352, episodic_return=1018.88
+Eval: global_step=1810432, reward=2404.36 +/- 745.28
+global_step=1813356, episodic_return=3051.58
+global_step=1817360, episodic_return=3066.53
+Eval: global_step=1818624, reward=2974.41 +/- 3.11
+global_step=1821364, episodic_return=3059.56
+global_step=1825368, episodic_return=3054.43
+Eval: global_step=1826816, reward=2996.03 +/- 5.69
+global_step=1829372, episodic_return=3049.21
+global_step=1833376, episodic_return=3043.40
+Eval: global_step=1835008, reward=2990.42 +/- 3.46
+global_step=1837380, episodic_return=3075.31
+global_step=1838536, episodic_return=897.30
+global_step=1842540, episodic_return=3051.05
+Eval: global_step=1843200, reward=2994.72 +/- 5.96
+global_step=1846544, episodic_return=3076.63
+global_step=1850548, episodic_return=3094.74
+Eval: global_step=1851392, reward=2969.42 +/- 4.55
+global_step=1854552, episodic_return=3066.22
+global_step=1858556, episodic_return=3051.42
+Eval: global_step=1859584, reward=2943.84 +/- 11.97
+global_step=1860280, episodic_return=1436.57
+global_step=1861852, episodic_return=1309.19
+global_step=1865856, episodic_return=3037.92
+Eval: global_step=1867776, reward=2966.03 +/- 8.37
+global_step=1869860, episodic_return=3080.48
+global_step=1873864, episodic_return=3074.50
+global_step=1875580, episodic_return=1437.98
+Eval: global_step=1875968, reward=2997.79 +/- 6.68
+global_step=1876828, episodic_return=1062.94
+global_step=1880832, episodic_return=3064.32
+global_step=1882460, episodic_return=1354.96
+global_step=1884100, episodic_return=1374.41
+Eval: global_step=1884160, reward=3066.52 +/- 13.19
+global_step=1885224, episodic_return=940.22
+global_step=1886544, episodic_return=1129.83
+global_step=1890548, episodic_return=3129.07
+global_step=1892328, episodic_return=1481.59
+Eval: global_step=1892352, reward=3052.90 +/- 26.47
+global_step=1896332, episodic_return=3124.76
+global_step=1897700, episodic_return=1162.52
+Eval: global_step=1900544, reward=3126.97 +/- 26.28
+global_step=1901032, episodic_return=2717.71
+global_step=1905036, episodic_return=3120.98
+global_step=1907836, episodic_return=2288.79
+Eval: global_step=1908736, reward=2697.43 +/- 660.37
+global_step=1910976, episodic_return=2564.69
+global_step=1913060, episodic_return=1748.12
+Eval: global_step=1916928, reward=3136.78 +/- 16.80
+global_step=1917064, episodic_return=3147.28
+global_step=1921068, episodic_return=3114.77
+global_step=1922464, episodic_return=1195.71
+global_step=1923640, episodic_return=970.12
+Eval: global_step=1925120, reward=3168.92 +/- 6.07
+global_step=1925372, episodic_return=1448.03
+global_step=1929376, episodic_return=3163.62
+global_step=1930556, episodic_return=974.21
+global_step=1931828, episodic_return=1055.41
+global_step=1933092, episodic_return=1057.19
+Eval: global_step=1933312, reward=3183.57 +/- 8.99
+global_step=1937096, episodic_return=3245.27
+global_step=1938440, episodic_return=1157.02
+global_step=1939728, episodic_return=1073.82
+Eval: global_step=1941504, reward=3190.07 +/- 8.16
+global_step=1942184, episodic_return=2016.68
+global_step=1945592, episodic_return=2843.09
+global_step=1949596, episodic_return=3158.33
+Eval: global_step=1949696, reward=3201.39 +/- 6.94
+global_step=1950776, episodic_return=972.01
+global_step=1954780, episodic_return=3165.76
+Eval: global_step=1957888, reward=2867.86 +/- 673.35
+global_step=1958784, episodic_return=3152.40
+global_step=1960396, episodic_return=1363.50
+global_step=1961428, episodic_return=853.15
+global_step=1963988, episodic_return=2072.04
+global_step=1965144, episodic_return=970.21
+Eval: global_step=1966080, reward=2431.81 +/- 945.99
+global_step=1966204, episodic_return=914.00
+global_step=1967044, episodic_return=676.80
+global_step=1968728, episodic_return=1431.60
+global_step=1971420, episodic_return=2208.39
+global_step=1972688, episodic_return=1059.49
+Eval: global_step=1974272, reward=2457.07 +/- 923.31
+global_step=1974692, episodic_return=1668.53
+global_step=1975896, episodic_return=994.67
+global_step=1978284, episodic_return=1932.66
+global_step=1979052, episodic_return=616.88
+global_step=1980452, episodic_return=1198.65
+global_step=1981592, episodic_return=948.37
+Eval: global_step=1982464, reward=2500.42 +/- 872.71
+global_step=1984796, episodic_return=2669.45
+global_step=1987244, episodic_return=2041.33
+global_step=1988900, episodic_return=1372.11
+global_step=1989992, episodic_return=928.10
+Eval: global_step=1990656, reward=1407.27 +/- 649.37
+global_step=1990932, episodic_return=784.90
+global_step=1992144, episodic_return=1024.50
+global_step=1993088, episodic_return=788.19
+global_step=1994952, episodic_return=1585.43
+global_step=1995764, episodic_return=647.92
+global_step=1996844, episodic_return=920.54
+global_step=1997936, episodic_return=932.16
+Eval: global_step=1998848, reward=2926.06 +/- 621.09
+Training completed. Total steps: 1998848
+Starting Distillation in mode gaussian...
+Generating fixed dataset of max 100000 samples...
+
+[1/12] Initializing Student with frac=1.0, samples=10000 - student_1
+Teacher Architecture: 2 layers, 64 neurons
+Student Architecture: 2 layers, 64 neurons (frac: 1.0)
+
+[2/12] Initializing Student with frac=0.5, samples=10000 - student_2
+Teacher Architecture: 2 layers, 64 neurons
+Student Architecture: 2 layers, 32 neurons (frac: 0.5)
+
+[3/12] Initializing Student with frac=0.25, samples=10000 - student_3
+Teacher Architecture: 2 layers, 64 neurons
+Student Architecture: 2 layers, 16 neurons (frac: 0.25)
+
+[4/12] Initializing Student with frac=1.0, samples=25000 - student_4
+Teacher Architecture: 2 layers, 64 neurons
+Student Architecture: 2 layers, 64 neurons (frac: 1.0)
+
+[5/12] Initializing Student with frac=0.5, samples=25000 - student_5
+Teacher Architecture: 2 layers, 64 neurons
+Student Architecture: 2 layers, 32 neurons (frac: 0.5)
+
+[6/12] Initializing Student with frac=0.25, samples=25000 - student_6
+Teacher Architecture: 2 layers, 64 neurons
+Student Architecture: 2 layers, 16 neurons (frac: 0.25)
+
+[7/12] Initializing Student with frac=1.0, samples=50000 - student_7
+Teacher Architecture: 2 layers, 64 neurons
+Student Architecture: 2 layers, 64 neurons (frac: 1.0)
+
+[8/12] Initializing Student with frac=0.5, samples=50000 - student_8
+Teacher Architecture: 2 layers, 64 neurons
+Student Architecture: 2 layers, 32 neurons (frac: 0.5)
+
+[9/12] Initializing Student with frac=0.25, samples=50000 - student_9
+Teacher Architecture: 2 layers, 64 neurons
+Student Architecture: 2 layers, 16 neurons (frac: 0.25)
+
+[10/12] Initializing Student with frac=1.0, samples=100000 - student_10
+Teacher Architecture: 2 layers, 64 neurons
+Student Architecture: 2 layers, 64 neurons (frac: 1.0)
+
+[11/12] Initializing Student with frac=0.5, samples=100000 - student_11
+Teacher Architecture: 2 layers, 64 neurons
+Student Architecture: 2 layers, 32 neurons (frac: 0.5)
+
+[12/12] Initializing Student with frac=0.25, samples=100000 - student_12
+Teacher Architecture: 2 layers, 64 neurons
+Student Architecture: 2 layers, 16 neurons (frac: 0.25)
+Robustness (student_1_robustness) Noise=0.000 | Mean Reward: 1018.98 +- 161.97
+Robustness (teacher_robustness) Noise=0.000 | Mean Reward: 2998.04 +- 561.01
+Robustness (student_2_robustness) Noise=0.000 | Mean Reward: 1300.74 +- 188.10
+Robustness (student_3_robustness) Noise=0.000 | Mean Reward: 342.25 +- 45.35
+Robustness (student_4_robustness) Noise=0.000 | Mean Reward: 848.30 +- 43.71
+Robustness (student_5_robustness) Noise=0.000 | Mean Reward: 1069.71 +- 141.24
+Robustness (student_6_robustness) Noise=0.000 | Mean Reward: 2194.62 +- 496.19
+Robustness (student_7_robustness) Noise=0.000 | Mean Reward: 1500.23 +- 777.92
+Robustness (student_8_robustness) Noise=0.000 | Mean Reward: 1543.50 +- 491.11
+Robustness (student_9_robustness) Noise=0.000 | Mean Reward: 1340.03 +- 608.50
+Robustness (student_10_robustness) Noise=0.000 | Mean Reward: 3110.31 +- 348.87
+Robustness (student_11_robustness) Noise=0.000 | Mean Reward: 3128.97 +- 319.54
+Robustness (student_12_robustness) Noise=0.000 | Mean Reward: 2540.78 +- 867.43

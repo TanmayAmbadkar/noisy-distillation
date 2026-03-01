@@ -1,0 +1,10 @@
+mode: mixed
+batch_size: 2048
+epochs: 100
+distil_samples: 400000
+loss: mean_mse
+sampling:
+  mode: mixed
+  mix_ratio: 0.5
+  synth_mode: uniform_data_bounds
+  expansion: 0.1

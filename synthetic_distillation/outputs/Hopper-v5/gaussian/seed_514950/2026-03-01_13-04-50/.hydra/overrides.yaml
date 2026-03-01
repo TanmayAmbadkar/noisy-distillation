@@ -1,0 +1,7 @@
+- algo.total_timesteps=100
+- algo.num_envs=4
+- env=hopper
+- seed=514950
+- distill=gaussian
+- distill.distil_samples=[10000, 25000, 50000, 100000]
+- model.distil_neurons=[1.0, 0.5, 0.25]

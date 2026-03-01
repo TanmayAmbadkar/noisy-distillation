@@ -1,0 +1,2 @@
+- algo.total_timesteps=10240
+- algo.num_envs=1

@@ -1,0 +1,31 @@
+env:
+  name: CartPole-v1
+  type: discrete
+  max_episode_steps: 500
+algo:
+  lr: 0.0003
+  gamma: 0.99
+  gae_lambda: 0.95
+  clip_eps: 0.2
+  entropy_coef: 0.01
+  ppo_epochs: 10
+  rollout_steps: 2048
+  minibatch_size: 256
+  updates: 400
+distill:
+  mode: trajectory
+  batch_size: 2048
+  epochs: 5000
+  loss: mean_mse
+model:
+  hidden_sizes:
+  - 64
+  - 64
+experiment:
+  name: baseline
+  description: Baseline experiment with default parameters.
+seed: 0
+device: cpu
+log:
+  use_tensorboard: true
+  log_interval: 10

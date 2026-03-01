@@ -1,0 +1,26 @@
+defaults:
+  - env: cartpole
+  - algo: ppo
+  - distill: uniform_data_bounds
+  - model: small
+  - experiment: baseline
+  - override hydra/job_logging: colorlog
+  - override hydra/hydra_logging: colorlog
+
+hydra:
+  run:
+    dir: outputs/${env.name}/${distill.mode}/seed_${seed}/${now:%Y-%m-%d_%H-%M-%S}
+  sweep:
+    dir: outputs/multirun/${now:%Y-%m-%d}/${now:%H-%M-%S}
+    subdir: ${env.name}/${distill.mode}/seed_${seed}
+
+seed: 0
+device: cpu
+
+log:
+  use_tensorboard: true
+  log_interval: 10
+
+robustness:
+  noise_levels: "[]"
+  episodes: 100

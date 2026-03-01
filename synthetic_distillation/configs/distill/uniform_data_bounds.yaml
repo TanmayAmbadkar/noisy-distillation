@@ -1,0 +1,8 @@
+mode: uniform_data_bounds
+batch_size: 2048
+epochs: 100
+distil_samples: 400000
+loss: mean_mse
+sampling:
+  mode: uniform_data_bounds
+  expansion: 0.1

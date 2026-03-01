@@ -1,0 +1,11 @@
+# @package _global_
+defaults:
+  - override /env: halfcheetah
+
+hydra:
+  mode: MULTIRUN
+  sweeper:
+    params:
+      seed: 0,1,2,3,4
+      env: hopper,halfcheetah,ant
+      distill: trajectory,gaussian,uniform_data_bounds,mixed

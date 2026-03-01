@@ -1,0 +1,50 @@
+Training completed. Total steps: 1998848
+[1/12] Initializing Student with frac=1.0, samples=10000 - student_1
+Teacher Architecture: 2 layers, 64 neurons
+Student Architecture: 2 layers, 64 neurons (frac: 1.0)
+[2/12] Initializing Student with frac=0.5, samples=10000 - student_2
+Teacher Architecture: 2 layers, 64 neurons
+Student Architecture: 2 layers, 32 neurons (frac: 0.5)
+[3/12] Initializing Student with frac=0.25, samples=10000 - student_3
+Teacher Architecture: 2 layers, 64 neurons
+Student Architecture: 2 layers, 16 neurons (frac: 0.25)
+[4/12] Initializing Student with frac=1.0, samples=25000 - student_4
+Teacher Architecture: 2 layers, 64 neurons
+Student Architecture: 2 layers, 64 neurons (frac: 1.0)
+[5/12] Initializing Student with frac=0.5, samples=25000 - student_5
+Teacher Architecture: 2 layers, 64 neurons
+Student Architecture: 2 layers, 32 neurons (frac: 0.5)
+[6/12] Initializing Student with frac=0.25, samples=25000 - student_6
+Teacher Architecture: 2 layers, 64 neurons
+Student Architecture: 2 layers, 16 neurons (frac: 0.25)
+[7/12] Initializing Student with frac=1.0, samples=50000 - student_7
+Teacher Architecture: 2 layers, 64 neurons
+Student Architecture: 2 layers, 64 neurons (frac: 1.0)
+[8/12] Initializing Student with frac=0.5, samples=50000 - student_8
+Teacher Architecture: 2 layers, 64 neurons
+Student Architecture: 2 layers, 32 neurons (frac: 0.5)
+[9/12] Initializing Student with frac=0.25, samples=50000 - student_9
+Teacher Architecture: 2 layers, 64 neurons
+Student Architecture: 2 layers, 16 neurons (frac: 0.25)
+[10/12] Initializing Student with frac=1.0, samples=100000 - student_10
+Teacher Architecture: 2 layers, 64 neurons
+Student Architecture: 2 layers, 64 neurons (frac: 1.0)
+[11/12] Initializing Student with frac=0.5, samples=100000 - student_11
+Teacher Architecture: 2 layers, 64 neurons
+Student Architecture: 2 layers, 32 neurons (frac: 0.5)
+[12/12] Initializing Student with frac=0.25, samples=100000 - student_12
+Teacher Architecture: 2 layers, 64 neurons
+Student Architecture: 2 layers, 16 neurons (frac: 0.25)
+Robustness (student_1_robustness) Noise=0.000 | Mean Reward: 593.97 +- 14.47
+Robustness (teacher_robustness) Noise=0.000 | Mean Reward: 582.74 +- 4.64
+Robustness (student_2_robustness) Noise=0.000 | Mean Reward: 570.57 +- 3.31
+Robustness (student_3_robustness) Noise=0.000 | Mean Reward: 445.88 +- 2.13
+Robustness (student_4_robustness) Noise=0.000 | Mean Reward: 626.36 +- 9.76
+Robustness (student_5_robustness) Noise=0.000 | Mean Reward: 622.68 +- 6.99
+Robustness (student_6_robustness) Noise=0.000 | Mean Reward: 603.45 +- 16.97
+Robustness (student_7_robustness) Noise=0.000 | Mean Reward: 600.79 +- 7.76
+Robustness (student_8_robustness) Noise=0.000 | Mean Reward: 601.24 +- 9.03
+Robustness (student_9_robustness) Noise=0.000 | Mean Reward: 618.64 +- 9.82
+Robustness (student_10_robustness) Noise=0.000 | Mean Reward: 582.02 +- 2.66
+Robustness (student_11_robustness) Noise=0.000 | Mean Reward: 591.13 +- 4.73
+Robustness (student_12_robustness) Noise=0.000 | Mean Reward: 599.46 +- 6.11

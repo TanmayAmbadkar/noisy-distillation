@@ -1,0 +1,5 @@
+mode: uniform
+batch_size: 2048
+epochs: 100
+distil_samples: 400000
+loss: mean_mse

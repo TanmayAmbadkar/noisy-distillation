@@ -1,0 +1,747 @@
+/scratch1/tsa5252/anaconda3/lib/python3.11/site-packages/hydra/_internal/defaults_list.py:251: UserWarning: In 'config': Defaults list is missing `_self_`. See https://hydra.cc/docs/1.2/upgrades/1.0_to_1.1/default_composition_order for more information
+  warnings.warn(msg, UserWarning)
+[[36m2026-02-28 04:51:53,882[0m][[34mOpenGL.acceleratesupport[0m][[32mINFO[0m] - No OpenGL_accelerate module loaded: No module named 'OpenGL_accelerate'[0m
+Starting PPO Teacher Training on HalfCheetah-v5...
+global_step=4000, episodic_return=-140.59
+global_step=8004, episodic_return=-154.36
+Eval: global_step=8192, reward=-0.16 +/- 0.77
+global_step=12008, episodic_return=-168.78
+global_step=16012, episodic_return=-168.12
+Eval: global_step=16384, reward=-0.02 +/- 0.73
+global_step=20016, episodic_return=-55.19
+global_step=24020, episodic_return=-90.41
+Eval: global_step=24576, reward=0.17 +/- 0.67
+global_step=28024, episodic_return=-36.44
+global_step=32028, episodic_return=-42.12
+Eval: global_step=32768, reward=-0.00 +/- 0.40
+global_step=36032, episodic_return=-45.02
+global_step=40036, episodic_return=15.10
+Eval: global_step=40960, reward=0.14 +/- 0.79
+global_step=44040, episodic_return=40.17
+global_step=48044, episodic_return=61.45
+Eval: global_step=49152, reward=0.92 +/- 1.20
+global_step=52048, episodic_return=128.46
+global_step=56052, episodic_return=126.90
+Eval: global_step=57344, reward=24.50 +/- 2.73
+global_step=60056, episodic_return=156.92
+global_step=64060, episodic_return=212.14
+Eval: global_step=65536, reward=150.84 +/- 3.48
+global_step=68064, episodic_return=268.09
+global_step=72068, episodic_return=327.09
+Eval: global_step=73728, reward=319.15 +/- 6.39
+global_step=76072, episodic_return=283.37
+global_step=80076, episodic_return=362.94
+Eval: global_step=81920, reward=476.65 +/- 4.29
+global_step=84080, episodic_return=407.57
+global_step=88084, episodic_return=350.38
+Eval: global_step=90112, reward=528.92 +/- 2.80
+global_step=92088, episodic_return=431.60
+global_step=96092, episodic_return=334.39
+Eval: global_step=98304, reward=521.22 +/- 1.84
+global_step=100096, episodic_return=381.54
+global_step=104100, episodic_return=443.23
+Eval: global_step=106496, reward=576.92 +/- 3.43
+global_step=108104, episodic_return=291.79
+global_step=112108, episodic_return=567.69
+Eval: global_step=114688, reward=578.40 +/- 4.92
+global_step=116112, episodic_return=523.00
+global_step=120116, episodic_return=654.26
+Eval: global_step=122880, reward=616.85 +/- 1.85
+global_step=124120, episodic_return=665.42
+global_step=128124, episodic_return=567.75
+Eval: global_step=131072, reward=673.05 +/- 2.15
+global_step=132128, episodic_return=755.38
+global_step=136132, episodic_return=598.98
+Eval: global_step=139264, reward=711.09 +/- 3.04
+global_step=140136, episodic_return=800.58
+global_step=144140, episodic_return=741.82
+Eval: global_step=147456, reward=730.38 +/- 3.90
+global_step=148144, episodic_return=601.33
+global_step=152148, episodic_return=809.45
+Eval: global_step=155648, reward=852.12 +/- 4.21
+global_step=156152, episodic_return=770.64
+global_step=160156, episodic_return=852.64
+Eval: global_step=163840, reward=884.95 +/- 5.96
+global_step=164160, episodic_return=921.19
+global_step=168164, episodic_return=842.38
+Eval: global_step=172032, reward=961.91 +/- 3.59
+global_step=172168, episodic_return=1042.87
+global_step=176172, episodic_return=894.34
+global_step=180176, episodic_return=1114.62
+Eval: global_step=180224, reward=1050.66 +/- 3.54
+global_step=184180, episodic_return=603.96
+global_step=188184, episodic_return=1142.44
+Eval: global_step=188416, reward=1151.18 +/- 4.90
+global_step=192188, episodic_return=1213.33
+global_step=196192, episodic_return=610.84
+Eval: global_step=196608, reward=1256.62 +/- 4.99
+global_step=200196, episodic_return=1220.77
+global_step=204200, episodic_return=1171.47
+Eval: global_step=204800, reward=1395.89 +/- 6.70
+global_step=208204, episodic_return=665.45
+global_step=212208, episodic_return=1191.82
+Eval: global_step=212992, reward=1434.08 +/- 4.66
+global_step=216212, episodic_return=1304.38
+global_step=220216, episodic_return=1173.33
+Eval: global_step=221184, reward=1470.33 +/- 3.55
+global_step=224220, episodic_return=1373.79
+global_step=228224, episodic_return=1284.61
+Eval: global_step=229376, reward=1513.21 +/- 7.34
+global_step=232228, episodic_return=1422.21
+global_step=236232, episodic_return=1550.51
+Eval: global_step=237568, reward=1666.95 +/- 8.76
+global_step=240236, episodic_return=1473.20
+global_step=244240, episodic_return=1359.53
+Eval: global_step=245760, reward=1764.28 +/- 6.93
+global_step=248244, episodic_return=1544.98
+global_step=252248, episodic_return=1746.01
+Eval: global_step=253952, reward=1951.97 +/- 6.96
+global_step=256252, episodic_return=1750.09
+global_step=260256, episodic_return=1606.01
+Eval: global_step=262144, reward=2007.93 +/- 10.67
+global_step=264260, episodic_return=1782.82
+global_step=268264, episodic_return=1626.76
+Eval: global_step=270336, reward=2113.23 +/- 9.27
+global_step=272268, episodic_return=1725.72
+global_step=276272, episodic_return=1802.59
+Eval: global_step=278528, reward=2141.92 +/- 12.07
+global_step=280276, episodic_return=1694.58
+global_step=284280, episodic_return=2026.96
+Eval: global_step=286720, reward=2274.61 +/- 10.91
+global_step=288284, episodic_return=1832.50
+global_step=292288, episodic_return=1683.42
+Eval: global_step=294912, reward=2338.77 +/- 16.72
+global_step=296292, episodic_return=1732.95
+global_step=300296, episodic_return=1676.25
+Eval: global_step=303104, reward=2299.10 +/- 15.41
+global_step=304300, episodic_return=1774.36
+global_step=308304, episodic_return=1885.68
+Eval: global_step=311296, reward=2475.97 +/- 11.29
+global_step=312308, episodic_return=1669.88
+global_step=316312, episodic_return=1606.43
+Eval: global_step=319488, reward=2505.09 +/- 15.97
+global_step=320316, episodic_return=2249.52
+global_step=324320, episodic_return=2102.81
+Eval: global_step=327680, reward=2549.43 +/- 12.62
+global_step=328324, episodic_return=2156.26
+global_step=332328, episodic_return=2120.92
+Eval: global_step=335872, reward=2543.02 +/- 16.30
+global_step=336332, episodic_return=1987.97
+global_step=340336, episodic_return=2168.71
+Eval: global_step=344064, reward=2591.85 +/- 12.85
+global_step=344340, episodic_return=1875.52
+global_step=348344, episodic_return=1979.80
+Eval: global_step=352256, reward=2641.98 +/- 20.32
+global_step=352348, episodic_return=2078.33
+global_step=356352, episodic_return=2205.49
+global_step=360356, episodic_return=2352.99
+Eval: global_step=360448, reward=2714.00 +/- 26.82
+global_step=364360, episodic_return=2231.50
+global_step=368364, episodic_return=2339.19
+Eval: global_step=368640, reward=2654.42 +/- 552.46
+global_step=372368, episodic_return=2492.85
+global_step=376372, episodic_return=2194.18
+Eval: global_step=376832, reward=2924.49 +/- 28.90
+global_step=380376, episodic_return=2112.33
+global_step=384380, episodic_return=1688.23
+Eval: global_step=385024, reward=2992.48 +/- 25.55
+global_step=388384, episodic_return=2534.61
+global_step=392388, episodic_return=2353.52
+Eval: global_step=393216, reward=3008.90 +/- 28.96
+global_step=396392, episodic_return=2350.10
+global_step=400396, episodic_return=2660.79
+Eval: global_step=401408, reward=3097.15 +/- 35.10
+global_step=404400, episodic_return=2662.62
+global_step=408404, episodic_return=2723.85
+Eval: global_step=409600, reward=3059.74 +/- 39.50
+global_step=412408, episodic_return=2436.91
+global_step=416412, episodic_return=2527.72
+Eval: global_step=417792, reward=3127.75 +/- 34.21
+global_step=420416, episodic_return=2455.14
+global_step=424420, episodic_return=2592.16
+Eval: global_step=425984, reward=3097.25 +/- 27.51
+global_step=428424, episodic_return=2330.29
+global_step=432428, episodic_return=2514.18
+Eval: global_step=434176, reward=3173.63 +/- 33.26
+global_step=436432, episodic_return=2680.73
+global_step=440436, episodic_return=1896.60
+Eval: global_step=442368, reward=3253.16 +/- 24.63
+global_step=444440, episodic_return=2873.86
+global_step=448444, episodic_return=2662.14
+Eval: global_step=450560, reward=3258.73 +/- 54.42
+global_step=452448, episodic_return=2912.67
+global_step=456452, episodic_return=2766.18
+Eval: global_step=458752, reward=3356.85 +/- 40.02
+global_step=460456, episodic_return=2725.44
+global_step=464460, episodic_return=2157.48
+Eval: global_step=466944, reward=3232.75 +/- 485.06
+global_step=468464, episodic_return=2503.86
+global_step=472468, episodic_return=2676.68
+Eval: global_step=475136, reward=3439.93 +/- 45.67
+global_step=476472, episodic_return=2514.08
+global_step=480476, episodic_return=2874.55
+Eval: global_step=483328, reward=3363.75 +/- 98.20
+global_step=484480, episodic_return=2953.76
+global_step=488484, episodic_return=2532.99
+Eval: global_step=491520, reward=3284.24 +/- 88.58
+global_step=492488, episodic_return=2732.87
+global_step=496492, episodic_return=2729.61
+Eval: global_step=499712, reward=3361.74 +/- 41.38
+global_step=500496, episodic_return=2775.39
+global_step=504500, episodic_return=2882.98
+Eval: global_step=507904, reward=3357.84 +/- 96.71
+global_step=508504, episodic_return=2484.35
+global_step=512508, episodic_return=2602.55
+Eval: global_step=516096, reward=3455.83 +/- 60.82
+global_step=516512, episodic_return=3077.72
+global_step=520516, episodic_return=3040.75
+Eval: global_step=524288, reward=3506.58 +/- 68.86
+global_step=524520, episodic_return=2818.00
+global_step=528524, episodic_return=2608.37
+Eval: global_step=532480, reward=3524.35 +/- 29.60
+global_step=532528, episodic_return=2812.41
+global_step=536532, episodic_return=3048.64
+global_step=540536, episodic_return=2931.96
+Eval: global_step=540672, reward=3513.10 +/- 36.90
+global_step=544540, episodic_return=2882.67
+global_step=548544, episodic_return=3101.59
+Eval: global_step=548864, reward=3322.25 +/- 569.54
+global_step=552548, episodic_return=3053.37
+global_step=556552, episodic_return=2715.50
+Eval: global_step=557056, reward=3533.11 +/- 34.07
+global_step=560556, episodic_return=2771.16
+global_step=564560, episodic_return=2873.59
+Eval: global_step=565248, reward=3581.66 +/- 37.87
+global_step=568564, episodic_return=3076.69
+global_step=572568, episodic_return=2835.45
+Eval: global_step=573440, reward=3558.90 +/- 24.51
+global_step=576572, episodic_return=2724.73
+global_step=580576, episodic_return=2806.85
+Eval: global_step=581632, reward=3551.27 +/- 28.97
+global_step=584580, episodic_return=3130.13
+global_step=588584, episodic_return=2907.86
+Eval: global_step=589824, reward=3566.77 +/- 28.47
+global_step=592588, episodic_return=3179.63
+global_step=596592, episodic_return=3185.65
+Eval: global_step=598016, reward=3602.12 +/- 29.22
+global_step=600596, episodic_return=3069.73
+global_step=604600, episodic_return=3188.96
+Eval: global_step=606208, reward=3625.42 +/- 28.38
+global_step=608604, episodic_return=2416.67
+global_step=612608, episodic_return=2994.23
+Eval: global_step=614400, reward=3639.23 +/- 30.47
+global_step=616612, episodic_return=2900.27
+global_step=620616, episodic_return=3287.90
+Eval: global_step=622592, reward=3644.74 +/- 41.03
+global_step=624620, episodic_return=3276.46
+global_step=628624, episodic_return=3015.33
+Eval: global_step=630784, reward=3659.13 +/- 15.53
+global_step=632628, episodic_return=3333.16
+global_step=636632, episodic_return=3275.28
+Eval: global_step=638976, reward=3748.42 +/- 48.01
+global_step=640636, episodic_return=3425.44
+global_step=644640, episodic_return=3335.95
+Eval: global_step=647168, reward=3754.39 +/- 52.57
+global_step=648644, episodic_return=3433.10
+global_step=652648, episodic_return=3222.90
+Eval: global_step=655360, reward=3790.23 +/- 30.76
+global_step=656652, episodic_return=3299.67
+global_step=660656, episodic_return=3364.43
+Eval: global_step=663552, reward=3754.36 +/- 18.89
+global_step=664660, episodic_return=3412.92
+global_step=668664, episodic_return=3387.54
+Eval: global_step=671744, reward=3731.86 +/- 32.23
+global_step=672668, episodic_return=3389.06
+global_step=676672, episodic_return=3341.48
+Eval: global_step=679936, reward=3763.20 +/- 29.11
+global_step=680676, episodic_return=3348.55
+global_step=684680, episodic_return=3445.42
+Eval: global_step=688128, reward=3731.17 +/- 32.71
+global_step=688684, episodic_return=3286.61
+global_step=692688, episodic_return=3270.45
+Eval: global_step=696320, reward=3752.54 +/- 16.88
+global_step=696692, episodic_return=3341.12
+global_step=700696, episodic_return=3280.31
+Eval: global_step=704512, reward=3784.42 +/- 23.68
+global_step=704700, episodic_return=3314.40
+global_step=708704, episodic_return=3317.57
+Eval: global_step=712704, reward=3803.35 +/- 23.38
+global_step=712708, episodic_return=3462.92
+global_step=716712, episodic_return=3535.83
+global_step=720716, episodic_return=3398.20
+Eval: global_step=720896, reward=3820.52 +/- 24.39
+global_step=724720, episodic_return=3310.53
+global_step=728724, episodic_return=3481.38
+Eval: global_step=729088, reward=3852.08 +/- 46.85
+global_step=732728, episodic_return=3508.83
+global_step=736732, episodic_return=3573.86
+Eval: global_step=737280, reward=3911.21 +/- 45.79
+global_step=740736, episodic_return=3497.15
+global_step=744740, episodic_return=3543.03
+Eval: global_step=745472, reward=3965.11 +/- 36.10
+global_step=748744, episodic_return=3544.82
+global_step=752748, episodic_return=3622.60
+Eval: global_step=753664, reward=3995.24 +/- 34.34
+global_step=756752, episodic_return=3748.24
+global_step=760756, episodic_return=3677.95
+Eval: global_step=761856, reward=4001.68 +/- 35.77
+global_step=764760, episodic_return=3644.18
+global_step=768764, episodic_return=3661.63
+Eval: global_step=770048, reward=3999.27 +/- 38.04
+global_step=772768, episodic_return=3640.39
+global_step=776772, episodic_return=3699.06
+Eval: global_step=778240, reward=3979.84 +/- 29.84
+global_step=780776, episodic_return=3597.48
+global_step=784780, episodic_return=3706.81
+Eval: global_step=786432, reward=4004.36 +/- 43.75
+global_step=788784, episodic_return=3675.49
+global_step=792788, episodic_return=3688.36
+Eval: global_step=794624, reward=3987.27 +/- 15.61
+global_step=796792, episodic_return=3690.69
+global_step=800796, episodic_return=3665.83
+Eval: global_step=802816, reward=4010.52 +/- 30.28
+global_step=804800, episodic_return=3699.78
+global_step=808804, episodic_return=3756.15
+Eval: global_step=811008, reward=4043.24 +/- 44.69
+global_step=812808, episodic_return=3767.20
+global_step=816812, episodic_return=3792.83
+Eval: global_step=819200, reward=4067.52 +/- 37.41
+global_step=820816, episodic_return=3814.95
+global_step=824820, episodic_return=3738.57
+Eval: global_step=827392, reward=4092.41 +/- 31.85
+global_step=828824, episodic_return=3757.21
+global_step=832828, episodic_return=3812.64
+Eval: global_step=835584, reward=4089.65 +/- 35.13
+global_step=836832, episodic_return=3812.15
+global_step=840836, episodic_return=3878.67
+Eval: global_step=843776, reward=4082.48 +/- 14.66
+global_step=844840, episodic_return=3785.85
+global_step=848844, episodic_return=3860.99
+Eval: global_step=851968, reward=4120.72 +/- 18.20
+global_step=852848, episodic_return=3776.66
+global_step=856852, episodic_return=3887.11
+Eval: global_step=860160, reward=4105.72 +/- 32.99
+global_step=860856, episodic_return=3835.64
+global_step=864860, episodic_return=3722.58
+Eval: global_step=868352, reward=4095.50 +/- 44.44
+global_step=868864, episodic_return=3907.44
+global_step=872868, episodic_return=3879.37
+Eval: global_step=876544, reward=4075.96 +/- 42.81
+global_step=876872, episodic_return=3824.99
+global_step=880876, episodic_return=3707.33
+Eval: global_step=884736, reward=4090.39 +/- 36.00
+global_step=884880, episodic_return=3896.27
+global_step=888884, episodic_return=3782.35
+global_step=892888, episodic_return=3882.85
+Eval: global_step=892928, reward=4097.01 +/- 25.27
+global_step=896892, episodic_return=3834.98
+global_step=900896, episodic_return=3901.06
+Eval: global_step=901120, reward=4129.73 +/- 36.20
+global_step=904900, episodic_return=3815.55
+global_step=908904, episodic_return=3924.06
+Eval: global_step=909312, reward=4143.51 +/- 25.49
+global_step=912908, episodic_return=3865.29
+global_step=916912, episodic_return=3931.63
+Eval: global_step=917504, reward=4155.58 +/- 25.79
+global_step=920916, episodic_return=3907.25
+global_step=924920, episodic_return=3899.87
+Eval: global_step=925696, reward=4192.59 +/- 31.15
+global_step=928924, episodic_return=3964.12
+global_step=932928, episodic_return=3938.88
+Eval: global_step=933888, reward=4207.84 +/- 29.74
+global_step=936932, episodic_return=4001.11
+global_step=940936, episodic_return=4062.44
+Eval: global_step=942080, reward=4194.99 +/- 39.59
+global_step=944940, episodic_return=3946.11
+global_step=948944, episodic_return=3737.11
+Eval: global_step=950272, reward=4184.92 +/- 37.37
+global_step=952948, episodic_return=3916.04
+global_step=956952, episodic_return=3980.89
+Eval: global_step=958464, reward=4204.30 +/- 22.18
+global_step=960956, episodic_return=3991.78
+global_step=964960, episodic_return=3986.25
+Eval: global_step=966656, reward=4242.62 +/- 25.59
+global_step=968964, episodic_return=4036.97
+global_step=972968, episodic_return=4021.03
+Eval: global_step=974848, reward=4262.85 +/- 22.16
+global_step=976972, episodic_return=4046.01
+global_step=980976, episodic_return=4145.72
+Eval: global_step=983040, reward=4241.24 +/- 22.16
+global_step=984980, episodic_return=4058.27
+global_step=988984, episodic_return=4043.51
+Eval: global_step=991232, reward=4284.08 +/- 25.22
+global_step=992988, episodic_return=4119.30
+global_step=996992, episodic_return=4096.29
+Eval: global_step=999424, reward=4263.74 +/- 23.89
+global_step=1000996, episodic_return=4110.23
+global_step=1005000, episodic_return=4116.54
+Eval: global_step=1007616, reward=4329.85 +/- 30.90
+global_step=1009004, episodic_return=4131.69
+global_step=1013008, episodic_return=4020.09
+Eval: global_step=1015808, reward=4338.49 +/- 26.80
+global_step=1017012, episodic_return=4137.35
+global_step=1021016, episodic_return=4162.84
+Eval: global_step=1024000, reward=4333.30 +/- 37.47
+global_step=1025020, episodic_return=4059.37
+global_step=1029024, episodic_return=4073.50
+Eval: global_step=1032192, reward=4330.19 +/- 24.31
+global_step=1033028, episodic_return=4122.73
+global_step=1037032, episodic_return=4124.69
+Eval: global_step=1040384, reward=4328.47 +/- 22.31
+global_step=1041036, episodic_return=4091.34
+global_step=1045040, episodic_return=4161.47
+Eval: global_step=1048576, reward=4355.12 +/- 96.27
+global_step=1049044, episodic_return=4246.19
+global_step=1053048, episodic_return=4219.89
+Eval: global_step=1056768, reward=4409.76 +/- 42.52
+global_step=1057052, episodic_return=4175.05
+global_step=1061056, episodic_return=4134.97
+Eval: global_step=1064960, reward=4414.02 +/- 28.37
+global_step=1065060, episodic_return=4159.61
+global_step=1069064, episodic_return=4205.96
+global_step=1073068, episodic_return=4162.43
+Eval: global_step=1073152, reward=4391.35 +/- 28.12
+global_step=1077072, episodic_return=4243.16
+global_step=1081076, episodic_return=4201.65
+Eval: global_step=1081344, reward=4392.49 +/- 32.96
+global_step=1085080, episodic_return=4270.36
+global_step=1089084, episodic_return=4272.48
+Eval: global_step=1089536, reward=4411.96 +/- 33.62
+global_step=1093088, episodic_return=4114.33
+global_step=1097092, episodic_return=4265.71
+Eval: global_step=1097728, reward=4425.37 +/- 30.85
+global_step=1101096, episodic_return=4207.41
+global_step=1105100, episodic_return=4237.05
+Eval: global_step=1105920, reward=4459.20 +/- 18.18
+global_step=1109104, episodic_return=4330.79
+global_step=1113108, episodic_return=4288.64
+Eval: global_step=1114112, reward=4444.14 +/- 24.50
+global_step=1117112, episodic_return=4251.78
+global_step=1121116, episodic_return=4261.39
+Eval: global_step=1122304, reward=4462.05 +/- 33.19
+global_step=1125120, episodic_return=4245.71
+global_step=1129124, episodic_return=4306.49
+Eval: global_step=1130496, reward=4471.12 +/- 36.28
+global_step=1133128, episodic_return=4320.63
+global_step=1137132, episodic_return=4328.96
+Eval: global_step=1138688, reward=4493.73 +/- 56.77
+global_step=1141136, episodic_return=4303.15
+global_step=1145140, episodic_return=4324.79
+Eval: global_step=1146880, reward=4470.54 +/- 37.97
+global_step=1149144, episodic_return=4294.53
+global_step=1153148, episodic_return=4334.10
+Eval: global_step=1155072, reward=4506.87 +/- 43.77
+global_step=1157152, episodic_return=4306.82
+global_step=1161156, episodic_return=4379.98
+Eval: global_step=1163264, reward=4512.02 +/- 29.40
+global_step=1165160, episodic_return=4352.78
+global_step=1169164, episodic_return=4203.77
+Eval: global_step=1171456, reward=4573.50 +/- 18.05
+global_step=1173168, episodic_return=4411.00
+global_step=1177172, episodic_return=4324.31
+Eval: global_step=1179648, reward=4571.11 +/- 35.24
+global_step=1181176, episodic_return=4390.39
+global_step=1185180, episodic_return=4385.55
+Eval: global_step=1187840, reward=4534.90 +/- 32.76
+global_step=1189184, episodic_return=4320.02
+global_step=1193188, episodic_return=4409.99
+Eval: global_step=1196032, reward=4546.74 +/- 45.10
+global_step=1197192, episodic_return=4313.44
+global_step=1201196, episodic_return=4409.79
+Eval: global_step=1204224, reward=4483.81 +/- 210.52
+global_step=1205200, episodic_return=4461.40
+global_step=1209204, episodic_return=4381.99
+Eval: global_step=1212416, reward=4604.46 +/- 39.85
+global_step=1213208, episodic_return=4442.82
+global_step=1217212, episodic_return=4492.00
+Eval: global_step=1220608, reward=4553.44 +/- 100.90
+global_step=1221216, episodic_return=4446.19
+global_step=1225220, episodic_return=4525.93
+Eval: global_step=1228800, reward=4609.25 +/- 32.12
+global_step=1229224, episodic_return=4454.69
+global_step=1233228, episodic_return=4529.53
+Eval: global_step=1236992, reward=4592.48 +/- 56.58
+global_step=1237232, episodic_return=4411.61
+global_step=1241236, episodic_return=4383.01
+Eval: global_step=1245184, reward=4625.95 +/- 35.92
+global_step=1245240, episodic_return=4387.36
+global_step=1249244, episodic_return=4523.21
+global_step=1253248, episodic_return=4492.62
+Eval: global_step=1253376, reward=4619.89 +/- 44.63
+global_step=1257252, episodic_return=4497.78
+global_step=1261256, episodic_return=4516.93
+Eval: global_step=1261568, reward=4636.96 +/- 27.47
+global_step=1265260, episodic_return=4375.68
+global_step=1269264, episodic_return=4407.69
+Eval: global_step=1269760, reward=4648.84 +/- 22.98
+global_step=1273268, episodic_return=4077.37
+global_step=1277272, episodic_return=4379.16
+Eval: global_step=1277952, reward=4642.57 +/- 81.05
+global_step=1281276, episodic_return=4431.17
+global_step=1285280, episodic_return=4405.27
+Eval: global_step=1286144, reward=4622.99 +/- 158.45
+global_step=1289284, episodic_return=4523.25
+global_step=1293288, episodic_return=4447.32
+Eval: global_step=1294336, reward=4645.89 +/- 29.09
+global_step=1297292, episodic_return=4213.84
+global_step=1301296, episodic_return=4388.91
+Eval: global_step=1302528, reward=4652.59 +/- 9.35
+global_step=1305300, episodic_return=4456.79
+global_step=1309304, episodic_return=4534.57
+Eval: global_step=1310720, reward=4638.28 +/- 89.91
+global_step=1313308, episodic_return=4516.04
+global_step=1317312, episodic_return=4417.80
+Eval: global_step=1318912, reward=4667.08 +/- 37.18
+global_step=1321316, episodic_return=4448.06
+global_step=1325320, episodic_return=4421.64
+Eval: global_step=1327104, reward=4621.94 +/- 156.99
+global_step=1329324, episodic_return=4530.68
+global_step=1333328, episodic_return=4455.35
+Eval: global_step=1335296, reward=4701.11 +/- 34.27
+global_step=1337332, episodic_return=4514.98
+global_step=1341336, episodic_return=4377.67
+Eval: global_step=1343488, reward=4695.47 +/- 35.39
+global_step=1345340, episodic_return=4159.94
+global_step=1349344, episodic_return=4546.13
+Eval: global_step=1351680, reward=4678.04 +/- 23.32
+global_step=1353348, episodic_return=4375.55
+global_step=1357352, episodic_return=4238.48
+Eval: global_step=1359872, reward=4683.59 +/- 21.65
+global_step=1361356, episodic_return=4211.45
+global_step=1365360, episodic_return=4436.78
+Eval: global_step=1368064, reward=4680.03 +/- 35.09
+global_step=1369364, episodic_return=3688.44
+global_step=1373368, episodic_return=4485.50
+Eval: global_step=1376256, reward=4679.17 +/- 30.50
+global_step=1377372, episodic_return=4585.30
+global_step=1381376, episodic_return=4545.31
+Eval: global_step=1384448, reward=4690.74 +/- 29.03
+global_step=1385380, episodic_return=4500.50
+global_step=1389384, episodic_return=4353.32
+Eval: global_step=1392640, reward=4655.74 +/- 63.95
+global_step=1393388, episodic_return=4493.36
+global_step=1397392, episodic_return=4527.12
+Eval: global_step=1400832, reward=4681.00 +/- 27.86
+global_step=1401396, episodic_return=4490.02
+global_step=1405400, episodic_return=4501.17
+Eval: global_step=1409024, reward=4695.99 +/- 28.32
+global_step=1409404, episodic_return=4524.27
+global_step=1413408, episodic_return=4562.57
+Eval: global_step=1417216, reward=4714.16 +/- 23.49
+global_step=1417412, episodic_return=4482.77
+global_step=1421416, episodic_return=4549.53
+Eval: global_step=1425408, reward=4683.86 +/- 47.65
+global_step=1425420, episodic_return=4432.20
+global_step=1429424, episodic_return=4534.21
+global_step=1433428, episodic_return=4506.33
+Eval: global_step=1433600, reward=4679.81 +/- 24.90
+global_step=1437432, episodic_return=4544.45
+global_step=1441436, episodic_return=4541.09
+Eval: global_step=1441792, reward=4719.93 +/- 27.56
+global_step=1445440, episodic_return=4587.07
+global_step=1449444, episodic_return=4598.53
+Eval: global_step=1449984, reward=4711.52 +/- 29.29
+global_step=1453448, episodic_return=4521.98
+global_step=1457452, episodic_return=4547.35
+Eval: global_step=1458176, reward=4678.27 +/- 30.86
+global_step=1461456, episodic_return=4612.78
+global_step=1465460, episodic_return=4576.17
+Eval: global_step=1466368, reward=4150.51 +/- 1495.75
+global_step=1469464, episodic_return=4511.19
+global_step=1473468, episodic_return=-121.85
+Eval: global_step=1474560, reward=4720.58 +/- 23.86
+global_step=1477472, episodic_return=4598.27
+global_step=1481476, episodic_return=4595.84
+Eval: global_step=1482752, reward=4508.23 +/- 574.86
+global_step=1485480, episodic_return=4531.15
+global_step=1489484, episodic_return=2178.47
+Eval: global_step=1490944, reward=4522.34 +/- 486.43
+global_step=1493488, episodic_return=4586.50
+global_step=1497492, episodic_return=4513.57
+Eval: global_step=1499136, reward=4677.38 +/- 30.11
+global_step=1501496, episodic_return=4586.65
+global_step=1505500, episodic_return=4500.88
+Eval: global_step=1507328, reward=4696.55 +/- 22.72
+global_step=1509504, episodic_return=4577.53
+global_step=1513508, episodic_return=4602.46
+Eval: global_step=1515520, reward=4752.20 +/- 36.11
+global_step=1517512, episodic_return=4594.95
+global_step=1521516, episodic_return=3399.31
+Eval: global_step=1523712, reward=4655.35 +/- 298.33
+global_step=1525520, episodic_return=4633.09
+global_step=1529524, episodic_return=4616.75
+Eval: global_step=1531904, reward=4270.77 +/- 1445.43
+global_step=1533528, episodic_return=4604.48
+global_step=1537532, episodic_return=4580.59
+Eval: global_step=1540096, reward=4740.80 +/- 39.11
+global_step=1541536, episodic_return=4549.86
+global_step=1545540, episodic_return=4596.83
+Eval: global_step=1548288, reward=4758.61 +/- 33.03
+global_step=1549544, episodic_return=4685.86
+global_step=1553548, episodic_return=4651.09
+Eval: global_step=1556480, reward=4749.68 +/- 37.69
+global_step=1557552, episodic_return=4652.92
+global_step=1561556, episodic_return=4598.68
+Eval: global_step=1564672, reward=4716.54 +/- 28.23
+global_step=1565560, episodic_return=-329.64
+global_step=1569564, episodic_return=4574.52
+Eval: global_step=1572864, reward=4727.40 +/- 23.59
+global_step=1573568, episodic_return=74.21
+global_step=1577572, episodic_return=4600.70
+Eval: global_step=1581056, reward=4686.88 +/- 24.87
+global_step=1581576, episodic_return=-338.34
+global_step=1585580, episodic_return=3790.12
+Eval: global_step=1589248, reward=4150.30 +/- 1548.22
+global_step=1589584, episodic_return=4597.07
+global_step=1593588, episodic_return=4586.73
+Eval: global_step=1597440, reward=4161.69 +/- 1524.10
+global_step=1597592, episodic_return=3927.44
+global_step=1601596, episodic_return=4610.52
+global_step=1605600, episodic_return=1808.94
+Eval: global_step=1605632, reward=4651.32 +/- 17.11
+global_step=1609604, episodic_return=3056.67
+global_step=1613608, episodic_return=4536.91
+Eval: global_step=1613824, reward=4637.41 +/- 44.65
+global_step=1617612, episodic_return=4502.89
+global_step=1621616, episodic_return=4544.27
+Eval: global_step=1622016, reward=4645.78 +/- 35.81
+global_step=1625620, episodic_return=4537.42
+global_step=1629624, episodic_return=4545.65
+Eval: global_step=1630208, reward=4158.50 +/- 1534.07
+global_step=1633628, episodic_return=4488.72
+global_step=1637632, episodic_return=2641.12
+Eval: global_step=1638400, reward=4676.38 +/- 19.44
+global_step=1641636, episodic_return=4127.08
+global_step=1645640, episodic_return=4516.88
+Eval: global_step=1646592, reward=4688.12 +/- 22.21
+global_step=1649644, episodic_return=4321.29
+global_step=1653648, episodic_return=4419.77
+Eval: global_step=1654784, reward=4171.74 +/- 1540.75
+global_step=1657652, episodic_return=4631.41
+global_step=1661656, episodic_return=4659.39
+Eval: global_step=1662976, reward=4696.99 +/- 46.10
+global_step=1665660, episodic_return=4624.12
+global_step=1669664, episodic_return=4631.72
+Eval: global_step=1671168, reward=4736.72 +/- 32.91
+global_step=1673668, episodic_return=4507.35
+global_step=1677672, episodic_return=4671.24
+Eval: global_step=1679360, reward=4188.98 +/- 1569.54
+global_step=1681676, episodic_return=4645.10
+global_step=1685680, episodic_return=4658.30
+Eval: global_step=1687552, reward=4710.90 +/- 30.60
+global_step=1689684, episodic_return=4613.70
+global_step=1693688, episodic_return=-444.22
+Eval: global_step=1695744, reward=4184.99 +/- 1562.08
+global_step=1697692, episodic_return=-494.48
+global_step=1701696, episodic_return=4652.59
+Eval: global_step=1703936, reward=4191.75 +/- 1536.10
+global_step=1705700, episodic_return=4632.33
+global_step=1709704, episodic_return=4631.81
+Eval: global_step=1712128, reward=4718.44 +/- 17.92
+global_step=1713708, episodic_return=4567.73
+global_step=1717712, episodic_return=-341.95
+Eval: global_step=1720320, reward=4167.50 +/- 1526.42
+global_step=1721716, episodic_return=4256.85
+global_step=1725720, episodic_return=4597.60
+Eval: global_step=1728512, reward=4213.55 +/- 1508.24
+global_step=1729724, episodic_return=2811.25
+global_step=1733728, episodic_return=4664.19
+Eval: global_step=1736704, reward=4164.33 +/- 1547.60
+global_step=1737732, episodic_return=4620.66
+global_step=1741736, episodic_return=4653.40
+Eval: global_step=1744896, reward=4218.98 +/- 1560.98
+global_step=1745740, episodic_return=4675.45
+global_step=1749744, episodic_return=4693.76
+Eval: global_step=1753088, reward=4722.63 +/- 35.84
+global_step=1753748, episodic_return=4672.30
+global_step=1757752, episodic_return=4651.61
+Eval: global_step=1761280, reward=4717.92 +/- 35.92
+global_step=1761756, episodic_return=4628.16
+global_step=1765760, episodic_return=2179.98
+Eval: global_step=1769472, reward=4713.39 +/- 18.11
+global_step=1769764, episodic_return=4618.67
+global_step=1773768, episodic_return=4622.52
+Eval: global_step=1777664, reward=3171.04 +/- 2363.23
+global_step=1777772, episodic_return=4637.34
+global_step=1781776, episodic_return=-435.33
+global_step=1785780, episodic_return=4603.20
+Eval: global_step=1785856, reward=4676.86 +/- 23.87
+global_step=1789784, episodic_return=4596.05
+global_step=1793788, episodic_return=4652.62
+Eval: global_step=1794048, reward=4164.92 +/- 1502.48
+global_step=1797792, episodic_return=4578.20
+global_step=1801796, episodic_return=4513.33
+Eval: global_step=1802240, reward=4668.81 +/- 27.01
+global_step=1805800, episodic_return=4623.89
+global_step=1809804, episodic_return=4582.39
+Eval: global_step=1810432, reward=4186.29 +/- 1511.41
+global_step=1813808, episodic_return=4514.35
+global_step=1817812, episodic_return=4636.39
+Eval: global_step=1818624, reward=4141.19 +/- 1522.05
+global_step=1821816, episodic_return=4582.32
+global_step=1825820, episodic_return=-484.73
+Eval: global_step=1826816, reward=4637.35 +/- 29.01
+global_step=1829824, episodic_return=4641.27
+global_step=1833828, episodic_return=4629.09
+Eval: global_step=1835008, reward=4630.16 +/- 44.75
+global_step=1837832, episodic_return=4628.87
+global_step=1841836, episodic_return=4534.04
+Eval: global_step=1843200, reward=3634.71 +/- 2038.41
+global_step=1845840, episodic_return=-438.14
+global_step=1849844, episodic_return=-445.31
+Eval: global_step=1851392, reward=4187.39 +/- 1439.99
+global_step=1853848, episodic_return=4623.57
+global_step=1857852, episodic_return=4616.59
+Eval: global_step=1859584, reward=4675.03 +/- 34.53
+global_step=1861856, episodic_return=-294.79
+global_step=1865860, episodic_return=4631.21
+Eval: global_step=1867776, reward=4638.14 +/- 31.36
+global_step=1869864, episodic_return=4601.37
+global_step=1873868, episodic_return=3918.82
+Eval: global_step=1875968, reward=4660.91 +/- 25.28
+global_step=1877872, episodic_return=4580.20
+global_step=1881876, episodic_return=-466.40
+Eval: global_step=1884160, reward=4649.87 +/- 27.15
+global_step=1885880, episodic_return=4564.94
+global_step=1889884, episodic_return=4583.30
+Eval: global_step=1892352, reward=4166.11 +/- 1528.15
+global_step=1893888, episodic_return=4624.33
+global_step=1897892, episodic_return=4625.52
+Eval: global_step=1900544, reward=3585.14 +/- 2007.25
+global_step=1901896, episodic_return=4631.59
+global_step=1905900, episodic_return=3150.93
+Eval: global_step=1908736, reward=4669.72 +/- 30.22
+global_step=1909904, episodic_return=773.54
+global_step=1913908, episodic_return=4611.53
+Eval: global_step=1916928, reward=4667.09 +/- 40.81
+global_step=1917912, episodic_return=4642.97
+global_step=1921916, episodic_return=-399.39
+Eval: global_step=1925120, reward=4176.18 +/- 1529.97
+global_step=1925920, episodic_return=4591.43
+global_step=1929924, episodic_return=4643.89
+Eval: global_step=1933312, reward=4180.36 +/- 1461.65
+global_step=1933928, episodic_return=4646.20
+global_step=1937932, episodic_return=4612.26
+Eval: global_step=1941504, reward=3454.68 +/- 2052.91
+global_step=1941936, episodic_return=4625.23
+global_step=1945940, episodic_return=4674.62
+Eval: global_step=1949696, reward=4195.42 +/- 1522.70
+global_step=1949944, episodic_return=4679.50
+global_step=1953948, episodic_return=4640.23
+Eval: global_step=1957888, reward=4214.62 +/- 1547.51
+global_step=1957952, episodic_return=4352.74
+global_step=1961956, episodic_return=-376.04
+global_step=1965960, episodic_return=4664.80
+Eval: global_step=1966080, reward=4285.35 +/- 1376.40
+global_step=1969964, episodic_return=4568.71
+global_step=1973968, episodic_return=4682.01
+Eval: global_step=1974272, reward=4376.59 +/- 1040.60
+global_step=1977972, episodic_return=4582.92
+global_step=1981976, episodic_return=4513.60
+Eval: global_step=1982464, reward=4190.42 +/- 1540.21
+global_step=1985980, episodic_return=4221.62
+global_step=1989984, episodic_return=4703.40
+Eval: global_step=1990656, reward=4691.27 +/- 48.99
+global_step=1993988, episodic_return=4593.53
+global_step=1997992, episodic_return=4474.97
+Eval: global_step=1998848, reward=4661.04 +/- 24.96

@@ -1,0 +1,214 @@
+
+CondaError: Run 'conda init' before 'conda activate'
+
+=================================================
+Starting sweep for Env: cartpole | Seed: 0 | Timesteps: 200000
+=================================================
+Finished Env: cartpole | Seed: 0
+--> Extracted Robustness results saved to: sweep_summaries/cartpole_seed_0_final_results.txt
+
+=================================================
+Starting sweep for Env: cartpole | Seed: 1 | Timesteps: 200000
+=================================================
+Finished Env: cartpole | Seed: 1
+--> Extracted Robustness results saved to: sweep_summaries/cartpole_seed_1_final_results.txt
+
+=================================================
+Starting sweep for Env: cartpole | Seed: 2 | Timesteps: 200000
+=================================================
+Finished Env: cartpole | Seed: 2
+--> Extracted Robustness results saved to: sweep_summaries/cartpole_seed_2_final_results.txt
+
+=================================================
+Starting sweep for Env: cartpole | Seed: 3 | Timesteps: 200000
+=================================================
+Finished Env: cartpole | Seed: 3
+--> Extracted Robustness results saved to: sweep_summaries/cartpole_seed_3_final_results.txt
+
+=================================================
+Starting sweep for Env: cartpole | Seed: 4 | Timesteps: 200000
+=================================================
+Finished Env: cartpole | Seed: 4
+--> Extracted Robustness results saved to: sweep_summaries/cartpole_seed_4_final_results.txt
+
+=================================================
+Starting sweep for Env: lunarlander | Seed: 0 | Timesteps: 2000000
+=================================================
+Finished Env: lunarlander | Seed: 0
+--> Extracted Robustness results saved to: sweep_summaries/lunarlander_seed_0_final_results.txt
+
+=================================================
+Starting sweep for Env: lunarlander | Seed: 1 | Timesteps: 2000000
+=================================================
+Finished Env: lunarlander | Seed: 1
+--> Extracted Robustness results saved to: sweep_summaries/lunarlander_seed_1_final_results.txt
+
+=================================================
+Starting sweep for Env: lunarlander | Seed: 2 | Timesteps: 2000000
+=================================================
+Finished Env: lunarlander | Seed: 2
+--> Extracted Robustness results saved to: sweep_summaries/lunarlander_seed_2_final_results.txt
+
+=================================================
+Starting sweep for Env: lunarlander | Seed: 3 | Timesteps: 2000000
+=================================================
+Finished Env: lunarlander | Seed: 3
+--> Extracted Robustness results saved to: sweep_summaries/lunarlander_seed_3_final_results.txt
+
+=================================================
+Starting sweep for Env: lunarlander | Seed: 4 | Timesteps: 2000000
+=================================================
+Finished Env: lunarlander | Seed: 4
+--> Extracted Robustness results saved to: sweep_summaries/lunarlander_seed_4_final_results.txt
+
+=================================================
+Starting sweep for Env: bipedalwalker | Seed: 0 | Timesteps: 2000000
+=================================================
+Finished Env: bipedalwalker | Seed: 0
+--> Extracted Robustness results saved to: sweep_summaries/bipedalwalker_seed_0_final_results.txt
+
+=================================================
+Starting sweep for Env: bipedalwalker | Seed: 1 | Timesteps: 2000000
+=================================================
+Finished Env: bipedalwalker | Seed: 1
+--> Extracted Robustness results saved to: sweep_summaries/bipedalwalker_seed_1_final_results.txt
+
+=================================================
+Starting sweep for Env: bipedalwalker | Seed: 2 | Timesteps: 2000000
+=================================================
+Finished Env: bipedalwalker | Seed: 2
+--> Extracted Robustness results saved to: sweep_summaries/bipedalwalker_seed_2_final_results.txt
+
+=================================================
+Starting sweep for Env: bipedalwalker | Seed: 3 | Timesteps: 2000000
+=================================================
+Finished Env: bipedalwalker | Seed: 3
+--> Extracted Robustness results saved to: sweep_summaries/bipedalwalker_seed_3_final_results.txt
+
+=================================================
+Starting sweep for Env: bipedalwalker | Seed: 4 | Timesteps: 2000000
+=================================================
+Finished Env: bipedalwalker | Seed: 4
+--> Extracted Robustness results saved to: sweep_summaries/bipedalwalker_seed_4_final_results.txt
+
+=================================================
+Starting sweep for Env: hopper | Seed: 0 | Timesteps: 2000000
+=================================================
+Finished Env: hopper | Seed: 0
+--> Extracted Robustness results saved to: sweep_summaries/hopper_seed_0_final_results.txt
+
+=================================================
+Starting sweep for Env: hopper | Seed: 1 | Timesteps: 2000000
+=================================================
+Finished Env: hopper | Seed: 1
+--> Extracted Robustness results saved to: sweep_summaries/hopper_seed_1_final_results.txt
+
+=================================================
+Starting sweep for Env: hopper | Seed: 2 | Timesteps: 2000000
+=================================================
+Finished Env: hopper | Seed: 2
+--> Extracted Robustness results saved to: sweep_summaries/hopper_seed_2_final_results.txt
+
+=================================================
+Starting sweep for Env: hopper | Seed: 3 | Timesteps: 2000000
+=================================================
+Finished Env: hopper | Seed: 3
+--> Extracted Robustness results saved to: sweep_summaries/hopper_seed_3_final_results.txt
+
+=================================================
+Starting sweep for Env: hopper | Seed: 4 | Timesteps: 2000000
+=================================================
+Finished Env: hopper | Seed: 4
+--> Extracted Robustness results saved to: sweep_summaries/hopper_seed_4_final_results.txt
+
+=================================================
+Starting sweep for Env: halfcheetah | Seed: 0 | Timesteps: 2000000
+=================================================
+Finished Env: halfcheetah | Seed: 0
+--> Extracted Robustness results saved to: sweep_summaries/halfcheetah_seed_0_final_results.txt
+
+=================================================
+Starting sweep for Env: halfcheetah | Seed: 1 | Timesteps: 2000000
+=================================================
+Finished Env: halfcheetah | Seed: 1
+--> Extracted Robustness results saved to: sweep_summaries/halfcheetah_seed_1_final_results.txt
+
+=================================================
+Starting sweep for Env: halfcheetah | Seed: 2 | Timesteps: 2000000
+=================================================
+Finished Env: halfcheetah | Seed: 2
+--> Extracted Robustness results saved to: sweep_summaries/halfcheetah_seed_2_final_results.txt
+
+=================================================
+Starting sweep for Env: halfcheetah | Seed: 3 | Timesteps: 2000000
+=================================================
+Finished Env: halfcheetah | Seed: 3
+--> Extracted Robustness results saved to: sweep_summaries/halfcheetah_seed_3_final_results.txt
+
+=================================================
+Starting sweep for Env: halfcheetah | Seed: 4 | Timesteps: 2000000
+=================================================
+Finished Env: halfcheetah | Seed: 4
+--> Extracted Robustness results saved to: sweep_summaries/halfcheetah_seed_4_final_results.txt
+
+=================================================
+Starting sweep for Env: ant | Seed: 0 | Timesteps: 2000000
+=================================================
+Finished Env: ant | Seed: 0
+--> Extracted Robustness results saved to: sweep_summaries/ant_seed_0_final_results.txt
+
+=================================================
+Starting sweep for Env: ant | Seed: 1 | Timesteps: 2000000
+=================================================
+Finished Env: ant | Seed: 1
+--> Extracted Robustness results saved to: sweep_summaries/ant_seed_1_final_results.txt
+
+=================================================
+Starting sweep for Env: ant | Seed: 2 | Timesteps: 2000000
+=================================================
+Finished Env: ant | Seed: 2
+--> Extracted Robustness results saved to: sweep_summaries/ant_seed_2_final_results.txt
+
+=================================================
+Starting sweep for Env: ant | Seed: 3 | Timesteps: 2000000
+=================================================
+Finished Env: ant | Seed: 3
+--> Extracted Robustness results saved to: sweep_summaries/ant_seed_3_final_results.txt
+
+=================================================
+Starting sweep for Env: ant | Seed: 4 | Timesteps: 2000000
+=================================================
+Finished Env: ant | Seed: 4
+--> Extracted Robustness results saved to: sweep_summaries/ant_seed_4_final_results.txt
+
+=================================================
+Starting sweep for Env: humanoid | Seed: 0 | Timesteps: 2000000
+=================================================
+Finished Env: humanoid | Seed: 0
+--> Extracted Robustness results saved to: sweep_summaries/humanoid_seed_0_final_results.txt
+
+=================================================
+Starting sweep for Env: humanoid | Seed: 1 | Timesteps: 2000000
+=================================================
+Finished Env: humanoid | Seed: 1
+--> Extracted Robustness results saved to: sweep_summaries/humanoid_seed_1_final_results.txt
+
+=================================================
+Starting sweep for Env: humanoid | Seed: 2 | Timesteps: 2000000
+=================================================
+Finished Env: humanoid | Seed: 2
+--> Extracted Robustness results saved to: sweep_summaries/humanoid_seed_2_final_results.txt
+
+=================================================
+Starting sweep for Env: humanoid | Seed: 3 | Timesteps: 2000000
+=================================================
+Finished Env: humanoid | Seed: 3
+--> Extracted Robustness results saved to: sweep_summaries/humanoid_seed_3_final_results.txt
+
+=================================================
+Starting sweep for Env: humanoid | Seed: 4 | Timesteps: 2000000
+=================================================
+Finished Env: humanoid | Seed: 4
+--> Extracted Robustness results saved to: sweep_summaries/humanoid_seed_4_final_results.txt
+
+Sweep fully completed! All summaries are located in the 'sweep_summaries/' directory.

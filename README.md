@@ -1,53 +1,53 @@
-# Proximal Policy Optimization (PPO) Framework
+# Synthetic Policy Distillation Framework
 
-This folder contains a clean, optimized, and thoroughly documented implementation of Proximal Policy Optimization (PPO). It is designed with good software engineering practices to be modular, extensible, and easy to understand.
+A production-grade, reproducible research framework for synthetic state coverage in Policy Distillation, primarily focused on discrete vs continuous environment sampling distributions.
 
-## Structure
+## Architecture & Features
 
-- **`agent.py`**: Contains the neural network architectures.
-  - `BaseAgent`: An abstract base class defining the required interface for an agent (value estimation, action distribution, etc.).
-  - `DiscreteAgent`: An implementation for environments with discrete action spaces (using `Categorical` distributions).
-  - `ContinuousAgent`: An implementation for environments with continuous action spaces (using parameterized `Normal` distributions).
-- **`ppo.py`**: The core algorithmic logic.
-  - `PPO`: The main agent that handles rollout collection, Advantage computation (GAE), and policy/value function objective optimizations.
-  - `LinearLRSchedule`: A learning rate scheduler that decays linearly.
-  - `PPOLogger`: Handles reporting metrics to the console and to TensorBoard.
-- **`main_ppo.py`**: The entrypoint script.
-  - Handles parsing arguments, setting up synchronized vectorized environments (`Gymnasium`), constructing the correct agent based on the action space, instantiating the PPO algorithm, and running the training loop.
-  - Includes a helper function to evaluate a saved policy.
+This framework is built upon **Hydra** composition for fully deterministic multi-seed experiment tracking, paired with **TensorBoard** and structured **JSON** logging.
 
-## Key Features
+- **Unified Environments**: Transparent handling of discrete (`CartPole`) and continuous (`Hopper` / `HalfCheetah` / `Ant`) Gymnasium environments via vector-wrapper adapters.
+- **Optimized PPO Teacher**: Integrated with a heavily tuned Proximal Policy Optimization implementation (featuring GAE normalization, early KL-stopping, continuous RPO stochasticity, and gradient clipping).
+- **Extensible Distiller**: Abstract distillation loss constraints (`cross_entropy`, `logit_mse`, `mean_mse`, `sample_mse`).
+- **Batched Smoothness Evaluator**: Ultra-fast $L_2$ derivative calculations leveraging PyTorch `.backward()` and Monte-Carlo local Lipschitz estimations on entire rollouts simultaneously without python looping structures. 
+- **Robustness Evaluator**: Automated validation passes for policies under varying configurations of observation noise to capture generalization capacity out-of-distribution.
+- **Synthetic Sampler**: Plug-n-play generation logic extending classical behavior cloning trajectory buffers into bounded spaces using `uniform_global`, `uniform_data_bounds`, `gaussian`, and `mixed` modes.
 
-- **Continuous and Discrete Environments Supported**: Automatically swaps out the network and distribution logic based on the action space type.
-- **Generalized Advantage Estimation (GAE)**: Uses GAE for stable variance reduction in policy gradient estimates.
-- **PPO Clipped Objective**: Prevents destructively large policy updates.
-- **Value Function Clipping**: Optional clipping of the value function loss to stabilize critic updates.
-- **Vectorized Environments**: Trains faster by interacting with multiple environments in parallel using `gym.vector.SyncVectorEnv`.
-- **Early Stopping via KL Divergence**: Optionally halts a policy update epoch early if the approximate KL divergence exceeds a target threshold, ensuring the policy stays within the trust region.
-- **TensorBoard Logging**: Comprehensive logging of rewards, episode lengths, policy loss, value loss, entropy loss, and clipping fractions.
+## Directory Structure
 
-## Usage
-
-To train an agent on a default environment (e.g. `CartPole-v1`), simply execute the main script:
-
-```bash
-python main_ppo.py
+```text
+├── synthetic_distillation/
+│   ├── configs/                 # Hydra YAML configuration modules
+│   ├── src/
+│   │   ├── algorithms/          # Highly optimized Actor/Critic PPO
+│   │   ├── distillation/        # The Distiller abstraction
+│   │   ├── environments/        # Vector env factories
+│   │   ├── evaluation/          # Batched Smoothness & Robustness metrics
+│   │   ├── data/                # Synthetic sampling modules
+│   │   ├── models/              # Discrete & Continuous Agent implementations
+│   │   └── logging/             # TBLogger and Multirun Aggregators
+│   ├── scripts/
+│   │   ├── train_teacher.py     # PPO Teacher entrypoint
+│   │   ├── distill_student.py   # Distiller entrypoint
+│   │   ├── run_experiment.py    # Metric & Evaluation entrypoints
+│   │   └── aggregate.py         # Hydra multi-seed metric aggregation
+│   └── main.py                  # Core sequence runner
+│
+├── docs/                        # Detailed architectural guides and run instructions
+└── README.md                    # This overview file
 ```
 
-The script supports overriding several configuration parameters when called as a module, or by adjusting the default kwargs inside `main_ppo.py`. 
+## Getting Started
 
-### Evaluating a Model
+Check out the `/docs/` folder for specific details on how to use the framework:
+- [Installation and Execution Details](docs/getting_started.md)
+- [How to Run Hydra Sweeps](docs/sweeps_and_aggregation.md)
+- [Adding New Environments & Metrics](docs/extending_the_framework.md)
 
-If `save_model=True` is passed to the `run_ppo` function, the model automatically saves to the `runs/` directory and is evaluated.
-
-### Tensorboard
-
-If `use_tensorboard=True` is provided, metrics will be dumped into a `runs/` directory. You can visualize them using:
+## Basic Usage example
 
 ```bash
-tensorboard --logdir runs/
+cd synthetic_distillation
+python main.py
 ```
-
-## Extensibility
-
-To implement a new network architecture, subclass `BaseAgent` from `agent.py` and implement the 4 required abstract methods: `estimate_value_from_observation`, `get_action_distribution`, `sample_action_and_compute_log_prob`, and `compute_action_log_probabilities_and_entropy`.
+This will automatically launch the baseline `config.yaml` targetting `cartpole` with a 100-step distillation process and track results instantly!

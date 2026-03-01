@@ -1,0 +1,3 @@
+name: CartPole-v1
+type: discrete
+max_episode_steps: 500

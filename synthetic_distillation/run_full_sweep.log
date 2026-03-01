@@ -1,0 +1,8 @@
+=================================================
+Launching parallel sweep for Env: hopper | Timesteps: 2000000
+=================================================
+Launching Process 1 (Seed: 503302) on CPUs 56-69
+Launching Process 2 (Seed: 662426) on CPUs 70-83
+Launching Process 3 (Seed: 702568) on CPUs 84-97
+Launching Process 4 (Seed: 321514) on CPUs 98-111
+Launching Process 5 (Seed: 219504) on CPUs 42-55

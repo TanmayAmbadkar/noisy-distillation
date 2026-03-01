@@ -1,0 +1,8 @@
+mode: gaussian
+batch_size: 2048
+epochs: 100
+distil_samples: 400000
+loss: mean_mse
+sampling:
+  mode: gaussian
+  std: 0.1

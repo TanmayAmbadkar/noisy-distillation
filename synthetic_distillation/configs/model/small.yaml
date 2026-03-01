@@ -1,0 +1,5 @@
+# Small model config
+neurons: 64
+layers: 2
+distil_neurons: 1.0
+distil_layers: 2

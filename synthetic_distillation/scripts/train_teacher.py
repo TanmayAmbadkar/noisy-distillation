@@ -8,9 +8,11 @@ from src.algorithms.ppo import PPO
 from src.environments.make_env import make_env
 
 class PPOAdapterLogger:
-    def __init__(self, tb_logger, eval_callback=None):
+    def __init__(self, tb_logger, eval_callback=None, eval_freq=0):
         self.tb = tb_logger
         self.eval_callback = eval_callback
+        self.eval_freq = eval_freq
+        self.last_eval_step = 0
 
     def log_rollout_step(self, infos, global_step):
         if "_episode" in infos and "episode" in infos:
@@ -37,7 +39,9 @@ class PPOAdapterLogger:
         self.tb.log_scalar("teacher/explained_variance", update_results.get("explained_variance", 0.0), global_step)
         
         if self.eval_callback is not None:
-            self.eval_callback(global_step)
+            if self.eval_freq <= 0 or (global_step - self.last_eval_step >= self.eval_freq):
+                self.eval_callback(global_step)
+                self.last_eval_step = global_step
 
 def get_eval_callback(cfg, env, teacher, env_is_discrete, device, logger, agent_class):
     eval_envs = make_env(cfg.env, num_envs=1, seed=cfg.seed + 1000)
@@ -147,7 +151,8 @@ def train_teacher(cfg, env, logger):
     total_timesteps = cfg.algo.total_timesteps
 
     eval_cb = get_eval_callback(cfg, env, teacher, env_is_discrete, device, logger, agent_class)
-    adapted_logger = PPOAdapterLogger(logger, eval_callback=eval_cb)
+    eval_freq = cfg.algo.get("eval_freq", 10000)
+    adapted_logger = PPOAdapterLogger(logger, eval_callback=eval_cb, eval_freq=eval_freq)
 
     ppo = PPO(
         agent=teacher,
@@ -166,7 +171,7 @@ def train_teacher(cfg, env, logger):
         normalize_advantages=True,
         clip_value_function_loss=True,
         target_kl=None,
-        anneal_lr=False,
+        anneal_lr=cfg.algo.get("anneal_lr", False),
         envs=env,
         seed=cfg.seed,
         logger=adapted_logger,

@@ -8,9 +8,11 @@ from src.algorithms.sac import SAC
 from src.environments.make_env import make_env
 
 class SACAdapterLogger:
-    def __init__(self, tb_logger, eval_callback=None):
+    def __init__(self, tb_logger, eval_callback=None, eval_freq=0):
         self.tb = tb_logger
         self.eval_callback = eval_callback
+        self.eval_freq = eval_freq
+        self.last_eval_step = 0
 
     def log_rollout_step(self, infos, global_step):
         if "_episode" in infos and "episode" in infos:
@@ -33,20 +35,15 @@ class SACAdapterLogger:
         self.tb.log_scalar("teacher/alpha_loss", update_results["alpha_loss"], global_step)
         
         if self.eval_callback is not None:
-            self.eval_callback(global_step)
+            if self.eval_freq <= 0 or (global_step - self.last_eval_step >= self.eval_freq):
+                self.eval_callback(global_step)
+                self.last_eval_step = global_step
 
 def get_eval_callback(cfg, env, teacher, device, logger, agent_class):
     eval_envs = make_env(cfg.env, num_envs=1, seed=cfg.seed + 1000)
     eval_teacher = agent_class(eval_envs, env_name=cfg.env.name).to(device)
 
     def callback(global_step):
-        # We only want to run evaluation every roughly N steps
-        if not hasattr(callback, "last_eval"):
-            callback.last_eval = 0
-        if global_step - callback.last_eval < getattr(cfg.algo, "eval_interval", 10000):
-            return
-        callback.last_eval = global_step
-
         eval_teacher.load_state_dict(teacher.state_dict())
         eval_teacher.eval()
         
@@ -129,12 +126,16 @@ def train_teacher(cfg, env, logger):
     total_timesteps = cfg.algo.total_timesteps
 
     eval_cb = get_eval_callback(cfg, env, teacher, device, logger, agent_class)
-    adapted_logger = SACAdapterLogger(logger, eval_callback=eval_cb)
+    eval_freq = cfg.algo.get("eval_freq", 10000)
+    adapted_logger = SACAdapterLogger(logger, eval_callback=eval_cb, eval_freq=eval_freq)
 
     sac = SAC(
         agent=teacher,
         envs=env,
         learning_rate=cfg.algo.lr,
+        num_rollout_steps=getattr(cfg.algo, "rollout_steps", 128),
+        num_envs=num_envs,
+        update_epochs=getattr(cfg.algo, "update_epochs", 1),
         buffer_size=getattr(cfg.algo, "buffer_size", 1000000),
         batch_size=getattr(cfg.algo, "batch_size", 256),
         gamma=cfg.algo.gamma,
@@ -144,6 +145,7 @@ def train_teacher(cfg, env, logger):
         target_update_interval=getattr(cfg.algo, "target_update_interval", 1),
         updates_per_step=getattr(cfg.algo, "updates_per_step", 1),
         start_steps=getattr(cfg.algo, "start_steps", 10000),
+        anneal_lr=getattr(cfg.algo, "anneal_lr", False),
         seed=cfg.seed,
         logger=adapted_logger,
     )

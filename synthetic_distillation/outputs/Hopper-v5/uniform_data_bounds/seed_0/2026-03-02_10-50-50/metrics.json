@@ -1,0 +1,19 @@
+{
+    "teacher_grad_norm_mean": 2.6069006707984954e-05,
+    "teacher_grad_norm_std": 3.7580684875138104e-06,
+    "teacher_logit_mean": 0.001848155981861055,
+    "teacher_logit_std": 0.0008929245523177087,
+    "teacher_lipschitz_mean": 0.0015270139556378126,
+    "teacher_lipschitz_std": 0.0007154082995839417,
+    "teacher_robustness/noise_0.0_mean": NaN,
+    "teacher_robustness/noise_0.0_std": NaN,
+    "student_1_grad_norm_mean": 2.7061636501457542e-05,
+    "student_1_grad_norm_std": 3.4372646950942e-06,
+    "student_1_logit_mean": 0.00183734146412462,
+    "student_1_logit_std": 0.0009671609150245786,
+    "student_1_lipschitz_mean": 0.001488592941313982,
+    "student_1_lipschitz_std": 0.000615472614299506,
+    "student_1_robustness/noise_0.0_mean": 127.50815928307442,
+    "student_1_robustness/noise_0.0_std": 13.157461810885188,
+    "seed": 0
+}

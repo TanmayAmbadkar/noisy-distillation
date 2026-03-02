@@ -1,0 +1,22 @@
+/scratch/tsa5252/.conda/envs/grpo_env/lib/python3.11/site-packages/hydra/_internal/defaults_list.py:251: UserWarning: In 'config': Defaults list is missing `_self_`. See https://hydra.cc/docs/1.2/upgrades/1.0_to_1.1/default_composition_order for more information
+  warnings.warn(msg, UserWarning)
+A.L.E: Arcade Learning Environment (version 0.11.2+ecc1138)
+[Powered by Stella]
+Starting PPO Teacher Training on ALE/Breakout-v5...
+Using DiscreteConvAgent for Atari environment.
+global_step=1232, episodic_return=0.00
+global_step=3008, episodic_return=2.00
+global_step=4056, episodic_return=0.00
+global_step=5304, episodic_return=1.00
+global_step=6632, episodic_return=1.00
+global_step=7632, episodic_return=0.00
+global_step=9008, episodic_return=1.00
+Eval: global_step=10240, reward=0.00 +/- 0.00
+global_step=10672, episodic_return=2.00
+global_step=12416, episodic_return=3.00
+global_step=13760, episodic_return=0.00
+global_step=14816, episodic_return=0.00
+global_step=15928, episodic_return=0.00
+global_step=17360, episodic_return=1.00
+global_step=18496, episodic_return=0.00
+global_step=19680, episodic_return=0.00

@@ -33,11 +33,17 @@ class SACAgent(nn.Module):
         self.log_sig_min = log_sig_min
         self.log_sig_max = log_sig_max
         
-        # Action rescaling
+        try:
+            high = envs.envs[0].unwrapped.action_space.high
+            low = envs.envs[0].unwrapped.action_space.low
+        except:
+            high = envs.single_action_space.high
+            low = envs.single_action_space.low
+            
         self.register_buffer("action_scale", torch.FloatTensor(
-            (envs.single_action_space.high - envs.single_action_space.low) / 2.))
+            (high - low) / 2.))
         self.register_buffer("action_bias", torch.FloatTensor(
-            (envs.single_action_space.high + envs.single_action_space.low) / 2.))
+            (high + low) / 2.))
 
         self.critic = TwinQNetwork(obs_dim, self.action_dim, neurons, layers)
         self.critic_target = TwinQNetwork(obs_dim, self.action_dim, neurons, layers)

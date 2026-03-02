@@ -1,5 +1,0 @@
-- algo.total_timesteps=500000
-- algo.num_envs=4
-- env=hopper
-- distill.distil_samples=[10000, 25000, 50000]
-- model.distil_neurons=[1, 0.5, 0.25]

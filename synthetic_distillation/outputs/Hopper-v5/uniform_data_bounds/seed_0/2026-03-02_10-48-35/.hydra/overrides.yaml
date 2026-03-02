@@ -1,0 +1,7 @@
+- env=hopper
+- algo=sac
+- algo.total_timesteps=500
+- +algo.rollout_steps=128
+- +algo.update_epochs=1
+- algo.num_envs=2
+- algo.batch_size=256

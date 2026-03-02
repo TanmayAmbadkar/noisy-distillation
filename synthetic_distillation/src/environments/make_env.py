@@ -2,6 +2,8 @@ import gymnasium as gym
 import numpy as np
 import types
 import copy
+import ale_py
+import ale_py
 
 def make_discrete_env(env_id, idx, capture_video, run_name):
     def thunk():
@@ -11,6 +13,19 @@ def make_discrete_env(env_id, idx, capture_video, run_name):
         else:
             env = gym.make(env_id)
         env = gym.wrappers.RecordEpisodeStatistics(env)
+        return env
+    return thunk
+
+def make_atari_env(env_id, idx, capture_video, run_name, screen_size=84):
+    def thunk():
+        if capture_video and idx == 0:
+            env = gym.make(env_id, render_mode="rgb_array", frameskip=1)
+            env = gym.wrappers.RecordVideo(env, f"videos/{run_name}")
+        else:
+            env = gym.make(env_id, frameskip=1)
+        env = gym.wrappers.RecordEpisodeStatistics(env)
+        env = gym.wrappers.AtariPreprocessing(env, terminal_on_life_loss=False, scale_obs=False, screen_size=screen_size)
+        env = gym.wrappers.FrameStackObservation(env, 4)
         return env
     return thunk
 
@@ -59,28 +74,10 @@ def sync_obs_norm_rms(self, target_envs):
 def make_env(env_cfg, num_envs=1, seed=0, capture_video=False, run_name="run", gamma=0.99):
     env_id = env_cfg.name
     if env_cfg.type == "atari":
-        from ale_py.vector_env import AtariVectorEnv
-        
-        # Build kwargs using sensible defaults and config overrides
-        kwargs = dict(
-            game=env_id,
-            num_envs=num_envs,
-            frameskip=4,
-            grayscale=True,
-            stack_num=4,
-            img_height=84,
-            img_width=84,
-            maxpool=True,
-            reward_clipping=True,
-            noop_max=30,
-            use_fire_reset=True,
-            episodic_life=False,
-            life_loss_info=False,
-            num_threads=1,
-            repeat_action_probability=0.0
+        screen_size = env_cfg.get("screen_size", 84)
+        envs = gym.vector.SyncVectorEnv(
+            [make_atari_env(env_id, i, capture_video, run_name, screen_size) for i in range(num_envs)]
         )
-        
-        envs = AtariVectorEnv(**kwargs)
         envs.action_space.seed(seed)
         envs.observation_space.seed(seed)
         return envs

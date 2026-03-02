@@ -12,7 +12,7 @@ from omegaconf import DictConfig
 
 from src.logging.tb_logger import TBLogger
 from src.environments.make_env import make_env
-from scripts.train_teacher import train_teacher
+# Import for algorithm will be done conditionally inside main
 from scripts.distill_student import distill
 from scripts.run_experiment import evaluate_all
 
@@ -43,10 +43,15 @@ def main(cfg: DictConfig):
     torch.set_num_threads(1)
     env = make_env(cfg.env, seed=cfg.seed)
     
-    teacher = train_teacher(cfg, env, logger)
+    if "tau" in cfg.algo:
+        from scripts.train_sac import train_teacher as train_algo
+    else:
+        from scripts.train_teacher import train_teacher as train_algo
+        
+    teacher = train_algo(cfg, env, logger)
     
     # 2.5 FREEZE Env normalization stats completely so identical environments across Distillation & Evaluation are stationary
-    if cfg.env.type != "discrete":
+    if cfg.env.type == "continuous":
         for i in range(env.num_envs):
             env.freeze_norm_stats(i)
             

@@ -2,9 +2,10 @@ lr: 3e-4
 gamma: 0.99
 gae_lambda: 0.95
 clip_eps: 0.2
-entropy_coef: 0.0001
+entropy_coef: 0.01
 ppo_epochs: 10
 rollout_steps: 2048
 minibatch_size: 256
 total_timesteps: 819200
 num_envs: 1
+anneal_lr: False

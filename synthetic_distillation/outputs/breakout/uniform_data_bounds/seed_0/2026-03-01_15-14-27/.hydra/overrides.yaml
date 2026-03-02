@@ -1,4 +1,0 @@
-- env=breakout
-- algo=ppo
-- algo.total_timesteps=1000
-- algo.num_envs=4

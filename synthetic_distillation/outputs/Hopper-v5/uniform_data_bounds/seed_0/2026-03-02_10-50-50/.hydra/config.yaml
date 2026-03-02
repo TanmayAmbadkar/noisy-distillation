@@ -1,0 +1,44 @@
+env:
+  name: Hopper-v5
+  type: continuous
+  max_episode_steps: 1000
+algo:
+  lr: 0.0003
+  buffer_size: 1000000
+  batch_size: 256
+  gamma: 0.99
+  tau: 0.005
+  alpha: 0.2
+  automatic_entropy_tuning: true
+  target_update_interval: 1
+  updates_per_step: 1
+  start_steps: 10000
+  total_timesteps: 500
+  num_envs: 2
+  rollout_steps: 128
+  update_epochs: 1
+distill:
+  mode: uniform_data_bounds
+  batch_size: 2048
+  epochs: 100
+  distil_samples: 400000
+  loss: mean_mse
+  sampling:
+    mode: uniform_data_bounds
+    expansion: 0.1
+model:
+  neurons: 64
+  layers: 2
+  distil_neurons: 1.0
+  distil_layers: 2
+experiment:
+  name: baseline
+  description: Baseline experiment with default parameters.
+seed: 0
+device: cpu
+log:
+  use_tensorboard: true
+  log_interval: 10
+robustness:
+  noise_levels: '[]'
+  episodes: 100

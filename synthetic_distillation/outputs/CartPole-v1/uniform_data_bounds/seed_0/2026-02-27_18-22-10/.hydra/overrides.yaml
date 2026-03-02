@@ -1,3 +1,0 @@
-- algo.total_timesteps=200000
-- algo.num_envs=4
-- env=cartpole

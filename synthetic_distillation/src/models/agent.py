@@ -178,7 +178,14 @@ class DiscreteConvAgent(BaseAgent):
             layer_init(nn.Conv2d(c2, c3, 3, stride=1)),
             nn.ReLU(),
             nn.Flatten(),
-            layer_init(nn.Linear(c3 * 7 * 7, l1)),
+        )
+
+        with torch.no_grad():
+            dummy = torch.zeros(1, *envs.single_observation_space.shape)
+            flattened_size = self.network(dummy).shape[1]
+
+        self.fc = nn.Sequential(
+            layer_init(nn.Linear(flattened_size, l1)),
             nn.ReLU(),
         )
 
@@ -186,7 +193,8 @@ class DiscreteConvAgent(BaseAgent):
         self.critic = layer_init(nn.Linear(l1, 1), std=1.0)
         
     def _get_features(self, x):
-        return self.network(x / 255.0)
+        hidden = self.network(x / 255.0)
+        return self.fc(hidden)
 
     def forward(self, states):
         hidden = self._get_features(states)

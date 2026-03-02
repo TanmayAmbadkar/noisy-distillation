@@ -1,7 +1,0 @@
-- algo.total_timesteps=2000000
-- algo.num_envs=4
-- env=bipedalwalker
-- seed=0
-- distill=gaussian
-- distill.distil_samples=[10000, 25000, 50000, 100000]
-- model.distil_neurons=[1.0, 0.5, 0.25]

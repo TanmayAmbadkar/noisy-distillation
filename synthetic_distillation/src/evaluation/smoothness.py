@@ -26,7 +26,7 @@ class SmoothnessEvaluator:
 
     def _get_outputs(self, model, states):
         outputs = model(states)
-        if self.env_type == "discrete":
+        if self.env_type in ["discrete", "atari"]:
             return outputs
         else:
             return outputs[0]

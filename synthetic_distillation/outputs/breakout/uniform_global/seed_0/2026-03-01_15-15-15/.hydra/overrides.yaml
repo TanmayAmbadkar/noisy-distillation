@@ -1,6 +1,0 @@
-- env=breakout
-- algo=ppo
-- algo.total_timesteps=100
-- algo.rollout_steps=10
-- distill.mode=uniform_global
-- distill.epochs=1

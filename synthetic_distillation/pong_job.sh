@@ -20,7 +20,6 @@ conda activate grpo_env
 
 # Environment variables
 export HF_HOME=/scratch/tsa5252/.cache/huggingface
-export HF_TOKEN=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
 export NCCL_P2P_DISABLE=1
 export PYTHONUNBUFFERED=1
 export PYTORCH_ALLOC_CONF=expandable_segments:True

@@ -1,9 +1,0 @@
-nohup: ignoring input
-=================================================
-Launching parallel sweep for Env: halfcheetah | Timesteps: 2000000
-=================================================
-Launching Process 1 (Seed: 764766) on CPUs 56-69
-Launching Process 2 (Seed: 831436) on CPUs 70-83
-Launching Process 3 (Seed: 769145) on CPUs 84-97
-Launching Process 4 (Seed: 976241) on CPUs 98-111
-Launching Process 5 (Seed: 980525) on CPUs 42-55

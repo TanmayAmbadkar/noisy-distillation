@@ -12,11 +12,25 @@ python main.py -m \
        distill.sampling.mode=trajectory,gaussian,uniform_data_bounds,mixed
 ```
 
-Or you can use the predefined experimental template logic inside of `configs/experiment/full_study.yaml`:
-```bash
-python main.py +experiment=full_study
-```
 This triggers the `sweeper` directives which expands all combinations simultaneously into separate target isolation groups within `outputs/multirun/YYYY-MM-DD/HH-MM-SS/`.
+
+## Optimized Parallel Scripts
+
+For large-scale sweeps across MuJoCo and Box2D environments with CPU isolation, use the provided bash scripts:
+
+```bash
+# For MuJoCo (HalfCheetah, Hopper, Ant, Humanoid)
+bash run_all_seeds.sh
+
+# For Box2D (LunarLander, BipedalWalker)
+bash run_all_seeds_box2d.sh
+```
+
+These scripts:
+- Launch 5 parallel seeds per environment.
+- Use `taskset` for strict CPU core isolation to prevent context-switching overhead.
+- Automatically inject environment-specific hyperparameters (e.g., higher timesteps for Humanoid, custom entropy for BipedalWalker).
+- Save comprehensive logs to `sweep_summaries/`.
 
 ## Aggregating Sweeps
 

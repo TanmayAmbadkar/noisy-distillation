@@ -7,6 +7,7 @@ You'll need `torch`, `gymnasium[mujoco]`, `tensorboard`, and the `hydra` scaling
 pip install hydra-core hydra-colorlog func_to_script torch tensorboard numpy "gymnasium[mujoco]"
 ```
 
+
 ## Running the framework
 
 The pipeline executes everything through `main.py` located centrally in `/synthetic_distillation`:
@@ -43,3 +44,11 @@ outputs/
               ├── teacher.pt
               └── student.pt
 ```
+
+## Detailed Documentation
+- [Installation and Execution Details](docs/getting_started.md)
+- [How to Run Hydra Sweeps](docs/sweeps_and_aggregation.md)
+- [Adding New Environments & Metrics](docs/extending_the_framework.md)
+
+> [!TIP]
+> For large-scale MuJoCo or Box2D experiments, it is highly recommended to use the optimized `run_all_seeds.sh` scripts described in the [Sweeps](docs/sweeps_and_aggregation.md#optimized-parallel-scripts) documentation. They ensure proper CPU isolation and tuned hyperparameters.

@@ -8,7 +8,7 @@ You can override any parameter by appending `group.parameter=value` to your comm
 These control the PPO Teacher Policy training.
 
 *   `algo.lr`: Learning rate (Default: `3e-4`)
-*   `algo.gamma`: Discount factor for future rewards (Default: `0.99`)
+*   `algo.gamma`: Discount factor for future rewards (Default: `0.99`). **Note**: This value is also used to sync the running statistics of the `NormalizeReward` environment wrapper.
 *   `algo.gae_lambda`: Bias-variance tradeoff parameter for Generalized Advantage Estimation (Default: `0.95`)
 *   `algo.clip_eps`: PPO surrogate clipping threshold epsilon (Default: `0.2`)
 *   `algo.entropy_coef`: Entropy loss weight for exploration (Default: `0.01`)
@@ -17,6 +17,7 @@ These control the PPO Teacher Policy training.
 *   `algo.minibatch_size`: Minibatch size used during the PPO update (Default: `256`)
 *   `algo.total_timesteps`: The absolute total number of environment interactions to train the completely (Default: `819200`)
 *   `algo.num_envs`: How many independent environment threads to spawn in parallel (Default: `1`)
+*   **Automatic Bootstrapping**: The PPO implementation automatically handles environment truncations by bootstrapping values from `final_observation` and augmenting rewards. No manual flag is required.
 
 ## 2. Distillation (`distill.*`)
 These control the Policy Distillation sequence from the Teacher to the Student.

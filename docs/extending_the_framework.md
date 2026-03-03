@@ -8,7 +8,7 @@ name: MountainCar-v0
 type: discrete
 max_episode_steps: 200
 ```
-Hydra automatically resolves the file.
+Hydra automatically resolves the file. **Note**: All environments automatically receive `NormalizeReward` and `TransformReward` (clipping) wrappers during initialization in `make_env.py` to ensure training stability.
 
 ## Adding a new synthetic logic form
 If you wish to augment existing `mixed` or `gaussian` bounds within the distillation process, you add the rule inside `synthetic_sampler.py`.

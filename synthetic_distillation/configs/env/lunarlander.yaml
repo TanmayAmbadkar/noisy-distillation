@@ -1,2 +1,2 @@
-name: "LunarLanderContinuous-v3"
-type: "continuous"
+name: "LunarLander-v3"
+type: "discrete"

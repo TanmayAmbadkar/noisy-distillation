@@ -1,0 +1,120 @@
+/scratch1/tsa5252/anaconda3/envs/spiceenv/lib/python3.8/site-packages/hydra/_internal/defaults_list.py:251: UserWarning: In 'config': Defaults list is missing `_self_`. See https://hydra.cc/docs/1.2/upgrades/1.0_to_1.1/default_composition_order for more information
+  warnings.warn(msg, UserWarning)
+[[36m2026-03-03 15:16:58,619[0m][[34mOpenGL.acceleratesupport[0m][[32mINFO[0m] - No OpenGL_accelerate module loaded: No module named 'OpenGL_accelerate'[0m
+Starting PPO Teacher Training on HalfCheetah-v5...
+global_step=4000, episodic_return=-347.94
+global_step=8004, episodic_return=-394.65
+global_step=12008, episodic_return=-344.14
+global_step=16012, episodic_return=-377.00
+global_step=20016, episodic_return=-264.80
+global_step=24020, episodic_return=-344.98
+global_step=28024, episodic_return=-350.39
+global_step=32028, episodic_return=-293.35
+global_step=36032, episodic_return=-315.56
+global_step=40036, episodic_return=-186.58
+global_step=44040, episodic_return=-337.25
+global_step=48044, episodic_return=-343.97
+global_step=52048, episodic_return=-297.14
+global_step=56052, episodic_return=-333.32
+global_step=60056, episodic_return=-257.61
+global_step=64060, episodic_return=-242.98
+global_step=68064, episodic_return=-249.60
+global_step=72068, episodic_return=-301.94
+global_step=76072, episodic_return=-257.87
+global_step=80076, episodic_return=-260.08
+global_step=84080, episodic_return=-275.69
+global_step=88084, episodic_return=-178.57
+global_step=92088, episodic_return=-373.33
+global_step=96092, episodic_return=-161.81
+global_step=100096, episodic_return=-187.12
+global_step=104100, episodic_return=-267.51
+Eval: global_step=106496, reward=-266.03 +/- 100.11
+Saved teacher checkpoint to /scratch1/tsa5252/noisy-distillation/synthetic_distillation/outputs/HalfCheetah-v5/gaussian/seed_764766/2026-03-03_15-16-58/checkpoints/teacher_step_106496.pt
+global_step=108104, episodic_return=-219.16
+global_step=112108, episodic_return=-168.56
+global_step=116112, episodic_return=-196.28
+global_step=120116, episodic_return=-202.83
+global_step=124120, episodic_return=-163.77
+global_step=128124, episodic_return=-199.79
+global_step=132128, episodic_return=-218.00
+global_step=136132, episodic_return=-239.73
+global_step=140136, episodic_return=-159.03
+global_step=144140, episodic_return=-197.14
+global_step=148144, episodic_return=-172.50
+global_step=152148, episodic_return=-137.46
+global_step=156152, episodic_return=-177.03
+global_step=160156, episodic_return=-134.83
+global_step=164160, episodic_return=-171.19
+global_step=168164, episodic_return=-177.02
+global_step=172168, episodic_return=-209.30
+global_step=176172, episodic_return=-110.58
+global_step=180176, episodic_return=-179.69
+global_step=184180, episodic_return=-137.19
+global_step=188184, episodic_return=-110.19
+global_step=192188, episodic_return=-104.52
+global_step=196192, episodic_return=-103.24
+global_step=200196, episodic_return=-318.50
+global_step=204200, episodic_return=-118.24
+global_step=208204, episodic_return=-56.89
+global_step=212208, episodic_return=-112.18
+Eval: global_step=212992, reward=-228.31 +/- 172.56
+Saved teacher checkpoint to /scratch1/tsa5252/noisy-distillation/synthetic_distillation/outputs/HalfCheetah-v5/gaussian/seed_764766/2026-03-03_15-16-58/checkpoints/teacher_step_212992.pt
+global_step=216212, episodic_return=-154.26
+global_step=220216, episodic_return=-123.38
+global_step=224220, episodic_return=-102.55
+global_step=228224, episodic_return=-35.00
+global_step=232228, episodic_return=-58.04
+global_step=236232, episodic_return=-120.73
+global_step=240236, episodic_return=-70.69
+global_step=244240, episodic_return=-28.05
+global_step=248244, episodic_return=-50.51
+global_step=252248, episodic_return=-29.59
+global_step=256252, episodic_return=-76.80
+global_step=260256, episodic_return=-5.70
+global_step=264260, episodic_return=25.45
+global_step=268264, episodic_return=-10.46
+global_step=272268, episodic_return=13.92
+global_step=276272, episodic_return=46.46
+global_step=280276, episodic_return=29.44
+global_step=284280, episodic_return=61.84
+global_step=288284, episodic_return=-7.04
+global_step=292288, episodic_return=27.87
+global_step=296292, episodic_return=25.94
+global_step=300296, episodic_return=-119.89
+global_step=304300, episodic_return=68.94
+global_step=308304, episodic_return=105.87
+global_step=312308, episodic_return=-21.79
+global_step=316312, episodic_return=54.70
+Eval: global_step=319488, reward=-116.31 +/- 251.55
+Saved teacher checkpoint to /scratch1/tsa5252/noisy-distillation/synthetic_distillation/outputs/HalfCheetah-v5/gaussian/seed_764766/2026-03-03_15-16-58/checkpoints/teacher_step_319488.pt
+global_step=320316, episodic_return=1.21
+global_step=324320, episodic_return=48.58
+global_step=328324, episodic_return=121.98
+global_step=332328, episodic_return=17.24
+global_step=336332, episodic_return=131.51
+global_step=340336, episodic_return=49.85
+global_step=344340, episodic_return=84.56
+global_step=348344, episodic_return=209.49
+global_step=352348, episodic_return=186.76
+global_step=356352, episodic_return=227.35
+global_step=360356, episodic_return=277.69
+global_step=364360, episodic_return=190.52
+global_step=368364, episodic_return=42.18
+global_step=372368, episodic_return=110.51
+global_step=376372, episodic_return=162.21
+global_step=380376, episodic_return=280.91
+global_step=384380, episodic_return=268.84
+global_step=388384, episodic_return=98.98
+global_step=392388, episodic_return=265.45
+global_step=396392, episodic_return=310.52
+global_step=400396, episodic_return=335.89
+global_step=404400, episodic_return=258.07
+global_step=408404, episodic_return=358.68
+global_step=412408, episodic_return=339.03
+global_step=416412, episodic_return=310.73
+global_step=420416, episodic_return=254.14
+global_step=424420, episodic_return=405.09
+Eval: global_step=425984, reward=-129.21 +/- 73.56
+Saved teacher checkpoint to /scratch1/tsa5252/noisy-distillation/synthetic_distillation/outputs/HalfCheetah-v5/gaussian/seed_764766/2026-03-03_15-16-58/checkpoints/teacher_step_425984.pt
+global_step=428424, episodic_return=196.50
+global_step=432428, episodic_return=273.76

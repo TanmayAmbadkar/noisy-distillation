@@ -255,7 +255,7 @@ class ContinuousAgent(BaseAgent):
         self.critic = make_mlp(obs_dim, 1, neurons, layers, last_std=1.0)
         self.actor_mean = make_mlp(obs_dim, action_dim, neurons, layers, last_std=0.01)
         
-        self.actor_logstd = nn.Parameter(torch.ones(1, action_dim))
+        self.actor_logstd = nn.Parameter(torch.zeros(1, action_dim))
 
     def forward(self, states):
         action_mean = self.actor_mean(states)

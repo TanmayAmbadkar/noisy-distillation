@@ -41,7 +41,7 @@ def main(cfg: DictConfig):
     logger = TBLogger(tb_dir)
 
     torch.set_num_threads(1)
-    env = make_env(cfg.env, seed=cfg.seed)
+    env = make_env(cfg.env, seed=cfg.seed, gamma=cfg.algo.gamma)
     
     if "tau" in cfg.algo:
         from scripts.train_sac import train_teacher as train_algo

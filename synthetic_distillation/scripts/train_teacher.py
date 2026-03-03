@@ -186,7 +186,7 @@ def train_teacher(cfg, env, logger, run_dir):
         update_epochs=cfg.algo.ppo_epochs,
         num_minibatches= (cfg.algo.rollout_steps * num_envs) // cfg.algo.minibatch_size,
         normalize_advantages=True,
-        clip_value_function_loss=True,
+        clip_value_function_loss=False,
         target_kl=None,
         anneal_lr=cfg.algo.get("anneal_lr", False),
         envs=env,

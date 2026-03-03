@@ -4,7 +4,7 @@
 # conda activate spiceenv
 PYTHON_PATH="/scratch1/tsa5252/anaconda3/envs/spiceenv/bin/python"
 
-ENVS=("ant" "humanoid")
+ENVS=("halfcheetah" "hopper" "ant" "humanoid")
 
 # Create a master directory to store the isolated logs
 mkdir -p sweep_summaries
@@ -13,11 +13,48 @@ mkdir -p sweep_summaries
 CPU_RANGES=("56-69" "70-83" "84-97" "98-111" "42-55")
 
 for env in "${ENVS[@]}"; do
-    if [ "$env" == "cartpole" ]; then
-        TIMESTEPS=200000
-    else
-        TIMESTEPS=2000000
-    fi
+    case "$env" in
+        "halfcheetah")
+            TIMESTEPS=2000000
+            NUM_ENVS=4
+            ROLLOUT_STEPS=2048
+            MINIBATCH_SIZE=256
+            EPOCHS=10
+            EVAL_FREQ=100000
+            ;;
+        "hopper")
+            TIMESTEPS=2000000
+            NUM_ENVS=4
+            ROLLOUT_STEPS=2048
+            MINIBATCH_SIZE=256
+            EPOCHS=10
+            EVAL_FREQ=100000
+            ;;
+        "ant")
+            TIMESTEPS=2000000
+            NUM_ENVS=4
+            ROLLOUT_STEPS=2048
+            MINIBATCH_SIZE=256
+            EPOCHS=10
+            EVAL_FREQ=100000
+            ;;
+        "humanoid")
+            TIMESTEPS=10000000
+            NUM_ENVS=4
+            ROLLOUT_STEPS=2048
+            MINIBATCH_SIZE=256
+            EPOCHS=5
+            EVAL_FREQ=100000
+            ;;
+        *)
+            TIMESTEPS=10000000
+            NUM_ENVS=4
+            ROLLOUT_STEPS=2048
+            MINIBATCH_SIZE=256
+            EPOCHS=10
+            EVAL_FREQ=100000
+            ;;
+    esac
 
     echo "================================================="
     echo "Launching parallel sweep for Env: $env | Timesteps: $TIMESTEPS"
@@ -40,7 +77,17 @@ for env in "${ENVS[@]}"; do
             # Run the experiment with taskset for CPU isolation
             taskset -c "$CPU_RANGE" "$PYTHON_PATH" main.py \
                 algo.total_timesteps=$TIMESTEPS \
-                algo.num_envs=4 \
+                algo.num_envs=$NUM_ENVS \
+                algo.rollout_steps=$ROLLOUT_STEPS \
+                algo.minibatch_size=$MINIBATCH_SIZE \
+                algo.ppo_epochs=$EPOCHS \
+                algo.lr=3e-4 \
+                algo.anneal_lr=True \
+                algo.gamma=0.99 \
+                algo.gae_lambda=0.95 \
+                algo.clip_eps=0.2 \
+                algo.entropy_coef=0.0 \
+                +algo.eval_freq=$EVAL_FREQ \
                 env=$env \
                 seed=$SEED \
                 distill=gaussian \

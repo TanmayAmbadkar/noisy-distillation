@@ -5,7 +5,7 @@ import copy
 import ale_py
 import ale_py
 
-def make_discrete_env(env_id, idx, capture_video, run_name):
+def make_discrete_env(env_id, idx, capture_video, run_name, gamma):
     def thunk():
         if capture_video and idx == 0:
             env = gym.make(env_id, render_mode="rgb_array")
@@ -13,6 +13,8 @@ def make_discrete_env(env_id, idx, capture_video, run_name):
         else:
             env = gym.make(env_id)
         env = gym.wrappers.RecordEpisodeStatistics(env)
+        env = gym.wrappers.NormalizeReward(env, gamma=gamma)
+        env = gym.wrappers.TransformReward(env, lambda reward: np.clip(reward, -10, 10))
         return env
     return thunk
 
@@ -80,6 +82,8 @@ def make_env(env_cfg, num_envs=1, seed=0, capture_video=False, run_name="run", g
             maxpool=True
         )
         envs = gym.wrappers.vector.RecordEpisodeStatistics(envs)
+        envs = gym.wrappers.vector.NormalizeReward(envs, gamma=gamma)
+        envs = gym.wrappers.vector.TransformReward(envs, lambda reward: np.clip(reward, -10, 10))
         envs.action_space.seed(seed)
         envs.observation_space.seed(seed)
         return envs
@@ -88,7 +92,7 @@ def make_env(env_cfg, num_envs=1, seed=0, capture_video=False, run_name="run", g
 
     if env_is_discrete:
         envs = gym.vector.SyncVectorEnv(
-            [make_discrete_env(env_id, i, capture_video, run_name) for i in range(num_envs)]
+            [make_discrete_env(env_id, i, capture_video, run_name, gamma) for i in range(num_envs)]
         )
     else:
         envs = gym.vector.SyncVectorEnv(

@@ -59,7 +59,6 @@ class PPOLogger:
             global_step (int): The current global training step count.
         """
         self.global_steps.append(global_step)
-        self.global_steps.append(global_step)
         if "_episode" in infos and "episode" in infos:
             # infos["_episode"] is a boolean array of environments that terminated
             # infos["episode"]["r"] and ["l"] contain the stats

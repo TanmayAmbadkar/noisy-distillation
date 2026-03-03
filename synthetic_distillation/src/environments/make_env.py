@@ -16,18 +16,7 @@ def make_discrete_env(env_id, idx, capture_video, run_name):
         return env
     return thunk
 
-def make_atari_env(env_id, idx, capture_video, run_name, screen_size=84):
-    def thunk():
-        if capture_video and idx == 0:
-            env = gym.make(env_id, render_mode="rgb_array", frameskip=1)
-            env = gym.wrappers.RecordVideo(env, f"videos/{run_name}")
-        else:
-            env = gym.make(env_id, frameskip=1)
-        env = gym.wrappers.RecordEpisodeStatistics(env)
-        env = gym.wrappers.AtariPreprocessing(env, terminal_on_life_loss=False, scale_obs=False, screen_size=screen_size)
-        env = gym.wrappers.FrameStackObservation(env, 4)
-        return env
-    return thunk
+
 
 def make_continuous_env(env_id, idx, capture_video, run_name, gamma):
     def thunk():
@@ -74,10 +63,23 @@ def sync_obs_norm_rms(self, target_envs):
 def make_env(env_cfg, num_envs=1, seed=0, capture_video=False, run_name="run", gamma=0.99):
     env_id = env_cfg.name
     if env_cfg.type == "atari":
+        from ale_py.vector_env import AtariVectorEnv
         screen_size = env_cfg.get("screen_size", 84)
-        envs = gym.vector.SyncVectorEnv(
-            [make_atari_env(env_id, i, capture_video, run_name, screen_size) for i in range(num_envs)]
+        game_name = env_id.split("/")[-1].split("-")[0].lower()
+        envs = AtariVectorEnv(
+            game=game_name,
+            num_envs=num_envs,
+            img_height=screen_size,
+            img_width=screen_size,
+            frameskip=4,
+            stack_num=4,
+            grayscale=True,
+            reward_clipping=True,
+            episodic_life=True,
+            use_fire_reset=True,
+            maxpool=True
         )
+        envs = gym.wrappers.vector.RecordEpisodeStatistics(envs)
         envs.action_space.seed(seed)
         envs.observation_space.seed(seed)
         return envs

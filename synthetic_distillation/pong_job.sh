@@ -30,11 +30,13 @@ cd /scratch/tsa5252/noisy-distillation/synthetic_distillation
 python -u main.py \
     env=breakout \
     algo=ppo \
+    +algo.eval_freq=100000 \
     algo.num_envs=8 \
     algo.rollout_steps=128 \
-    algo.clip_eps=0.2 \
-    algo.ppo_epochs=10 \
+    algo.clip_eps=0.1 \
+    algo.ppo_epochs=4 \
     algo.lr=2.5e-4 \
+    algo.anneal_lr=True \
     algo.minibatch_size=256 \
     distill=uniform \
     +distill.sampling.mode=uniform_global \

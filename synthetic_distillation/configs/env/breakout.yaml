@@ -1,2 +1,3 @@
 name: "ALE/Breakout-v5"
 type: "atari"
+screen_size: 84

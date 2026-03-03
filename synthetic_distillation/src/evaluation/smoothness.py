@@ -39,7 +39,8 @@ class SmoothnessEvaluator:
         loss = outputs.norm(dim=1).mean()
         loss.backward()
         
-        grad_norm = states.grad.norm(dim=1)
+        # Use all dimensions except batch for norm
+        grad_norm = states.grad.flatten(start_dim=1).norm(dim=1)
         return grad_norm.mean().item(), grad_norm.std().item()
 
     def _logit_magnitude(self, model, states):
@@ -59,7 +60,8 @@ class SmoothnessEvaluator:
             out2 = self._get_outputs(model, perturbed)
 
         numerator = (out2 - out1).norm(dim=1)
-        denominator = noise.norm(dim=1)
+        # Use all dimensions except batch for norm
+        denominator = noise.flatten(start_dim=1).norm(dim=1)
         
         ratio = numerator / (denominator + 1e-8)
         return ratio.mean().item(), ratio.std().item()

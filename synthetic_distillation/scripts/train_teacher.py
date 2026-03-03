@@ -44,7 +44,7 @@ class PPOAdapterLogger:
                 self.last_eval_step = global_step
 
 def get_eval_callback(cfg, env, teacher, env_is_discrete, device, logger, agent_class):
-    eval_envs = make_env(cfg.env, num_envs=1, seed=cfg.seed + 1000)
+    eval_envs = make_env(cfg.env, num_envs=10, seed=cfg.seed + 1000)
     eval_teacher = agent_class(eval_envs, env_name=cfg.env.name).to(device)
 
     def callback(global_step):
@@ -58,12 +58,17 @@ def get_eval_callback(cfg, env, teacher, env_is_discrete, device, logger, agent_
         
         obs, _ = eval_envs.reset()
         eval_episodes = 0
+        eval_steps = 0
         rewards = []
         
-        while eval_episodes < 10:
+        # Use stochastic evaluation for Atari to avoid getting stuck issuing NOOPs without FireOnLifeLoss wrapper
+        is_atari = getattr(cfg.env, "type", "") == "atari"
+        
+        while eval_episodes < 10 and eval_steps < 10000:
             with torch.no_grad():
-                actions = eval_teacher.act(torch.Tensor(obs).to(device), deterministic=True)
+                actions = eval_teacher.act(torch.Tensor(obs).to(device), deterministic=not is_atari)
             obs, _, _, _, infos = eval_envs.step(actions.cpu().numpy())
+            eval_steps += 1
             
             if "_episode" in infos and "episode" in infos:
                 mask = infos["_episode"]
@@ -85,7 +90,7 @@ def get_eval_callback(cfg, env, teacher, env_is_discrete, device, logger, agent_
 
 def evaluate_teacher(cfg, env, teacher, env_is_discrete, device, total_timesteps, logger, agent_class):
     # Run a simple evaluation rollout at the end
-    eval_envs = make_env(cfg.env, num_envs=1, seed=cfg.seed + 1000)
+    eval_envs = make_env(cfg.env, num_envs=5, seed=cfg.seed + 1000)
     
     eval_teacher = agent_class(eval_envs, env_name=cfg.env.name).to(device)
     eval_teacher.load_state_dict(teacher.state_dict())
@@ -98,12 +103,16 @@ def evaluate_teacher(cfg, env, teacher, env_is_discrete, device, total_timesteps
 
     obs, _ = eval_envs.reset()
     eval_episodes = 0
+    eval_steps = 0
     total_eval_returns = 0
     
-    while eval_episodes < 5:
+    is_atari = getattr(cfg.env, "type", "") == "atari"
+    
+    while eval_episodes < 5 and eval_steps < 5000:
         with torch.no_grad():
-            actions = eval_teacher.act(torch.Tensor(obs).to(device), deterministic=True)
+            actions = eval_teacher.act(torch.Tensor(obs).to(device), deterministic=not is_atari)
         obs, _, _, _, infos = eval_envs.step(actions.cpu().numpy())
+        eval_steps += 1
         
         if "_episode" in infos and "episode" in infos:
             mask = infos["_episode"]
@@ -151,7 +160,7 @@ def train_teacher(cfg, env, logger):
     total_timesteps = cfg.algo.total_timesteps
 
     eval_cb = get_eval_callback(cfg, env, teacher, env_is_discrete, device, logger, agent_class)
-    eval_freq = cfg.algo.get("eval_freq", 10000)
+    eval_freq = cfg.algo.get("eval_freq", 100000)
     adapted_logger = PPOAdapterLogger(logger, eval_callback=eval_cb, eval_freq=eval_freq)
 
     ppo = PPO(

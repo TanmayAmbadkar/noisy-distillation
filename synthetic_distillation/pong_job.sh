@@ -28,7 +28,7 @@ cd /scratch/tsa5252/noisy-distillation/synthetic_distillation
 
 # Run the python command
 python -u main.py \
-    env=breakout \
+    env=pong \
     algo=ppo \
     +algo.eval_freq=100000 \
     algo.num_envs=8 \
@@ -44,8 +44,8 @@ python -u main.py \
     +distill.sampling.high=255 \
     algo.total_timesteps=10000000 \
     robustness.episodes=10 \
-    algo.anneal_lr=False \
+    algo.anneal_lr=True \
     distill.epochs=100 \
     'distill.distil_samples=[10000, 25000, 50000, 100000]' \
     'model.distil_neurons=[1.0, 0.5, 0.25]' \
-    device="cuda" > breakout_sweep_run.log 2>&1
+    device="cuda" > pong_sweep_run.log 2>&1

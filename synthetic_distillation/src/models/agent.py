@@ -172,11 +172,11 @@ class DiscreteConvAgent(BaseAgent):
 
         self.network = nn.Sequential(
             layer_init(nn.Conv2d(envs.single_observation_space.shape[0], c1, 8, stride=4)),
-            nn.ReLU(),
+            nn.Tanh(),
             layer_init(nn.Conv2d(c1, c2, 4, stride=2)),
-            nn.ReLU(),
+            nn.Tanh(),
             layer_init(nn.Conv2d(c2, c3, 3, stride=1)),
-            nn.ReLU(),
+            nn.Tanh(),
             nn.Flatten(),
         )
 
@@ -186,7 +186,7 @@ class DiscreteConvAgent(BaseAgent):
 
         self.fc = nn.Sequential(
             layer_init(nn.Linear(flattened_size, l1)),
-            nn.ReLU(),
+            nn.Tanh(),
         )
 
         self.actor = layer_init(nn.Linear(l1, action_dim), std=0.01)

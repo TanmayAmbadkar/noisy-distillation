@@ -2,346 +2,743 @@
   warnings.warn(msg, UserWarning)
 Starting PPO Teacher Training on ALE/Pong-v5...
 Using DiscreteConvAgent for Atari environment.
-global_step=7192, episodic_return=-20.00
-global_step=13280, episodic_return=-21.00
-global_step=19360, episodic_return=-21.00
-global_step=25432, episodic_return=-21.00
-global_step=31520, episodic_return=-21.00
-global_step=37592, episodic_return=-21.00
-global_step=43680, episodic_return=-21.00
-global_step=49752, episodic_return=-21.00
-global_step=55848, episodic_return=-21.00
-global_step=61936, episodic_return=-21.00
-global_step=68024, episodic_return=-21.00
-global_step=74624, episodic_return=-21.00
-global_step=80720, episodic_return=-21.00
-global_step=86824, episodic_return=-21.00
-global_step=92896, episodic_return=-21.00
-global_step=99016, episodic_return=-21.00
-Eval: global_step=100352, reward=-20.70 +/- 0.64
-global_step=105080, episodic_return=-21.00
-global_step=111664, episodic_return=-21.00
-global_step=118256, episodic_return=-21.00
-global_step=124352, episodic_return=-21.00
-global_step=131664, episodic_return=-20.00
-global_step=139968, episodic_return=-20.00
-global_step=146648, episodic_return=-20.00
-global_step=154184, episodic_return=-21.00
-global_step=162088, episodic_return=-21.00
-global_step=169376, episodic_return=-21.00
-global_step=178680, episodic_return=-20.00
-global_step=185880, episodic_return=-21.00
-global_step=194704, episodic_return=-20.00
-Eval: global_step=200704, reward=-19.70 +/- 0.78
-global_step=201176, episodic_return=-21.00
-global_step=208264, episodic_return=-21.00
-global_step=215808, episodic_return=-21.00
-global_step=223128, episodic_return=-21.00
-global_step=230296, episodic_return=-20.00
-global_step=236848, episodic_return=-21.00
-global_step=243136, episodic_return=-21.00
-global_step=250024, episodic_return=-20.00
-global_step=256632, episodic_return=-21.00
-global_step=262848, episodic_return=-21.00
-global_step=269544, episodic_return=-20.00
-global_step=276320, episodic_return=-21.00
-global_step=283040, episodic_return=-20.00
-global_step=289608, episodic_return=-21.00
-global_step=296272, episodic_return=-20.00
-Eval: global_step=301056, reward=-20.70 +/- 0.46
-global_step=303240, episodic_return=-21.00
-global_step=310408, episodic_return=-20.00
-global_step=316976, episodic_return=-21.00
-global_step=324896, episodic_return=-18.00
-global_step=331496, episodic_return=-21.00
-global_step=338056, episodic_return=-21.00
-global_step=344512, episodic_return=-21.00
-global_step=351232, episodic_return=-21.00
-global_step=357936, episodic_return=-20.00
-global_step=364520, episodic_return=-21.00
-global_step=371560, episodic_return=-21.00
-global_step=378264, episodic_return=-20.00
-global_step=385080, episodic_return=-21.00
-global_step=393368, episodic_return=-19.00
-global_step=400472, episodic_return=-21.00
-Eval: global_step=401408, reward=-20.50 +/- 0.50
-global_step=406944, episodic_return=-21.00
-global_step=416304, episodic_return=-17.00
-global_step=423824, episodic_return=-20.00
-global_step=431000, episodic_return=-20.00
-global_step=437792, episodic_return=-21.00
-global_step=444376, episodic_return=-21.00
-global_step=451288, episodic_return=-21.00
-global_step=458000, episodic_return=-20.00
-global_step=464264, episodic_return=-21.00
-global_step=470536, episodic_return=-21.00
-global_step=478200, episodic_return=-21.00
-global_step=485608, episodic_return=-19.00
-global_step=492824, episodic_return=-21.00
-global_step=500688, episodic_return=-19.00
-Eval: global_step=501760, reward=-20.40 +/- 0.80
-global_step=507024, episodic_return=-21.00
-global_step=515768, episodic_return=-19.00
-global_step=522952, episodic_return=-20.00
-global_step=530416, episodic_return=-19.00
-global_step=536976, episodic_return=-21.00
-global_step=543280, episodic_return=-21.00
-global_step=550760, episodic_return=-19.00
-global_step=557528, episodic_return=-21.00
-global_step=564936, episodic_return=-19.00
-global_step=571184, episodic_return=-21.00
-global_step=579424, episodic_return=-21.00
-global_step=587512, episodic_return=-19.00
-global_step=594368, episodic_return=-21.00
-Eval: global_step=602112, reward=-19.40 +/- 1.02
-global_step=602328, episodic_return=-20.00
-global_step=609640, episodic_return=-19.00
-global_step=616456, episodic_return=-20.00
-global_step=624728, episodic_return=-19.00
-global_step=632120, episodic_return=-21.00
-global_step=639928, episodic_return=-19.00
-global_step=646192, episodic_return=-21.00
-global_step=652888, episodic_return=-20.00
-global_step=659232, episodic_return=-21.00
-global_step=666936, episodic_return=-19.00
-global_step=676552, episodic_return=-18.00
-global_step=683920, episodic_return=-20.00
-global_step=692416, episodic_return=-20.00
-global_step=701800, episodic_return=-18.00
-Eval: global_step=702464, reward=-18.90 +/- 1.37
-global_step=708504, episodic_return=-21.00
-global_step=719280, episodic_return=-17.00
-global_step=730072, episodic_return=-17.00
-global_step=739648, episodic_return=-17.00
-global_step=750320, episodic_return=-15.00
-global_step=758336, episodic_return=-20.00
-global_step=766704, episodic_return=-19.00
-global_step=773824, episodic_return=-20.00
-global_step=780560, episodic_return=-20.00
-global_step=786872, episodic_return=-21.00
-global_step=793360, episodic_return=-21.00
-global_step=800272, episodic_return=-20.00
-Eval: global_step=802816, reward=-20.60 +/- 0.49
-global_step=806944, episodic_return=-20.00
-global_step=813656, episodic_return=-20.00
-global_step=820496, episodic_return=-20.00
-global_step=826744, episodic_return=-21.00
-global_step=832992, episodic_return=-21.00
-global_step=840328, episodic_return=-19.00
-global_step=847024, episodic_return=-20.00
-global_step=854336, episodic_return=-20.00
-global_step=860600, episodic_return=-21.00
-global_step=866856, episodic_return=-21.00
-global_step=873592, episodic_return=-20.00
-global_step=879824, episodic_return=-21.00
-global_step=887120, episodic_return=-19.00
-global_step=893848, episodic_return=-20.00
-global_step=901432, episodic_return=-19.00
-Eval: global_step=903168, reward=-20.70 +/- 0.46
-global_step=908096, episodic_return=-20.00
-global_step=914360, episodic_return=-21.00
-global_step=920576, episodic_return=-21.00
-global_step=927264, episodic_return=-20.00
-global_step=933936, episodic_return=-20.00
-global_step=940160, episodic_return=-21.00
-global_step=946432, episodic_return=-21.00
-global_step=952696, episodic_return=-21.00
-global_step=959376, episodic_return=-20.00
-global_step=965600, episodic_return=-21.00
-global_step=971832, episodic_return=-21.00
-global_step=978584, episodic_return=-21.00
-global_step=984800, episodic_return=-21.00
-global_step=992064, episodic_return=-21.00
-global_step=999584, episodic_return=-19.00
-Eval: global_step=1003520, reward=-20.40 +/- 0.92
-global_step=1006912, episodic_return=-20.00
-global_step=1013592, episodic_return=-20.00
-global_step=1019808, episodic_return=-21.00
-global_step=1026080, episodic_return=-21.00
-global_step=1032312, episodic_return=-21.00
-global_step=1038560, episodic_return=-21.00
-global_step=1044792, episodic_return=-21.00
-global_step=1051440, episodic_return=-21.00
-global_step=1063280, episodic_return=-14.00
-global_step=1070784, episodic_return=-19.00
-global_step=1078784, episodic_return=-20.00
-global_step=1085472, episodic_return=-20.00
-global_step=1092176, episodic_return=-20.00
-global_step=1098424, episodic_return=-21.00
-Eval: global_step=1103872, reward=-18.70 +/- 1.42
-global_step=1105200, episodic_return=-21.00
-global_step=1114632, episodic_return=-19.00
-global_step=1124688, episodic_return=-16.00
-global_step=1132488, episodic_return=-21.00
-global_step=1140152, episodic_return=-20.00
-global_step=1149056, episodic_return=-19.00
-global_step=1156304, episodic_return=-20.00
-global_step=1168392, episodic_return=-14.00
-global_step=1181600, episodic_return=-15.00
-global_step=1193064, episodic_return=-16.00
-global_step=1202536, episodic_return=-19.00
-Eval: global_step=1204224, reward=-18.10 +/- 1.97
-global_step=1211744, episodic_return=-19.00
-global_step=1220384, episodic_return=-21.00
-global_step=1231664, episodic_return=-14.00
-global_step=1242832, episodic_return=-15.00
-global_step=1255344, episodic_return=-15.00
-global_step=1266712, episodic_return=-14.00
-global_step=1275240, episodic_return=-18.00
-global_step=1285104, episodic_return=-19.00
-global_step=1292608, episodic_return=-19.00
-global_step=1299320, episodic_return=-20.00
-Eval: global_step=1304576, reward=-17.60 +/- 2.24
-global_step=1305872, episodic_return=-21.00
-global_step=1315648, episodic_return=-17.00
-global_step=1324000, episodic_return=-21.00
-global_step=1333072, episodic_return=-19.00
-global_step=1343888, episodic_return=-18.00
-global_step=1352712, episodic_return=-20.00
-global_step=1361560, episodic_return=-20.00
-global_step=1372504, episodic_return=-17.00
-global_step=1383096, episodic_return=-16.00
-global_step=1395840, episodic_return=-17.00
-Eval: global_step=1404928, reward=-19.10 +/- 1.87
-global_step=1406176, episodic_return=-17.00
-global_step=1416768, episodic_return=-20.00
-global_step=1427296, episodic_return=-17.00
-global_step=1439536, episodic_return=-16.00
-global_step=1452056, episodic_return=-17.00
-global_step=1464280, episodic_return=-17.00
-global_step=1475600, episodic_return=-18.00
-global_step=1487960, episodic_return=-16.00
-global_step=1498192, episodic_return=-20.00
-Eval: global_step=1505280, reward=-17.20 +/- 3.34
-global_step=1507048, episodic_return=-20.00
-global_step=1521368, episodic_return=-15.00
-global_step=1533856, episodic_return=-15.00
-global_step=1547680, episodic_return=-19.00
-global_step=1558184, episodic_return=-18.00
-global_step=1568760, episodic_return=-18.00
-global_step=1579240, episodic_return=-20.00
-global_step=1591952, episodic_return=-15.00
-global_step=1603456, episodic_return=-19.00
-Eval: global_step=1605632, reward=-16.40 +/- 2.11
-global_step=1612056, episodic_return=-21.00
-global_step=1622424, episodic_return=-20.00
-global_step=1632856, episodic_return=-20.00
-global_step=1645136, episodic_return=-17.00
-global_step=1656320, episodic_return=-20.00
-global_step=1667960, episodic_return=-19.00
-global_step=1679704, episodic_return=-16.00
-global_step=1694696, episodic_return=-10.00
-Eval: global_step=1705984, reward=-18.50 +/- 1.50
-global_step=1707536, episodic_return=-20.00
-global_step=1724184, episodic_return=-18.00
-global_step=1738792, episodic_return=-12.00
-global_step=1749224, episodic_return=-20.00
-global_step=1759040, episodic_return=-21.00
-global_step=1770008, episodic_return=-19.00
-global_step=1781968, episodic_return=-18.00
-global_step=1798320, episodic_return=-17.00
-Eval: global_step=1806336, reward=-17.10 +/- 2.51
-global_step=1813192, episodic_return=-17.00
-global_step=1829032, episodic_return=-18.00
-global_step=1846200, episodic_return=-15.00
-global_step=1859656, episodic_return=-18.00
-global_step=1870576, episodic_return=-19.00
-global_step=1876904, episodic_return=-21.00
-global_step=1882984, episodic_return=-21.00
-global_step=1889056, episodic_return=-21.00
-global_step=1895152, episodic_return=-21.00
-global_step=1901256, episodic_return=-21.00
-Eval: global_step=1906688, reward=-21.00 +/- 0.00
-global_step=1907336, episodic_return=-21.00
-global_step=1913408, episodic_return=-21.00
-global_step=1919520, episodic_return=-21.00
-global_step=1925608, episodic_return=-21.00
-global_step=1931712, episodic_return=-21.00
-global_step=1937784, episodic_return=-21.00
-global_step=1943848, episodic_return=-21.00
-global_step=1949928, episodic_return=-21.00
-global_step=1956016, episodic_return=-21.00
-global_step=1962096, episodic_return=-21.00
-global_step=1968184, episodic_return=-21.00
-global_step=1974280, episodic_return=-21.00
-global_step=1980376, episodic_return=-21.00
-global_step=1986440, episodic_return=-21.00
-global_step=1992552, episodic_return=-21.00
-global_step=1998640, episodic_return=-21.00
-global_step=2004744, episodic_return=-21.00
-Eval: global_step=2007040, reward=-21.00 +/- 0.00
-global_step=2010840, episodic_return=-21.00
-global_step=2016928, episodic_return=-21.00
-global_step=2023016, episodic_return=-21.00
-global_step=2029112, episodic_return=-21.00
-global_step=2035232, episodic_return=-21.00
-global_step=2041328, episodic_return=-21.00
-global_step=2047432, episodic_return=-21.00
-global_step=2053512, episodic_return=-21.00
-global_step=2061656, episodic_return=-20.00
-global_step=2069432, episodic_return=-19.00
-global_step=2075536, episodic_return=-21.00
-global_step=2083192, episodic_return=-20.00
-global_step=2092808, episodic_return=-18.00
-global_step=2098888, episodic_return=-21.00
-global_step=2105208, episodic_return=-21.00
-Eval: global_step=2107392, reward=-20.70 +/- 0.90
-global_step=2111280, episodic_return=-21.00
-global_step=2117768, episodic_return=-21.00
-global_step=2126392, episodic_return=-20.00
-global_step=2135448, episodic_return=-20.00
-global_step=2146432, episodic_return=-17.00
-global_step=2155384, episodic_return=-20.00
-global_step=2165464, episodic_return=-16.00
-global_step=2176376, episodic_return=-16.00
-global_step=2186752, episodic_return=-18.00
-global_step=2198528, episodic_return=-17.00
-Eval: global_step=2207744, reward=-15.70 +/- 3.32
-global_step=2210504, episodic_return=-18.00
-global_step=2225080, episodic_return=-13.00
-global_step=2239288, episodic_return=-14.00
-global_step=2253432, episodic_return=-15.00
-global_step=2262616, episodic_return=-18.00
-global_step=2268712, episodic_return=-21.00
-global_step=2275304, episodic_return=-21.00
-global_step=2281376, episodic_return=-21.00
-global_step=2287720, episodic_return=-21.00
-global_step=2302496, episodic_return=-14.00
-Eval: global_step=2308096, reward=-18.90 +/- 2.84
-global_step=2309096, episodic_return=-21.00
-global_step=2319992, episodic_return=-18.00
-global_step=2331552, episodic_return=-17.00
-global_step=2342824, episodic_return=-21.00
-global_step=2357736, episodic_return=-17.00
-global_step=2371056, episodic_return=-17.00
-global_step=2389832, episodic_return=-8.00
-global_step=2404408, episodic_return=-11.00
-Eval: global_step=2408448, reward=-12.80 +/- 3.63
-global_step=2426552, episodic_return=-5.00
-global_step=2446024, episodic_return=-7.00
-global_step=2465808, episodic_return=-6.00
-global_step=2486864, episodic_return=-3.00
-global_step=2501168, episodic_return=-17.00
-Eval: global_step=2508800, reward=-9.40 +/- 9.88
-global_step=2529264, episodic_return=1.00
-global_step=2545328, episodic_return=-16.00
-global_step=2572424, episodic_return=-2.00
-global_step=2589784, episodic_return=13.00
-global_step=2602376, episodic_return=-17.00
-Eval: global_step=2609152, reward=-2.20 +/- 13.85
-global_step=2617400, episodic_return=15.00
-global_step=2628896, episodic_return=-16.00
-global_step=2651664, episodic_return=3.00
-global_step=2664992, episodic_return=-18.00
-global_step=2684512, episodic_return=4.00
-global_step=2696664, episodic_return=-21.00
-Eval: global_step=2709504, reward=-8.30 +/- 12.78
-global_step=2720352, episodic_return=3.00
-global_step=2742296, episodic_return=-4.00
-global_step=2759904, episodic_return=-9.00
-global_step=2783808, episodic_return=-3.00
-Eval: global_step=2809856, reward=-7.30 +/- 6.60
-global_step=2811984, episodic_return=1.00
-global_step=2834368, episodic_return=-11.00
-global_step=2857616, episodic_return=-14.00
-global_step=2888160, episodic_return=-2.00
+global_step=7840, episodic_return=-19.00
+global_step=15056, episodic_return=-21.00
+global_step=22856, episodic_return=-20.00
+global_step=29232, episodic_return=-21.00
+global_step=37136, episodic_return=-20.00
+global_step=43360, episodic_return=-21.00
+global_step=54472, episodic_return=-17.00
+global_step=61168, episodic_return=-20.00
+global_step=68192, episodic_return=-21.00
+global_step=75584, episodic_return=-20.00
+global_step=82256, episodic_return=-20.00
+global_step=90216, episodic_return=-19.00
+global_step=96792, episodic_return=-21.00
+Eval: global_step=100352, reward=-20.40 +/- 0.49
+Saved teacher checkpoint to /scratch/tsa5252/noisy-distillation/synthetic_distillation/outputs/ALE/Pong-v5/uniform/seed_0/2026-03-03_11-38-44/checkpoints/teacher_step_100352.pt
+global_step=104008, episodic_return=-20.00
+global_step=110704, episodic_return=-20.00
+global_step=117448, episodic_return=-20.00
+global_step=124872, episodic_return=-20.00
+global_step=131200, episodic_return=-21.00
+global_step=137888, episodic_return=-20.00
+global_step=145104, episodic_return=-20.00
+global_step=152288, episodic_return=-20.00
+global_step=158952, episodic_return=-20.00
+global_step=165664, episodic_return=-20.00
+global_step=172384, episodic_return=-20.00
+global_step=180056, episodic_return=-20.00
+global_step=187408, episodic_return=-20.00
+global_step=194600, episodic_return=-21.00
+Eval: global_step=200704, reward=-20.70 +/- 0.46
+Saved teacher checkpoint to /scratch/tsa5252/noisy-distillation/synthetic_distillation/outputs/ALE/Pong-v5/uniform/seed_0/2026-03-03_11-38-44/checkpoints/teacher_step_200704.pt
+global_step=201152, episodic_return=-21.00
+global_step=208336, episodic_return=-20.00
+global_step=217184, episodic_return=-21.00
+global_step=224712, episodic_return=-20.00
+global_step=232744, episodic_return=-20.00
+global_step=241920, episodic_return=-19.00
+global_step=250768, episodic_return=-20.00
+global_step=261672, episodic_return=-18.00
+global_step=270904, episodic_return=-20.00
+global_step=278712, episodic_return=-20.00
+global_step=286856, episodic_return=-20.00
+global_step=297440, episodic_return=-20.00
+Eval: global_step=301056, reward=-20.90 +/- 0.30
+Saved teacher checkpoint to /scratch/tsa5252/noisy-distillation/synthetic_distillation/outputs/ALE/Pong-v5/uniform/seed_0/2026-03-03_11-38-44/checkpoints/teacher_step_301056.pt
+global_step=313272, episodic_return=-21.00
+global_step=320928, episodic_return=-20.00
+global_step=336712, episodic_return=-20.00
+global_step=350520, episodic_return=-21.00
+global_step=357080, episodic_return=-21.00
+global_step=363880, episodic_return=-21.00
+global_step=370560, episodic_return=-20.00
+global_step=377616, episodic_return=-21.00
+global_step=383848, episodic_return=-21.00
+global_step=392624, episodic_return=-21.00
+global_step=399184, episodic_return=-21.00
+Eval: global_step=401408, reward=-20.60 +/- 0.66
+Saved teacher checkpoint to /scratch/tsa5252/noisy-distillation/synthetic_distillation/outputs/ALE/Pong-v5/uniform/seed_0/2026-03-03_11-38-44/checkpoints/teacher_step_401408.pt
+global_step=405984, episodic_return=-21.00
+global_step=412552, episodic_return=-21.00
+global_step=419368, episodic_return=-21.00
+global_step=426432, episodic_return=-21.00
+global_step=432984, episodic_return=-21.00
+global_step=440176, episodic_return=-21.00
+global_step=449512, episodic_return=-20.00
+global_step=455856, episodic_return=-21.00
+global_step=463136, episodic_return=-21.00
+global_step=472040, episodic_return=-21.00
+global_step=485840, episodic_return=-21.00
+global_step=492432, episodic_return=-21.00
+Eval: global_step=501760, reward=-20.80 +/- 0.40
+Saved teacher checkpoint to /scratch/tsa5252/noisy-distillation/synthetic_distillation/outputs/ALE/Pong-v5/uniform/seed_0/2026-03-03_11-38-44/checkpoints/teacher_step_501760.pt
+global_step=502024, episodic_return=-20.00
+global_step=509776, episodic_return=-21.00
+global_step=516352, episodic_return=-21.00
+global_step=526504, episodic_return=-21.00
+global_step=533072, episodic_return=-21.00
+global_step=539560, episodic_return=-21.00
+global_step=546160, episodic_return=-21.00
+global_step=552744, episodic_return=-21.00
+global_step=565744, episodic_return=-21.00
+global_step=572008, episodic_return=-21.00
+global_step=583696, episodic_return=-21.00
+global_step=593784, episodic_return=-20.00
+Eval: global_step=602112, reward=-20.80 +/- 0.40
+Saved teacher checkpoint to /scratch/tsa5252/noisy-distillation/synthetic_distillation/outputs/ALE/Pong-v5/uniform/seed_0/2026-03-03_11-38-44/checkpoints/teacher_step_602112.pt
+global_step=605968, episodic_return=-21.00
+global_step=619408, episodic_return=-20.00
+global_step=627416, episodic_return=-20.00
+global_step=635168, episodic_return=-21.00
+global_step=645128, episodic_return=-20.00
+global_step=651704, episodic_return=-21.00
+global_step=659144, episodic_return=-21.00
+global_step=667656, episodic_return=-19.00
+global_step=674232, episodic_return=-21.00
+global_step=681064, episodic_return=-20.00
+global_step=687368, episodic_return=-21.00
+global_step=696808, episodic_return=-21.00
+Eval: global_step=702464, reward=-21.00 +/- 0.00
+Saved teacher checkpoint to /scratch/tsa5252/noisy-distillation/synthetic_distillation/outputs/ALE/Pong-v5/uniform/seed_0/2026-03-03_11-38-44/checkpoints/teacher_step_702464.pt
+global_step=703320, episodic_return=-21.00
+global_step=710624, episodic_return=-20.00
+global_step=717192, episodic_return=-21.00
+global_step=723504, episodic_return=-21.00
+global_step=730776, episodic_return=-21.00
+global_step=738072, episodic_return=-21.00
+global_step=747328, episodic_return=-21.00
+global_step=754144, episodic_return=-21.00
+global_step=760752, episodic_return=-21.00
+global_step=766832, episodic_return=-21.00
+global_step=772936, episodic_return=-21.00
+global_step=779248, episodic_return=-21.00
+global_step=785352, episodic_return=-21.00
+global_step=791936, episodic_return=-21.00
+global_step=798024, episodic_return=-21.00
+Eval: global_step=802816, reward=-21.00 +/- 0.00
+Saved teacher checkpoint to /scratch/tsa5252/noisy-distillation/synthetic_distillation/outputs/ALE/Pong-v5/uniform/seed_0/2026-03-03_11-38-44/checkpoints/teacher_step_802816.pt
+global_step=804144, episodic_return=-21.00
+global_step=810240, episodic_return=-21.00
+global_step=816328, episodic_return=-21.00
+global_step=822392, episodic_return=-21.00
+global_step=828456, episodic_return=-21.00
+global_step=834576, episodic_return=-21.00
+global_step=840664, episodic_return=-21.00
+global_step=846776, episodic_return=-21.00
+global_step=852864, episodic_return=-21.00
+global_step=858976, episodic_return=-21.00
+global_step=865040, episodic_return=-21.00
+global_step=871128, episodic_return=-21.00
+global_step=877216, episodic_return=-21.00
+global_step=883328, episodic_return=-21.00
+global_step=889424, episodic_return=-21.00
+global_step=895520, episodic_return=-21.00
+global_step=901616, episodic_return=-21.00
+Eval: global_step=903168, reward=-21.00 +/- 0.00
+Saved teacher checkpoint to /scratch/tsa5252/noisy-distillation/synthetic_distillation/outputs/ALE/Pong-v5/uniform/seed_0/2026-03-03_11-38-44/checkpoints/teacher_step_903168.pt
+global_step=907728, episodic_return=-21.00
+global_step=913816, episodic_return=-21.00
+global_step=919928, episodic_return=-21.00
+global_step=926032, episodic_return=-21.00
+global_step=932152, episodic_return=-21.00
+global_step=938232, episodic_return=-21.00
+global_step=944320, episodic_return=-21.00
+global_step=950424, episodic_return=-21.00
+global_step=956536, episodic_return=-21.00
+global_step=962616, episodic_return=-21.00
+global_step=969448, episodic_return=-21.00
+global_step=975512, episodic_return=-21.00
+global_step=982768, episodic_return=-21.00
+global_step=989560, episodic_return=-21.00
+global_step=996336, episodic_return=-21.00
+global_step=1002456, episodic_return=-21.00
+Eval: global_step=1003520, reward=-21.00 +/- 0.00
+Saved teacher checkpoint to /scratch/tsa5252/noisy-distillation/synthetic_distillation/outputs/ALE/Pong-v5/uniform/seed_0/2026-03-03_11-38-44/checkpoints/teacher_step_1003520.pt
+global_step=1008576, episodic_return=-21.00
+global_step=1015368, episodic_return=-21.00
+global_step=1023624, episodic_return=-20.00
+global_step=1029704, episodic_return=-21.00
+global_step=1035824, episodic_return=-21.00
+global_step=1041888, episodic_return=-21.00
+global_step=1047952, episodic_return=-21.00
+global_step=1054024, episodic_return=-21.00
+global_step=1060120, episodic_return=-21.00
+global_step=1066216, episodic_return=-21.00
+global_step=1072280, episodic_return=-21.00
+global_step=1078400, episodic_return=-21.00
+global_step=1084488, episodic_return=-21.00
+global_step=1090584, episodic_return=-21.00
+global_step=1096664, episodic_return=-21.00
+global_step=1102784, episodic_return=-21.00
+Eval: global_step=1103872, reward=-20.90 +/- 0.30
+Saved teacher checkpoint to /scratch/tsa5252/noisy-distillation/synthetic_distillation/outputs/ALE/Pong-v5/uniform/seed_0/2026-03-03_11-38-44/checkpoints/teacher_step_1103872.pt
+global_step=1109400, episodic_return=-21.00
+global_step=1116216, episodic_return=-21.00
+global_step=1122544, episodic_return=-21.00
+global_step=1132256, episodic_return=-18.00
+global_step=1140592, episodic_return=-19.00
+global_step=1147680, episodic_return=-20.00
+global_step=1154264, episodic_return=-21.00
+global_step=1161000, episodic_return=-21.00
+global_step=1168216, episodic_return=-20.00
+global_step=1175688, episodic_return=-19.00
+global_step=1182528, episodic_return=-21.00
+global_step=1189272, episodic_return=-21.00
+global_step=1197216, episodic_return=-20.00
+Eval: global_step=1204224, reward=-20.40 +/- 0.66
+Saved teacher checkpoint to /scratch/tsa5252/noisy-distillation/synthetic_distillation/outputs/ALE/Pong-v5/uniform/seed_0/2026-03-03_11-38-44/checkpoints/teacher_step_1204224.pt
+global_step=1204576, episodic_return=-20.00
+global_step=1212432, episodic_return=-20.00
+global_step=1220120, episodic_return=-21.00
+global_step=1226424, episodic_return=-21.00
+global_step=1234032, episodic_return=-19.00
+global_step=1242024, episodic_return=-21.00
+global_step=1251584, episodic_return=-20.00
+global_step=1258808, episodic_return=-21.00
+global_step=1265496, episodic_return=-21.00
+global_step=1273056, episodic_return=-20.00
+global_step=1280456, episodic_return=-20.00
+global_step=1288400, episodic_return=-19.00
+global_step=1296144, episodic_return=-21.00
+global_step=1302232, episodic_return=-21.00
+Eval: global_step=1304576, reward=-20.30 +/- 0.78
+Saved teacher checkpoint to /scratch/tsa5252/noisy-distillation/synthetic_distillation/outputs/ALE/Pong-v5/uniform/seed_0/2026-03-03_11-38-44/checkpoints/teacher_step_1304576.pt
+global_step=1308976, episodic_return=-20.00
+global_step=1316200, episodic_return=-21.00
+global_step=1322304, episodic_return=-21.00
+global_step=1329032, episodic_return=-20.00
+global_step=1335152, episodic_return=-21.00
+global_step=1341856, episodic_return=-20.00
+global_step=1349592, episodic_return=-21.00
+global_step=1355712, episodic_return=-21.00
+global_step=1361800, episodic_return=-21.00
+global_step=1369208, episodic_return=-20.00
+global_step=1375280, episodic_return=-21.00
+global_step=1381384, episodic_return=-21.00
+global_step=1388936, episodic_return=-21.00
+global_step=1396248, episodic_return=-21.00
+global_step=1403080, episodic_return=-20.00
+Eval: global_step=1404928, reward=-20.70 +/- 0.46
+Saved teacher checkpoint to /scratch/tsa5252/noisy-distillation/synthetic_distillation/outputs/ALE/Pong-v5/uniform/seed_0/2026-03-03_11-38-44/checkpoints/teacher_step_1404928.pt
+global_step=1410848, episodic_return=-21.00
+global_step=1417400, episodic_return=-21.00
+global_step=1425240, episodic_return=-20.00
+global_step=1433656, episodic_return=-20.00
+global_step=1441832, episodic_return=-18.00
+global_step=1449448, episodic_return=-20.00
+global_step=1458888, episodic_return=-20.00
+global_step=1466128, episodic_return=-21.00
+global_step=1473992, episodic_return=-20.00
+global_step=1481320, episodic_return=-20.00
+global_step=1487920, episodic_return=-21.00
+global_step=1495192, episodic_return=-21.00
+global_step=1502864, episodic_return=-20.00
+Eval: global_step=1505280, reward=-20.20 +/- 0.87
+Saved teacher checkpoint to /scratch/tsa5252/noisy-distillation/synthetic_distillation/outputs/ALE/Pong-v5/uniform/seed_0/2026-03-03_11-38-44/checkpoints/teacher_step_1505280.pt
+global_step=1512248, episodic_return=-19.00
+global_step=1519624, episodic_return=-20.00
+global_step=1526312, episodic_return=-20.00
+global_step=1535136, episodic_return=-20.00
+global_step=1542408, episodic_return=-21.00
+global_step=1548976, episodic_return=-21.00
+global_step=1559192, episodic_return=-19.00
+global_step=1565432, episodic_return=-21.00
+global_step=1572464, episodic_return=-21.00
+global_step=1579656, episodic_return=-21.00
+global_step=1589480, episodic_return=-20.00
+global_step=1596072, episodic_return=-21.00
+global_step=1602768, episodic_return=-20.00
+Eval: global_step=1605632, reward=-20.70 +/- 0.46
+Saved teacher checkpoint to /scratch/tsa5252/noisy-distillation/synthetic_distillation/outputs/ALE/Pong-v5/uniform/seed_0/2026-03-03_11-38-44/checkpoints/teacher_step_1605632.pt
+global_step=1609312, episodic_return=-21.00
+global_step=1616360, episodic_return=-21.00
+global_step=1624176, episodic_return=-20.00
+global_step=1630904, episodic_return=-21.00
+global_step=1637952, episodic_return=-21.00
+global_step=1645496, episodic_return=-20.00
+global_step=1652664, episodic_return=-21.00
+global_step=1661136, episodic_return=-19.00
+global_step=1667944, episodic_return=-21.00
+global_step=1675368, episodic_return=-19.00
+global_step=1682568, episodic_return=-21.00
+global_step=1689160, episodic_return=-21.00
+global_step=1696248, episodic_return=-21.00
+global_step=1703424, episodic_return=-21.00
+Eval: global_step=1705984, reward=-20.40 +/- 0.66
+Saved teacher checkpoint to /scratch/tsa5252/noisy-distillation/synthetic_distillation/outputs/ALE/Pong-v5/uniform/seed_0/2026-03-03_11-38-44/checkpoints/teacher_step_1705984.pt
+global_step=1710208, episodic_return=-21.00
+global_step=1717296, episodic_return=-21.00
+global_step=1724376, episodic_return=-21.00
+global_step=1733848, episodic_return=-21.00
+global_step=1740904, episodic_return=-21.00
+global_step=1747928, episodic_return=-21.00
+global_step=1756080, episodic_return=-20.00
+global_step=1763128, episodic_return=-21.00
+global_step=1769360, episodic_return=-21.00
+global_step=1775448, episodic_return=-21.00
+global_step=1781544, episodic_return=-21.00
+global_step=1788120, episodic_return=-21.00
+global_step=1794680, episodic_return=-21.00
+global_step=1801280, episodic_return=-21.00
+Eval: global_step=1806336, reward=-20.80 +/- 0.40
+Saved teacher checkpoint to /scratch/tsa5252/noisy-distillation/synthetic_distillation/outputs/ALE/Pong-v5/uniform/seed_0/2026-03-03_11-38-44/checkpoints/teacher_step_1806336.pt
+global_step=1809440, episodic_return=-20.00
+global_step=1818056, episodic_return=-20.00
+global_step=1825344, episodic_return=-21.00
+global_step=1833408, episodic_return=-20.00
+global_step=1840744, episodic_return=-20.00
+global_step=1847432, episodic_return=-20.00
+global_step=1855728, episodic_return=-19.00
+global_step=1865360, episodic_return=-19.00
+global_step=1871616, episodic_return=-21.00
+global_step=1878184, episodic_return=-21.00
+global_step=1884760, episodic_return=-21.00
+global_step=1892616, episodic_return=-20.00
+global_step=1900472, episodic_return=-20.00
+Eval: global_step=1906688, reward=-20.20 +/- 0.75
+Saved teacher checkpoint to /scratch/tsa5252/noisy-distillation/synthetic_distillation/outputs/ALE/Pong-v5/uniform/seed_0/2026-03-03_11-38-44/checkpoints/teacher_step_1906688.pt
+global_step=1908976, episodic_return=-20.00
+global_step=1917160, episodic_return=-20.00
+global_step=1924728, episodic_return=-20.00
+global_step=1935368, episodic_return=-18.00
+global_step=1943544, episodic_return=-21.00
+global_step=1952768, episodic_return=-19.00
+global_step=1963360, episodic_return=-21.00
+global_step=1976144, episodic_return=-19.00
+global_step=1987104, episodic_return=-21.00
+global_step=1994768, episodic_return=-21.00
+global_step=2004016, episodic_return=-20.00
+Eval: global_step=2007040, reward=-19.20 +/- 1.17
+Saved teacher checkpoint to /scratch/tsa5252/noisy-distillation/synthetic_distillation/outputs/ALE/Pong-v5/uniform/seed_0/2026-03-03_11-38-44/checkpoints/teacher_step_2007040.pt
+global_step=2013968, episodic_return=-17.00
+global_step=2021832, episodic_return=-20.00
+global_step=2030360, episodic_return=-20.00
+global_step=2041656, episodic_return=-20.00
+global_step=2050048, episodic_return=-20.00
+global_step=2059576, episodic_return=-21.00
+global_step=2067664, episodic_return=-20.00
+global_step=2076776, episodic_return=-20.00
+global_step=2090480, episodic_return=-20.00
+global_step=2100352, episodic_return=-21.00
+Eval: global_step=2107392, reward=-19.10 +/- 1.22
+Saved teacher checkpoint to /scratch/tsa5252/noisy-distillation/synthetic_distillation/outputs/ALE/Pong-v5/uniform/seed_0/2026-03-03_11-38-44/checkpoints/teacher_step_2107392.pt
+global_step=2108656, episodic_return=-21.00
+global_step=2118528, episodic_return=-20.00
+global_step=2127944, episodic_return=-19.00
+global_step=2137904, episodic_return=-18.00
+global_step=2149448, episodic_return=-20.00
+global_step=2160000, episodic_return=-19.00
+global_step=2172616, episodic_return=-19.00
+global_step=2183296, episodic_return=-18.00
+global_step=2195056, episodic_return=-21.00
+global_step=2203048, episodic_return=-21.00
+Eval: global_step=2207744, reward=-19.00 +/- 1.26
+Saved teacher checkpoint to /scratch/tsa5252/noisy-distillation/synthetic_distillation/outputs/ALE/Pong-v5/uniform/seed_0/2026-03-03_11-38-44/checkpoints/teacher_step_2207744.pt
+global_step=2213920, episodic_return=-19.00
+global_step=2224248, episodic_return=-21.00
+global_step=2232344, episodic_return=-21.00
+global_step=2247136, episodic_return=-16.00
+global_step=2255008, episodic_return=-19.00
+global_step=2265336, episodic_return=-19.00
+global_step=2274640, episodic_return=-19.00
+global_step=2285624, episodic_return=-20.00
+global_step=2295872, episodic_return=-17.00
+global_step=2303848, episodic_return=-19.00
+Eval: global_step=2308096, reward=-19.80 +/- 1.25
+Saved teacher checkpoint to /scratch/tsa5252/noisy-distillation/synthetic_distillation/outputs/ALE/Pong-v5/uniform/seed_0/2026-03-03_11-38-44/checkpoints/teacher_step_2308096.pt
+global_step=2313880, episodic_return=-20.00
+global_step=2327592, episodic_return=-18.00
+global_step=2341920, episodic_return=-20.00
+global_step=2351296, episodic_return=-21.00
+global_step=2359568, episodic_return=-21.00
+global_step=2373192, episodic_return=-16.00
+global_step=2384960, episodic_return=-19.00
+global_step=2396408, episodic_return=-19.00
+Eval: global_step=2408448, reward=-17.90 +/- 1.51
+Saved teacher checkpoint to /scratch/tsa5252/noisy-distillation/synthetic_distillation/outputs/ALE/Pong-v5/uniform/seed_0/2026-03-03_11-38-44/checkpoints/teacher_step_2408448.pt
+global_step=2410384, episodic_return=-19.00
+global_step=2422472, episodic_return=-18.00
+global_step=2434528, episodic_return=-18.00
+global_step=2449040, episodic_return=-18.00
+global_step=2462320, episodic_return=-20.00
+global_step=2476464, episodic_return=-19.00
+global_step=2484136, episodic_return=-20.00
+global_step=2496824, episodic_return=-19.00
+global_step=2508184, episodic_return=-18.00
+Eval: global_step=2508800, reward=-18.10 +/- 1.81
+Saved teacher checkpoint to /scratch/tsa5252/noisy-distillation/synthetic_distillation/outputs/ALE/Pong-v5/uniform/seed_0/2026-03-03_11-38-44/checkpoints/teacher_step_2508800.pt
+global_step=2521488, episodic_return=-14.00
+global_step=2532256, episodic_return=-18.00
+global_step=2542688, episodic_return=-16.00
+global_step=2552464, episodic_return=-17.00
+global_step=2561080, episodic_return=-19.00
+global_step=2570280, episodic_return=-18.00
+global_step=2580848, episodic_return=-20.00
+global_step=2592360, episodic_return=-18.00
+global_step=2602368, episodic_return=-18.00
+Eval: global_step=2609152, reward=-16.70 +/- 2.15
+Saved teacher checkpoint to /scratch/tsa5252/noisy-distillation/synthetic_distillation/outputs/ALE/Pong-v5/uniform/seed_0/2026-03-03_11-38-44/checkpoints/teacher_step_2609152.pt
+global_step=2616152, episodic_return=-14.00
+global_step=2627056, episodic_return=-18.00
+global_step=2643384, episodic_return=-10.00
+global_step=2655696, episodic_return=-16.00
+global_step=2667336, episodic_return=-16.00
+global_step=2682328, episodic_return=-13.00
+global_step=2691544, episodic_return=-19.00
+global_step=2698104, episodic_return=-21.00
+global_step=2704832, episodic_return=-20.00
+Eval: global_step=2709504, reward=-18.30 +/- 1.19
+Saved teacher checkpoint to /scratch/tsa5252/noisy-distillation/synthetic_distillation/outputs/ALE/Pong-v5/uniform/seed_0/2026-03-03_11-38-44/checkpoints/teacher_step_2709504.pt
+global_step=2715336, episodic_return=-19.00
+global_step=2728912, episodic_return=-16.00
+global_step=2743560, episodic_return=-17.00
+global_step=2755320, episodic_return=-18.00
+global_step=2767320, episodic_return=-16.00
+global_step=2780384, episodic_return=-14.00
+global_step=2791328, episodic_return=-16.00
+global_step=2804664, episodic_return=-14.00
+Eval: global_step=2809856, reward=-17.20 +/- 1.25
+Saved teacher checkpoint to /scratch/tsa5252/noisy-distillation/synthetic_distillation/outputs/ALE/Pong-v5/uniform/seed_0/2026-03-03_11-38-44/checkpoints/teacher_step_2809856.pt
+global_step=2816400, episodic_return=-18.00
+global_step=2825272, episodic_return=-20.00
+global_step=2837456, episodic_return=-18.00
+global_step=2848984, episodic_return=-17.00
+global_step=2857528, episodic_return=-20.00
+global_step=2865712, episodic_return=-19.00
+global_step=2874536, episodic_return=-20.00
+global_step=2883648, episodic_return=-19.00
+global_step=2894112, episodic_return=-18.00
+global_step=2906312, episodic_return=-16.00
+Eval: global_step=2910208, reward=-16.60 +/- 1.74
+Saved teacher checkpoint to /scratch/tsa5252/noisy-distillation/synthetic_distillation/outputs/ALE/Pong-v5/uniform/seed_0/2026-03-03_11-38-44/checkpoints/teacher_step_2910208.pt
+global_step=2916312, episodic_return=-18.00
+global_step=2927088, episodic_return=-16.00
+global_step=2938992, episodic_return=-16.00
+global_step=2950320, episodic_return=-15.00
+global_step=2961888, episodic_return=-16.00
+global_step=2974616, episodic_return=-15.00
+global_step=2984648, episodic_return=-16.00
+global_step=2996640, episodic_return=-13.00
+global_step=3008344, episodic_return=-16.00
+Eval: global_step=3010560, reward=-15.10 +/- 2.02
+Saved teacher checkpoint to /scratch/tsa5252/noisy-distillation/synthetic_distillation/outputs/ALE/Pong-v5/uniform/seed_0/2026-03-03_11-38-44/checkpoints/teacher_step_3010560.pt
+global_step=3021688, episodic_return=-11.00
+global_step=3035888, episodic_return=-15.00
+global_step=3049824, episodic_return=-11.00
+global_step=3064936, episodic_return=-11.00
+global_step=3077728, episodic_return=-14.00
+global_step=3091496, episodic_return=-12.00
+global_step=3101336, episodic_return=-18.00
+Eval: global_step=3110912, reward=-15.10 +/- 1.51
+Saved teacher checkpoint to /scratch/tsa5252/noisy-distillation/synthetic_distillation/outputs/ALE/Pong-v5/uniform/seed_0/2026-03-03_11-38-44/checkpoints/teacher_step_3110912.pt
+global_step=3113904, episodic_return=-13.00
+global_step=3126512, episodic_return=-14.00
+global_step=3138648, episodic_return=-16.00
+global_step=3150016, episodic_return=-15.00
+global_step=3160784, episodic_return=-17.00
+global_step=3172480, episodic_return=-16.00
+global_step=3185032, episodic_return=-16.00
+global_step=3199088, episodic_return=-13.00
+Eval: global_step=3211264, reward=-12.90 +/- 2.39
+Saved teacher checkpoint to /scratch/tsa5252/noisy-distillation/synthetic_distillation/outputs/ALE/Pong-v5/uniform/seed_0/2026-03-03_11-38-44/checkpoints/teacher_step_3211264.pt
+global_step=3211704, episodic_return=-15.00
+global_step=3226224, episodic_return=-18.00
+global_step=3237952, episodic_return=-18.00
+global_step=3251824, episodic_return=-16.00
+global_step=3266224, episodic_return=-16.00
+global_step=3280720, episodic_return=-16.00
+global_step=3294336, episodic_return=-14.00
+global_step=3310096, episodic_return=-13.00
+Eval: global_step=3311616, reward=-14.70 +/- 2.33
+Saved teacher checkpoint to /scratch/tsa5252/noisy-distillation/synthetic_distillation/outputs/ALE/Pong-v5/uniform/seed_0/2026-03-03_11-38-44/checkpoints/teacher_step_3311616.pt
+global_step=3322176, episodic_return=-14.00
+global_step=3336912, episodic_return=-11.00
+global_step=3352096, episodic_return=-12.00
+global_step=3369960, episodic_return=-6.00
+global_step=3384384, episodic_return=-11.00
+global_step=3401912, episodic_return=-7.00
+Eval: global_step=3411968, reward=-4.30 +/- 2.28
+Saved teacher checkpoint to /scratch/tsa5252/noisy-distillation/synthetic_distillation/outputs/ALE/Pong-v5/uniform/seed_0/2026-03-03_11-38-44/checkpoints/teacher_step_3411968.pt
+global_step=3422256, episodic_return=-4.00
+global_step=3440688, episodic_return=-6.00
+global_step=3460416, episodic_return=-3.00
+global_step=3473928, episodic_return=-13.00
+global_step=3492376, episodic_return=-9.00
+global_step=3506168, episodic_return=-13.00
+Eval: global_step=3512320, reward=-11.90 +/- 1.58
+Saved teacher checkpoint to /scratch/tsa5252/noisy-distillation/synthetic_distillation/outputs/ALE/Pong-v5/uniform/seed_0/2026-03-03_11-38-44/checkpoints/teacher_step_3512320.pt
+global_step=3518488, episodic_return=-15.00
+global_step=3531280, episodic_return=-14.00
+global_step=3542984, episodic_return=-17.00
+global_step=3558992, episodic_return=-11.00
+global_step=3570200, episodic_return=-15.00
+global_step=3582920, episodic_return=-14.00
+global_step=3602288, episodic_return=-7.00
+Eval: global_step=3612672, reward=-6.70 +/- 2.45
+Saved teacher checkpoint to /scratch/tsa5252/noisy-distillation/synthetic_distillation/outputs/ALE/Pong-v5/uniform/seed_0/2026-03-03_11-38-44/checkpoints/teacher_step_3612672.pt
+global_step=3619056, episodic_return=-9.00
+global_step=3632320, episodic_return=-15.00
+global_step=3650672, episodic_return=-10.00
+global_step=3671296, episodic_return=-3.00
+global_step=3688080, episodic_return=-9.00
+global_step=3702784, episodic_return=-11.00
+Eval: global_step=3713024, reward=-11.30 +/- 2.10
+Saved teacher checkpoint to /scratch/tsa5252/noisy-distillation/synthetic_distillation/outputs/ALE/Pong-v5/uniform/seed_0/2026-03-03_11-38-44/checkpoints/teacher_step_3713024.pt
+global_step=3720376, episodic_return=-7.00
+global_step=3737384, episodic_return=-7.00
+global_step=3750696, episodic_return=-12.00
+global_step=3769448, episodic_return=-5.00
+global_step=3789392, episodic_return=-3.00
+global_step=3808360, episodic_return=-4.00
+Eval: global_step=3813376, reward=-9.40 +/- 2.65
+Saved teacher checkpoint to /scratch/tsa5252/noisy-distillation/synthetic_distillation/outputs/ALE/Pong-v5/uniform/seed_0/2026-03-03_11-38-44/checkpoints/teacher_step_3813376.pt
+global_step=3826320, episodic_return=-8.00
+global_step=3845320, episodic_return=-5.00
+global_step=3864432, episodic_return=-4.00
+global_step=3883752, episodic_return=-8.00
+global_step=3902008, episodic_return=-7.00
+Eval: global_step=3913728, reward=-14.80 +/- 3.60
+Saved teacher checkpoint to /scratch/tsa5252/noisy-distillation/synthetic_distillation/outputs/ALE/Pong-v5/uniform/seed_0/2026-03-03_11-38-44/checkpoints/teacher_step_3913728.pt
+global_step=3918328, episodic_return=-9.00
+global_step=3935856, episodic_return=-9.00
+global_step=3953656, episodic_return=-9.00
+global_step=3968544, episodic_return=-10.00
+global_step=3985216, episodic_return=-9.00
+global_step=4002472, episodic_return=-7.00
+Eval: global_step=4014080, reward=-9.60 +/- 2.06
+Saved teacher checkpoint to /scratch/tsa5252/noisy-distillation/synthetic_distillation/outputs/ALE/Pong-v5/uniform/seed_0/2026-03-03_11-38-44/checkpoints/teacher_step_4014080.pt
+global_step=4018568, episodic_return=-11.00
+global_step=4035160, episodic_return=-11.00
+global_step=4052800, episodic_return=-9.00
+global_step=4071864, episodic_return=-5.00
+global_step=4088816, episodic_return=-7.00
+global_step=4099168, episodic_return=-16.00
+global_step=4107080, episodic_return=-19.00
+Eval: global_step=4114432, reward=-9.20 +/- 3.12
+Saved teacher checkpoint to /scratch/tsa5252/noisy-distillation/synthetic_distillation/outputs/ALE/Pong-v5/uniform/seed_0/2026-03-03_11-38-44/checkpoints/teacher_step_4114432.pt
+global_step=4121856, episodic_return=-13.00
+global_step=4142848, episodic_return=-3.00
+global_step=4156320, episodic_return=-13.00
+global_step=4175392, episodic_return=-6.00
+global_step=4195472, episodic_return=-3.00
+Eval: global_step=4214784, reward=-4.00 +/- 1.67
+Saved teacher checkpoint to /scratch/tsa5252/noisy-distillation/synthetic_distillation/outputs/ALE/Pong-v5/uniform/seed_0/2026-03-03_11-38-44/checkpoints/teacher_step_4214784.pt
+global_step=4216184, episodic_return=-2.00
+global_step=4236192, episodic_return=-4.00
+global_step=4252656, episodic_return=-10.00
+global_step=4276328, episodic_return=1.00
+global_step=4296088, episodic_return=-4.00
+global_step=4314904, episodic_return=-5.00
+Eval: global_step=4315136, reward=-10.00 +/- 2.41
+Saved teacher checkpoint to /scratch/tsa5252/noisy-distillation/synthetic_distillation/outputs/ALE/Pong-v5/uniform/seed_0/2026-03-03_11-38-44/checkpoints/teacher_step_4315136.pt
+global_step=4335176, episodic_return=-4.00
+global_step=4350184, episodic_return=-11.00
+global_step=4368088, episodic_return=-6.00
+global_step=4387560, episodic_return=-6.00
+global_step=4408952, episodic_return=-2.00
+Eval: global_step=4415488, reward=-11.70 +/- 2.69
+Saved teacher checkpoint to /scratch/tsa5252/noisy-distillation/synthetic_distillation/outputs/ALE/Pong-v5/uniform/seed_0/2026-03-03_11-38-44/checkpoints/teacher_step_4415488.pt
+global_step=4424248, episodic_return=-14.00
+global_step=4441680, episodic_return=-7.00
+global_step=4458136, episodic_return=-8.00
+global_step=4476552, episodic_return=-7.00
+global_step=4499184, episodic_return=-1.00
+Eval: global_step=4515840, reward=-4.20 +/- 2.82
+Saved teacher checkpoint to /scratch/tsa5252/noisy-distillation/synthetic_distillation/outputs/ALE/Pong-v5/uniform/seed_0/2026-03-03_11-38-44/checkpoints/teacher_step_4515840.pt
+global_step=4516904, episodic_return=-6.00
+global_step=4535344, episodic_return=-7.00
+global_step=4546368, episodic_return=-17.00
+global_step=4554992, episodic_return=-19.00
+global_step=4567672, episodic_return=-14.00
+global_step=4584272, episodic_return=-9.00
+global_step=4602552, episodic_return=-6.00
+Eval: global_step=4616192, reward=-8.50 +/- 3.29
+Saved teacher checkpoint to /scratch/tsa5252/noisy-distillation/synthetic_distillation/outputs/ALE/Pong-v5/uniform/seed_0/2026-03-03_11-38-44/checkpoints/teacher_step_4616192.pt
+global_step=4620944, episodic_return=-6.00
+global_step=4637176, episodic_return=-11.00
+global_step=4651880, episodic_return=-12.00
+global_step=4671464, episodic_return=-4.00
+global_step=4691840, episodic_return=-5.00
+global_step=4709872, episodic_return=-7.00
+Eval: global_step=4716544, reward=-5.50 +/- 3.29
+Saved teacher checkpoint to /scratch/tsa5252/noisy-distillation/synthetic_distillation/outputs/ALE/Pong-v5/uniform/seed_0/2026-03-03_11-38-44/checkpoints/teacher_step_4716544.pt
+global_step=4730568, episodic_return=-5.00
+global_step=4747672, episodic_return=-9.00
+global_step=4767872, episodic_return=-5.00
+global_step=4788896, episodic_return=-5.00
+global_step=4808432, episodic_return=-7.00
+Eval: global_step=4816896, reward=-4.70 +/- 2.10
+Saved teacher checkpoint to /scratch/tsa5252/noisy-distillation/synthetic_distillation/outputs/ALE/Pong-v5/uniform/seed_0/2026-03-03_11-38-44/checkpoints/teacher_step_4816896.pt
+global_step=4825848, episodic_return=-8.00
+global_step=4845992, episodic_return=-3.00
+global_step=4866264, episodic_return=-3.00
+global_step=4884912, episodic_return=-7.00
+global_step=4905560, episodic_return=-3.00
+Eval: global_step=4917248, reward=-3.80 +/- 1.47
+Saved teacher checkpoint to /scratch/tsa5252/noisy-distillation/synthetic_distillation/outputs/ALE/Pong-v5/uniform/seed_0/2026-03-03_11-38-44/checkpoints/teacher_step_4917248.pt
+global_step=4927856, episodic_return=-3.00
+global_step=4942888, episodic_return=-15.00
+global_step=4953768, episodic_return=-15.00
+global_step=4970000, episodic_return=-9.00
+global_step=4992192, episodic_return=-4.00
+global_step=5014632, episodic_return=-2.00
+Eval: global_step=5017600, reward=-7.50 +/- 2.01
+Saved teacher checkpoint to /scratch/tsa5252/noisy-distillation/synthetic_distillation/outputs/ALE/Pong-v5/uniform/seed_0/2026-03-03_11-38-44/checkpoints/teacher_step_5017600.pt
+global_step=5031104, episodic_return=-10.00
+global_step=5048488, episodic_return=-8.00
+global_step=5066712, episodic_return=-10.00
+global_step=5086928, episodic_return=-4.00
+global_step=5102400, episodic_return=-11.00
+Eval: global_step=5117952, reward=-3.30 +/- 2.83
+Saved teacher checkpoint to /scratch/tsa5252/noisy-distillation/synthetic_distillation/outputs/ALE/Pong-v5/uniform/seed_0/2026-03-03_11-38-44/checkpoints/teacher_step_5117952.pt
+global_step=5120400, episodic_return=-6.00
+global_step=5141144, episodic_return=-5.00
+global_step=5162240, episodic_return=-6.00
+global_step=5181552, episodic_return=-9.00
+global_step=5202096, episodic_return=-6.00
+Eval: global_step=5218304, reward=-4.40 +/- 1.96
+Saved teacher checkpoint to /scratch/tsa5252/noisy-distillation/synthetic_distillation/outputs/ALE/Pong-v5/uniform/seed_0/2026-03-03_11-38-44/checkpoints/teacher_step_5218304.pt
+global_step=5224272, episodic_return=-6.00
+global_step=5245912, episodic_return=-3.00
+global_step=5267544, episodic_return=-1.00
+global_step=5286288, episodic_return=-4.00
+global_step=5306248, episodic_return=-3.00
+Eval: global_step=5318656, reward=-7.00 +/- 2.10
+Saved teacher checkpoint to /scratch/tsa5252/noisy-distillation/synthetic_distillation/outputs/ALE/Pong-v5/uniform/seed_0/2026-03-03_11-38-44/checkpoints/teacher_step_5318656.pt
+global_step=5324976, episodic_return=-6.00
+global_step=5345936, episodic_return=-4.00
+global_step=5364984, episodic_return=-6.00
+global_step=5384960, episodic_return=-4.00
+global_step=5407120, episodic_return=-4.00
+Eval: global_step=5419008, reward=-5.10 +/- 2.43
+Saved teacher checkpoint to /scratch/tsa5252/noisy-distillation/synthetic_distillation/outputs/ALE/Pong-v5/uniform/seed_0/2026-03-03_11-38-44/checkpoints/teacher_step_5419008.pt
+global_step=5427496, episodic_return=-6.00
+global_step=5445048, episodic_return=-16.00
+global_step=5462880, episodic_return=-11.00
+global_step=5482432, episodic_return=-4.00
+global_step=5500552, episodic_return=-8.00
+Eval: global_step=5519360, reward=-7.10 +/- 2.55
+Saved teacher checkpoint to /scratch/tsa5252/noisy-distillation/synthetic_distillation/outputs/ALE/Pong-v5/uniform/seed_0/2026-03-03_11-38-44/checkpoints/teacher_step_5519360.pt
+global_step=5522112, episodic_return=-3.00
+global_step=5538992, episodic_return=-10.00
+global_step=5555576, episodic_return=-7.00
+global_step=5572880, episodic_return=-10.00
+global_step=5591368, episodic_return=-5.00
+global_step=5605504, episodic_return=-11.00
+Eval: global_step=5619712, reward=-9.50 +/- 6.86
+Saved teacher checkpoint to /scratch/tsa5252/noisy-distillation/synthetic_distillation/outputs/ALE/Pong-v5/uniform/seed_0/2026-03-03_11-38-44/checkpoints/teacher_step_5619712.pt
+global_step=5625792, episodic_return=-3.00
+global_step=5636312, episodic_return=-16.00
+global_step=5654072, episodic_return=-8.00
+global_step=5674448, episodic_return=-2.00
+global_step=5688080, episodic_return=-13.00
+global_step=5704808, episodic_return=-8.00
+Eval: global_step=5720064, reward=-3.00 +/- 2.37
+Saved teacher checkpoint to /scratch/tsa5252/noisy-distillation/synthetic_distillation/outputs/ALE/Pong-v5/uniform/seed_0/2026-03-03_11-38-44/checkpoints/teacher_step_5720064.pt
+global_step=5724496, episodic_return=-4.00
+global_step=5743944, episodic_return=-4.00
+global_step=5766848, episodic_return=-4.00
+global_step=5784008, episodic_return=-9.00
+global_step=5802504, episodic_return=-6.00
+Eval: global_step=5820416, reward=-5.00 +/- 1.48
+Saved teacher checkpoint to /scratch/tsa5252/noisy-distillation/synthetic_distillation/outputs/ALE/Pong-v5/uniform/seed_0/2026-03-03_11-38-44/checkpoints/teacher_step_5820416.pt
+global_step=5822256, episodic_return=-6.00
+global_step=5841040, episodic_return=-8.00
+global_step=5861080, episodic_return=-6.00
+global_step=5880064, episodic_return=-7.00
+global_step=5899544, episodic_return=-7.00
+global_step=5919432, episodic_return=-5.00
+Eval: global_step=5920768, reward=-10.40 +/- 1.02
+Saved teacher checkpoint to /scratch/tsa5252/noisy-distillation/synthetic_distillation/outputs/ALE/Pong-v5/uniform/seed_0/2026-03-03_11-38-44/checkpoints/teacher_step_5920768.pt
+global_step=5932736, episodic_return=-14.00
+global_step=5940424, episodic_return=-19.00
+global_step=5948856, episodic_return=-21.00
+global_step=5956968, episodic_return=-19.00
+global_step=5964048, episodic_return=-21.00
+global_step=5979056, episodic_return=-14.00
+global_step=5994840, episodic_return=-13.00
+global_step=6014088, episodic_return=-6.00
+Eval: global_step=6021120, reward=-5.00 +/- 2.37
+Saved teacher checkpoint to /scratch/tsa5252/noisy-distillation/synthetic_distillation/outputs/ALE/Pong-v5/uniform/seed_0/2026-03-03_11-38-44/checkpoints/teacher_step_6021120.pt
+global_step=6034104, episodic_return=-6.00
+global_step=6050256, episodic_return=-8.00
+global_step=6062752, episodic_return=-15.00
+global_step=6077240, episodic_return=-13.00
+global_step=6095240, episodic_return=-8.00
+global_step=6109936, episodic_return=-10.00
+Eval: global_step=6121472, reward=-5.50 +/- 2.58
+Saved teacher checkpoint to /scratch/tsa5252/noisy-distillation/synthetic_distillation/outputs/ALE/Pong-v5/uniform/seed_0/2026-03-03_11-38-44/checkpoints/teacher_step_6121472.pt
+global_step=6128120, episodic_return=-6.00
+global_step=6148952, episodic_return=-3.00
+global_step=6169416, episodic_return=-4.00
+global_step=6187112, episodic_return=-8.00
+global_step=6205768, episodic_return=-8.00
+Eval: global_step=6221824, reward=-4.70 +/- 1.55
+Saved teacher checkpoint to /scratch/tsa5252/noisy-distillation/synthetic_distillation/outputs/ALE/Pong-v5/uniform/seed_0/2026-03-03_11-38-44/checkpoints/teacher_step_6221824.pt
+global_step=6227992, episodic_return=-3.00
+global_step=6248064, episodic_return=-9.00
+global_step=6269464, episodic_return=-3.00
+global_step=6293936, episodic_return=-1.00
+global_step=6316120, episodic_return=-5.00
+Eval: global_step=6322176, reward=-3.40 +/- 2.15
+Saved teacher checkpoint to /scratch/tsa5252/noisy-distillation/synthetic_distillation/outputs/ALE/Pong-v5/uniform/seed_0/2026-03-03_11-38-44/checkpoints/teacher_step_6322176.pt
+global_step=6339144, episodic_return=-5.00
+global_step=6360248, episodic_return=-3.00
+global_step=6380656, episodic_return=-5.00
+global_step=6401288, episodic_return=-5.00
+Eval: global_step=6422528, reward=-5.00 +/- 2.86
+Saved teacher checkpoint to /scratch/tsa5252/noisy-distillation/synthetic_distillation/outputs/ALE/Pong-v5/uniform/seed_0/2026-03-03_11-38-44/checkpoints/teacher_step_6422528.pt
+global_step=6422840, episodic_return=-3.00
+global_step=6443856, episodic_return=-4.00
+global_step=6461664, episodic_return=-7.00
+global_step=6480664, episodic_return=-4.00
+global_step=6493736, episodic_return=-13.00
+global_step=6504888, episodic_return=-16.00
+Eval: global_step=6522880, reward=-3.70 +/- 1.95
+Saved teacher checkpoint to /scratch/tsa5252/noisy-distillation/synthetic_distillation/outputs/ALE/Pong-v5/uniform/seed_0/2026-03-03_11-38-44/checkpoints/teacher_step_6522880.pt
+global_step=6528480, episodic_return=-3.00
+global_step=6541920, episodic_return=-13.00
+global_step=6565608, episodic_return=-2.00
+global_step=6586008, episodic_return=-7.00
+global_step=6606592, episodic_return=-5.00
+Eval: global_step=6623232, reward=-3.50 +/- 2.66
+Saved teacher checkpoint to /scratch/tsa5252/noisy-distillation/synthetic_distillation/outputs/ALE/Pong-v5/uniform/seed_0/2026-03-03_11-38-44/checkpoints/teacher_step_6623232.pt
+global_step=6627296, episodic_return=-4.00
+global_step=6646792, episodic_return=-7.00
+global_step=6670536, episodic_return=-1.00
+global_step=6694696, episodic_return=2.00
+global_step=6716456, episodic_return=-5.00
+Eval: global_step=6723584, reward=-5.10 +/- 2.26
+Saved teacher checkpoint to /scratch/tsa5252/noisy-distillation/synthetic_distillation/outputs/ALE/Pong-v5/uniform/seed_0/2026-03-03_11-38-44/checkpoints/teacher_step_6723584.pt
+global_step=6738368, episodic_return=-5.00
+global_step=6759488, episodic_return=-6.00
+global_step=6775872, episodic_return=-10.00
+global_step=6798048, episodic_return=-5.00
+global_step=6819168, episodic_return=-2.00
+Eval: global_step=6823936, reward=-2.80 +/- 2.79
+Saved teacher checkpoint to /scratch/tsa5252/noisy-distillation/synthetic_distillation/outputs/ALE/Pong-v5/uniform/seed_0/2026-03-03_11-38-44/checkpoints/teacher_step_6823936.pt
+global_step=6840840, episodic_return=-2.00
+global_step=6857648, episodic_return=-8.00
+global_step=6878288, episodic_return=-4.00
+global_step=6901928, episodic_return=1.00
+Eval: global_step=6924288, reward=-2.20 +/- 2.14
+Saved teacher checkpoint to /scratch/tsa5252/noisy-distillation/synthetic_distillation/outputs/ALE/Pong-v5/uniform/seed_0/2026-03-03_11-38-44/checkpoints/teacher_step_6924288.pt
+global_step=6926848, episodic_return=-2.00
+global_step=6952416, episodic_return=-1.00
+global_step=6975176, episodic_return=-2.00
+global_step=6998320, episodic_return=-2.00
+global_step=7022176, episodic_return=-2.00
+Eval: global_step=7024640, reward=-0.90 +/- 2.47
+Saved teacher checkpoint to /scratch/tsa5252/noisy-distillation/synthetic_distillation/outputs/ALE/Pong-v5/uniform/seed_0/2026-03-03_11-38-44/checkpoints/teacher_step_7024640.pt
+global_step=7049328, episodic_return=-3.00
+global_step=7073344, episodic_return=-4.00
+global_step=7093328, episodic_return=-8.00
+global_step=7116320, episodic_return=-4.00
+Eval: global_step=7124992, reward=-8.60 +/- 1.85
+Saved teacher checkpoint to /scratch/tsa5252/noisy-distillation/synthetic_distillation/outputs/ALE/Pong-v5/uniform/seed_0/2026-03-03_11-38-44/checkpoints/teacher_step_7124992.pt
+global_step=7135440, episodic_return=-8.00
+global_step=7154760, episodic_return=-5.00
+global_step=7176096, episodic_return=-6.00
+global_step=7198600, episodic_return=-4.00

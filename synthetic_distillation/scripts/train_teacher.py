@@ -2,6 +2,7 @@ import torch
 import torch.optim as optim
 from functools import partial
 import numpy as np
+import os
 
 from src.models.agent import DiscreteAgent, ContinuousAgent, DiscreteConvAgent
 from src.algorithms.ppo import PPO
@@ -43,7 +44,7 @@ class PPOAdapterLogger:
                 self.eval_callback(global_step)
                 self.last_eval_step = global_step
 
-def get_eval_callback(cfg, env, teacher, env_is_discrete, device, logger, agent_class):
+def get_eval_callback(cfg, env, teacher, env_is_discrete, device, logger, agent_class, run_dir):
     eval_envs = make_env(cfg.env, num_envs=10, seed=cfg.seed + 1000)
     eval_teacher = agent_class(eval_envs, env_name=cfg.env.name).to(device)
 
@@ -84,6 +85,13 @@ def get_eval_callback(cfg, env, teacher, env_is_discrete, device, logger, agent_
         logger.log_scalar("teacher/eval_reward_mean", mean_reward, global_step)
         logger.log_scalar("teacher/eval_reward_std", std_reward, global_step)
         print(f"Eval: global_step={global_step}, reward={mean_reward:.2f} +/- {std_reward:.2f}", flush=True)
+
+        if run_dir is not None:
+            checkpoint_dir = os.path.join(run_dir, "checkpoints")
+            os.makedirs(checkpoint_dir, exist_ok=True)
+            save_path = os.path.join(checkpoint_dir, f"teacher_step_{global_step}.pt")
+            torch.save(teacher.state_dict(), save_path)
+            print(f"Saved teacher checkpoint to {save_path}", flush=True)
 
     return callback
 
@@ -127,7 +135,7 @@ def evaluate_teacher(cfg, env, teacher, env_is_discrete, device, total_timesteps
     eval_envs.close()
 
 
-def train_teacher(cfg, env, logger):
+def train_teacher(cfg, env, logger, run_dir):
     print(f"Starting PPO Teacher Training on {cfg.env.name}...")
     
     device = torch.device(cfg.device if torch.cuda.is_available() and cfg.device != "cpu" else "cpu")
@@ -159,7 +167,7 @@ def train_teacher(cfg, env, logger):
     num_envs = getattr(cfg.algo, "num_envs", 1)
     total_timesteps = cfg.algo.total_timesteps
 
-    eval_cb = get_eval_callback(cfg, env, teacher, env_is_discrete, device, logger, agent_class)
+    eval_cb = get_eval_callback(cfg, env, teacher, env_is_discrete, device, logger, agent_class, run_dir)
     eval_freq = cfg.algo.get("eval_freq", 100000)
     adapted_logger = PPOAdapterLogger(logger, eval_callback=eval_cb, eval_freq=eval_freq)
 

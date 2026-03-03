@@ -2,6 +2,7 @@ import torch
 import torch.optim as optim
 from functools import partial
 import numpy as np
+import os
 
 from src.models.sac_agent import SACAgent
 from src.algorithms.sac import SAC
@@ -39,7 +40,7 @@ class SACAdapterLogger:
                 self.eval_callback(global_step)
                 self.last_eval_step = global_step
 
-def get_eval_callback(cfg, env, teacher, device, logger, agent_class):
+def get_eval_callback(cfg, env, teacher, device, logger, agent_class, run_dir):
     eval_envs = make_env(cfg.env, num_envs=1, seed=cfg.seed + 1000)
     eval_teacher = agent_class(eval_envs, env_name=cfg.env.name).to(device)
 
@@ -75,6 +76,13 @@ def get_eval_callback(cfg, env, teacher, device, logger, agent_class):
         logger.log_scalar("teacher/eval_reward_std", std_reward, global_step)
         print(f"SAC Eval: global_step={global_step}, reward={mean_reward:.2f} +/- {std_reward:.2f}", flush=True)
 
+        if run_dir is not None:
+            checkpoint_dir = os.path.join(run_dir, "checkpoints")
+            os.makedirs(checkpoint_dir, exist_ok=True)
+            save_path = os.path.join(checkpoint_dir, f"teacher_step_{global_step}.pt")
+            torch.save(teacher.state_dict(), save_path)
+            print(f"Saved teacher checkpoint to {save_path}", flush=True)
+
     return callback
 
 def evaluate_teacher(cfg, env, teacher, device, total_timesteps, logger, agent_class):
@@ -109,7 +117,7 @@ def evaluate_teacher(cfg, env, teacher, device, total_timesteps, logger, agent_c
     logger.log_scalar("teacher/eval_reward", eval_reward, total_timesteps)
     eval_envs.close()
 
-def train_teacher(cfg, env, logger):
+def train_teacher(cfg, env, logger, run_dir):
     print(f"Starting SAC Teacher Training on {cfg.env.name}...")
     
     device = torch.device(cfg.device if torch.cuda.is_available() and cfg.device != "cpu" else "cpu")
@@ -125,7 +133,7 @@ def train_teacher(cfg, env, logger):
     num_envs = getattr(cfg.algo, "num_envs", 1)
     total_timesteps = cfg.algo.total_timesteps
 
-    eval_cb = get_eval_callback(cfg, env, teacher, device, logger, agent_class)
+    eval_cb = get_eval_callback(cfg, env, teacher, device, logger, agent_class, run_dir)
     eval_freq = cfg.algo.get("eval_freq", 10000)
     adapted_logger = SACAdapterLogger(logger, eval_callback=eval_cb, eval_freq=eval_freq)
 

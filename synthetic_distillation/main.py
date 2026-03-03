@@ -48,7 +48,7 @@ def main(cfg: DictConfig):
     else:
         from scripts.train_teacher import train_teacher as train_algo
         
-    teacher = train_algo(cfg, env, logger)
+    teacher = train_algo(cfg, env, logger, run_dir)
     
     # 2.5 FREEZE Env normalization stats completely so identical environments across Distillation & Evaluation are stationary
     if cfg.env.type == "continuous":

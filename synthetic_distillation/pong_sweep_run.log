@@ -344,3 +344,4 @@ Eval: global_step=2809856, reward=-7.30 +/- 6.60
 global_step=2811984, episodic_return=1.00
 global_step=2834368, episodic_return=-11.00
 global_step=2857616, episodic_return=-14.00
+global_step=2888160, episodic_return=-2.00

@@ -165,10 +165,10 @@ class DiscreteConvAgent(BaseAgent):
         # Assumption: envs.single_observation_space is image shaped like (C, H, W)
         action_dim = envs.single_action_space.n
 
-        c1 = max(1, int(32 * scale))
-        c2 = max(1, int(64 * scale))
-        c3 = max(1, int(64 * scale))
-        l1 = max(1, int(512 * scale))
+        self.c1 = c1 = max(1, int(32 * scale))
+        self.c2 = c2 = max(1, int(64 * scale))
+        self.c3 = c3 = max(1, int(64 * scale))
+        self.l1 = l1 = max(1, int(512 * scale))
 
         self.network = nn.Sequential(
             layer_init(nn.Conv2d(envs.single_observation_space.shape[0], c1, 8, stride=4)),
@@ -256,6 +256,11 @@ class ContinuousAgent(BaseAgent):
         self.actor_mean = make_mlp(obs_dim, action_dim, neurons, layers, last_std=0.01)
         
         self.actor_logstd = nn.Parameter(torch.zeros(1, action_dim))
+        
+        # Extract environment bounds for native forward clamping
+        if hasattr(envs.single_action_space, 'low') and hasattr(envs.single_action_space, 'high'):
+            self.register_buffer("action_low", torch.tensor(envs.single_action_space.low))
+            self.register_buffer("action_high", torch.tensor(envs.single_action_space.high))
 
     def forward(self, states):
         action_mean = self.actor_mean(states)
@@ -265,10 +270,15 @@ class ContinuousAgent(BaseAgent):
     def act(self, state, deterministic=True):
         mean, log_std = self.forward(state)
         if deterministic:
-            return mean
+            action = mean
         else:
             std = torch.exp(log_std)
-            return Normal(mean, std).sample()
+            action = Normal(mean, std).sample()
+            
+        if hasattr(self, "action_low") and hasattr(self, "action_high"):
+            action = torch.max(torch.min(action, self.action_high), self.action_low)
+            
+        return action
 
     def estimate_value_from_observation(
         self, observation: torch.Tensor

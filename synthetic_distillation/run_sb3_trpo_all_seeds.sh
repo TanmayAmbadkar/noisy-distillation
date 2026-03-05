@@ -1,13 +1,12 @@
 #!/bin/bash
 
 # Array of environments to test
-# conda activate spiceenv
 conda activate spiceenv
 
-ENVS=("ant" "humanoid")
+ENVS=("ant" "humanoid" "halfcheetah" "hopper")
 
 # Create a master directory to store the isolated logs
-mkdir -p sweep_summaries/ppo
+mkdir -p sweep_summaries/sb3
 
 # Define CPU ranges for 5 parallel processes
 CPU_RANGES=("56-69" "70-83" "84-97" "98-111" "42-55")
@@ -21,7 +20,6 @@ for env in "${ENVS[@]}"; do
             MINIBATCH_SIZE=256
             EPOCHS=10
             EVAL_FREQ=100000
-            NEURONS=256
             ;;
         "hopper")
             TIMESTEPS=2000000
@@ -30,16 +28,15 @@ for env in "${ENVS[@]}"; do
             MINIBATCH_SIZE=256
             EPOCHS=10
             EVAL_FREQ=100000
-            NEURONS=256
             ;;
         "ant")
-            TIMESTEPS=5000000
+            TIMESTEPS=10000000
             NUM_ENVS=16
             ROLLOUT_STEPS=2048
             MINIBATCH_SIZE=4096
+
             EPOCHS=10
             EVAL_FREQ=100000
-            NEURONS=256
             ;;
         "humanoid")
             TIMESTEPS=10000000
@@ -48,21 +45,19 @@ for env in "${ENVS[@]}"; do
             MINIBATCH_SIZE=2048
             EPOCHS=10
             EVAL_FREQ=100000
-            NEURONS=512
             ;;
         *)
-            TIMESTEPS=10000000
-            NUM_ENVS=8
-            ROLLOUT_STEPS=1024
-            MINIBATCH_SIZE=256
+            TIMESTEPS=5000000
+            NUM_ENVS=16
+            ROLLOUT_STEPS=2048
+            MINIBATCH_SIZE=4096
             EPOCHS=10
             EVAL_FREQ=100000
-            NEURONS=256
             ;;
     esac
 
     echo "================================================="
-    echo "Launching parallel sweep for Env: $env | Timesteps: $TIMESTEPS"
+    echo "Launching parallel SB3 TRPO sweep for Env: $env | Timesteps: $TIMESTEPS"
     echo "================================================="
 
     for i in {0..4}; do
@@ -73,45 +68,41 @@ for env in "${ENVS[@]}"; do
         
         CPU_RANGE=${CPU_RANGES[$i]}
         
-        LOG_FILE="sweep_summaries/ppo/${env}_seed_${SEED}_full.log"
-        RES_FILE="sweep_summaries/ppo/${env}_seed_${SEED}_final_results.txt"
+        LOG_FILE="sweep_summaries/sb3/${env}_sb3_trpo_seed_${SEED}_full.log"
+        RES_FILE="sweep_summaries/sb3/${env}_sb3_trpo_seed_${SEED}_final_results.txt"
         
-        echo "Launching Process $((i+1)) (Seed: $SEED) on CPUs $CPU_RANGE"
+        echo "Launching SB3 TRPO Process $((i+1)) (Seed: $SEED) on CPUs $CPU_RANGE"
         
         (
             # Run the experiment with taskset for CPU isolation
             python main.py \
+                algo=sb3_trpo \
                 algo.total_timesteps=$TIMESTEPS \
                 algo.num_envs=$NUM_ENVS \
                 algo.rollout_steps=$ROLLOUT_STEPS \
-                algo.minibatch_size=$MINIBATCH_SIZE \
-                algo.ppo_epochs=$EPOCHS \
+                algo.batch_size=$MINIBATCH_SIZE \
                 algo.lr=3e-4 \
-                algo.anneal_lr=True \
                 algo.gamma=0.99 \
-                algo.gae_lambda=0.95 \
-                algo.clip_eps=0.2 \
-                algo.entropy_coef=0.0 \
                 +algo.eval_freq=$EVAL_FREQ \
                 env=$env \
                 seed=$SEED \
-                distill=multi_noise \
-                model.neurons=$NEURONS \
+                distill=gaussian \
+                model.neurons=256 \
                 "distill.distil_samples=[10000, 25000, 50000, 100000]" \
                 "model.distil_neurons=[1.0, 0.5, 0.25]" > "$LOG_FILE" 2>&1
                 
             # Extract metrics
             grep -E "Training completed\.|Initializing Student|Teacher Architecture|Student Architecture|Robustness" "$LOG_FILE" > "$RES_FILE"
             
-            echo "Finished Env: $env | Seed: $SEED"
+            echo "Finished SB3 TRPO Env: $env | Seed: $SEED"
             echo "--> Extracted Robustness results saved to: $RES_FILE"
         ) &
     done
 
     # Wait for all 5 parallel seeds for the current environment to finish
     wait
-    echo "All seeds for Env: $env completed."
+    echo "All SB3 TRPO seeds for Env: $env completed."
     echo ""
 done
 
-echo "Sweep fully completed! All summaries are located in the 'sweep_summaries/' directory."
+echo "SB3 TRPO Sweep fully completed! All summaries are located in the 'sweep_summaries/sb3' directory."

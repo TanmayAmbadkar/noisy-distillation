@@ -1,0 +1,10 @@
+name: "pure_uniform"
+mode: "uniform_global"
+loss: "mean_mse"
+epochs: 100
+batch_size: 2048
+distil_samples: [10000, 50000]
+sampling:
+  mode: "uniform_global"
+  low: -1.0
+  high: 1.0

@@ -19,7 +19,7 @@ def distill_custom(
     epochs=50,
     batch_size=256,
     lr=1e-4,
-    device="cuda"
+    device="auto"
 ):
     """
     Standalone script to distill a student from a teacher checkpoint.
@@ -31,6 +31,9 @@ def distill_custom(
     print(f"Samples: {num_samples}")
     print(f"Sampling Mode: {sampling_mode}")
     print(f"---")
+    
+    from src.utils.device import get_device
+    device = get_device(device)
 
     # 1. Setup Config Mock (necessary for existing components)
     cfg = OmegaConf.create({

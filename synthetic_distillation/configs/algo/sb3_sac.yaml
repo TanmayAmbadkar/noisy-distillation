@@ -1,3 +1,4 @@
+name: "sb3_sac"
 lr: 3e-4
 buffer_size: 1000000
 batch_size: 256
@@ -6,9 +7,6 @@ tau: 0.005
 alpha: 0.2
 automatic_entropy_tuning: true
 target_update_interval: 1
-updates_per_step: 1
-start_steps: 10000
-total_timesteps: 1000000
-num_envs: 1
-rollout_steps: 128
-anneal_lr: false
+train_freq: 1
+total_timesteps: 2000000
+num_envs: 8

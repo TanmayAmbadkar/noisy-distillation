@@ -1,0 +1,14 @@
+name: "sb3_trpo"
+lr: 3e-4
+gamma: 0.99
+cg_max_steps: 15
+cg_damping: 0.1
+line_search_shrinking_factor: 0.8
+line_search_max_iter: 10
+sub_sampling_factor: 1
+n_critic_updates: 10
+target_kl: 0.01
+rollout_steps: 2048
+batch_size: 4096
+total_timesteps: 5000000
+num_envs: 16

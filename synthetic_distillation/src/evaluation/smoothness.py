@@ -66,16 +66,24 @@ class SmoothnessEvaluator:
         ratio = numerator / (denominator + 1e-8)
         return ratio.mean().item(), ratio.std().item()
 
-    def evaluate(self, model, states):
-        grad_mean, grad_std = self._gradient_norm(model, states)
-        mag_mean, mag_std = self._logit_magnitude(model, states)
-        lip_mean, lip_std = self._local_lipschitz(model, states)
-
-        return {
-            "grad_norm_mean": grad_mean,
-            "grad_norm_std": grad_std,
-            "logit_mean": mag_mean,
-            "logit_std": mag_std,
-            "lipschitz_mean": lip_mean,
-            "lipschitz_std": lip_std
+    def evaluate(self, model, real_states, gaussian_states=None):
+        grad_mean_real, grad_std_real = self._gradient_norm(model, real_states)
+        mag_mean_real, mag_std_real = self._logit_magnitude(model, real_states)
+        lip_mean_real, lip_std_real = self._local_lipschitz(model, real_states)
+        
+        metrics = {
+            "grad_norm_real": grad_mean_real,
+            "logit_mean_real": mag_mean_real,
+            "lipschitz_mean_real": lip_mean_real,
         }
+        
+        if gaussian_states is not None:
+             grad_mean_gauss, grad_std_gauss = self._gradient_norm(model, gaussian_states)
+             mag_mean_gauss, mag_std_gauss = self._logit_magnitude(model, gaussian_states)
+             lip_mean_gauss, lip_std_gauss = self._local_lipschitz(model, gaussian_states)
+             
+             metrics["grad_norm_gaussian"] = grad_mean_gauss
+             metrics["logit_mean_gaussian"] = mag_mean_gauss
+             metrics["lipschitz_mean_gaussian"] = lip_mean_gauss
+             
+        return metrics

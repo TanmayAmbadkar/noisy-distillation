@@ -1,0 +1,46 @@
+# Atari Spatiotemporal Noise Patterns
+# Optimized for [4, 84, 84] framestacks
+
+name: "atari_spatiotemporal"
+mode: "atari_spatiotemporal"
+loss: "kl_div"  # Atari students usually use KL or MSE on logits
+epochs: 100
+batch_size: 256
+distil_samples: [25000, 50000, 100000]
+
+sampling_list:
+  # 1. 3D Gaussian Volume (Elegant Correlation)
+  - name: "st_gaussian_full"
+    mode: "st_gaussian"
+    sigma_t: 1.0  # Temporal correlation (frames change slowly)
+    sigma_s: 2.0  # Spatial correlation (blobs)
+    
+  - name: "st_gaussian_spatial"
+    mode: "st_gaussian"
+    sigma_t: 0.0  # No temporal correlation (i.i.d. frames)
+    sigma_s: 2.0  # Spatial blobs
+    
+  - name: "st_gaussian_none"
+    mode: "st_gaussian"
+    sigma_t: 0.0
+    sigma_s: 0.0  # Pure white noise
+    
+  # 2. Autoregressive AR1 (Temporal Persistence)
+  - name: "st_ar1_full"
+    mode: "st_ar1"
+    rho: 0.9      # Higher = slower drift
+    sigma: 0.5    # Variance of innovation
+    
+  # 3. Moving Blobs (Kinematic Features)
+  - name: "st_moving_blob"
+    mode: "st_moving"
+
+# Global defaults for these when not overridden
+sampling:
+  mode: "st_gaussian"
+  sigma_t: 1.0
+  sigma_s: 2.0
+  rho: 0.9
+  sigma: 0.5
+  low: 0.0
+  high: 255.0

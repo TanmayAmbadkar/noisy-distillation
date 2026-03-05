@@ -9,13 +9,13 @@ defaults:
 
 hydra:
   run:
-    dir: outputs/${env.name}/${distill.mode}/seed_${seed}/${now:%Y-%m-%d_%H-%M-%S}
+    dir: outputs/${env.name}/${distill.mode}/${now:%Y-%m-%d_%H-%M-%S}/seed_${seed}
   sweep:
     dir: outputs/multirun/${now:%Y-%m-%d}/${now:%H-%M-%S}
     subdir: ${env.name}/${distill.mode}/seed_${seed}
 
 seed: 0
-device: cpu
+device: auto
 
 log:
   use_tensorboard: true

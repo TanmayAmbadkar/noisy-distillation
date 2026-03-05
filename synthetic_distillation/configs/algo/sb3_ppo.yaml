@@ -1,0 +1,11 @@
+name: "sb3_ppo"
+lr: 3e-4
+gamma: 0.99
+gae_lambda: 0.95
+clip_eps: 0.2
+entropy_coef: 0.0
+ppo_epochs: 10
+rollout_steps: 2048
+batch_size: 4096
+total_timesteps: 5000000
+num_envs: 16

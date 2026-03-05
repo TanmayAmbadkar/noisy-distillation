@@ -1,0 +1,13 @@
+name: "sb3_ddpg"
+lr: 1e-3
+gamma: 0.99
+buffer_size: 1000000
+learning_starts: 100
+train_freq: 1
+gradient_steps: -1
+action_noise: none # Replaced by custom environment noise if needed, or specify via config
+batch_size: 100
+tau: 0.005
+total_timesteps: 1000000
+num_envs: 1
+rollout_steps: 2048

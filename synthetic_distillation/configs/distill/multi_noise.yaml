@@ -1,0 +1,15 @@
+name: "multi_noise"
+mode: "mixed"
+loss: "mean_mse"
+epochs: 100
+batch_size: 2048
+distil_samples: [10000, 25000, 50000, 100000]
+
+sampling_list:
+  - {name: "gaussian_baseline", mode: "gaussian", mean: 0.0, std: 1.0}
+  - {name: "gaussian_wide", mode: "gaussian", mean: 0.0, std: 2.0}
+  - {name: "gaussian_narrow", mode: "gaussian", mean: 0.0, std: 0.5}
+  - {name: "gaussian_shifted", mode: "gaussian", mean: 1.0, std: 1.0}
+  - {name: "uniform_wide", mode: "uniform_global", low: -1.0, high: 1.0}
+  - {name: "uniform_narrow", mode: "uniform_global", low: -0.5, high: 0.5}
+  - {name: "laplace_baseline", mode: "laplace", scale: 1.0}

@@ -120,7 +120,8 @@ def evaluate_teacher(cfg, env, teacher, device, total_timesteps, logger, agent_c
 def train_teacher(cfg, env, logger, run_dir):
     print(f"Starting SAC Teacher Training on {cfg.env.name}...")
     
-    device = torch.device(cfg.device if torch.cuda.is_available() and cfg.device != "cpu" else "cpu")
+    from src.utils.device import get_device
+    device = get_device(cfg.device)
     if cfg.env.type == "discrete":
         raise ValueError("SAC requires a continuous action space environment")
     

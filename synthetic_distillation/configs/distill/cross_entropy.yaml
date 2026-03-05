@@ -1,0 +1,8 @@
+name: "cross_entropy"
+mode: "trajectory"
+loss: "cross_entropy"
+epochs: 100
+batch_size: 2048
+distil_samples: 400000
+sampling:
+  mode: "trajectory"

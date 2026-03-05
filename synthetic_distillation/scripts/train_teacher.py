@@ -53,9 +53,11 @@ def get_eval_callback(cfg, env, teacher, env_is_discrete, device, logger, agent_
         eval_teacher.eval()
         
         if not env_is_discrete:
-            env.sync_obs_norm_rms(eval_envs)
-            for i in range(eval_envs.num_envs):
-                eval_envs.freeze_norm_stats(i)
+            if hasattr(env, "sync_obs_norm_rms"):
+                env.sync_obs_norm_rms(eval_envs)
+            if hasattr(eval_envs, "freeze_norm_stats"):
+                for i in range(eval_envs.num_envs):
+                    eval_envs.freeze_norm_stats(i)
         
         obs, _ = eval_envs.reset()
         eval_episodes = 0
@@ -105,9 +107,11 @@ def evaluate_teacher(cfg, env, teacher, env_is_discrete, device, total_timesteps
     eval_teacher.eval()
     
     if not env_is_discrete:
-        env.sync_obs_norm_rms(eval_envs)
-        for i in range(eval_envs.num_envs):
-            eval_envs.freeze_norm_stats(i)
+        if hasattr(env, "sync_obs_norm_rms"):
+            env.sync_obs_norm_rms(eval_envs)
+        if hasattr(eval_envs, "freeze_norm_stats"):
+            for i in range(eval_envs.num_envs):
+                eval_envs.freeze_norm_stats(i)
 
     obs, _ = eval_envs.reset()
     eval_episodes = 0
@@ -138,7 +142,8 @@ def evaluate_teacher(cfg, env, teacher, env_is_discrete, device, total_timesteps
 def train_teacher(cfg, env, logger, run_dir):
     print(f"Starting PPO Teacher Training on {cfg.env.name}...")
     
-    device = torch.device(cfg.device if torch.cuda.is_available() and cfg.device != "cpu" else "cpu")
+    from src.utils.device import get_device
+    device = get_device(cfg.device)
     env_is_atari = cfg.env.type == "atari"
     env_is_discrete = cfg.env.type == "discrete"
 

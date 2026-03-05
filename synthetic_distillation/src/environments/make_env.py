@@ -13,8 +13,7 @@ def make_discrete_env(env_id, idx, capture_video, run_name, gamma):
         else:
             env = gym.make(env_id)
         env = gym.wrappers.RecordEpisodeStatistics(env)
-        env = gym.wrappers.NormalizeReward(env, gamma=gamma)
-        env = gym.wrappers.TransformReward(env, lambda reward: np.clip(reward, -10, 10))
+        # env = gym.wrappers.TransformReward(env, lambda reward: np.clip(reward, -10, 10))
         return env
     return thunk
 
@@ -29,16 +28,20 @@ def make_continuous_env(env_id, idx, capture_video, run_name, gamma):
             env = gym.make(env_id)
         env = gym.wrappers.FlattenObservation(env)
         env = gym.wrappers.RecordEpisodeStatistics(env)
-        env = gym.wrappers.ClipAction(env)
+        # env = gym.wrappers.ClipAction(env)
         env = gym.wrappers.NormalizeObservation(env)
         env = gym.wrappers.TransformObservation(env, lambda obs: np.clip(obs, -10, 10), env.observation_space)
-        env = gym.wrappers.NormalizeReward(env, gamma=gamma)
-        env = gym.wrappers.TransformReward(env, lambda reward: np.clip(reward, -10, 10))
+        # env = gym.wrappers.TransformReward(env, lambda reward: np.clip(reward, -10, 10))
         return env
     return thunk
 
 def get_NormalizeObservation_wrapper(self, env_num=0):
-    return self.envs[env_num].env.env.env
+    curr_env = self.envs[env_num]
+    while hasattr(curr_env, "env"):
+        if isinstance(curr_env, gym.wrappers.NormalizeObservation):
+            return curr_env
+        curr_env = curr_env.env
+    raise ValueError("NormalizeObservation wrapper not found in the environment stack")
 
 def get_obs_norm_rms_obj(self, env_num=0):
     return self.get_NormalizeObservation_wrapper(env_num=env_num).obs_rms
@@ -46,11 +49,14 @@ def get_obs_norm_rms_obj(self, env_num=0):
 def set_obs_norm_rms_obj(self, rms_obj, env_num=0):
     self.get_NormalizeObservation_wrapper(env_num=env_num).obs_rms = rms_obj
 
+def _dummy_update(*args, **kwargs):
+    pass
+
 def freeze_norm_stats(self, env_num=0):
     wrapper = self.get_NormalizeObservation_wrapper(env_num=env_num)
     if hasattr(wrapper, "obs_rms") and not hasattr(wrapper.obs_rms, "frozen_update"):
         wrapper.obs_rms.frozen_update = wrapper.obs_rms.update
-        wrapper.obs_rms.update = lambda x: None
+        wrapper.obs_rms.update = _dummy_update
 
 def unfreeze_norm_stats(self, env_num=0):
     wrapper = self.get_NormalizeObservation_wrapper(env_num=env_num)
@@ -82,8 +88,7 @@ def make_env(env_cfg, num_envs=1, seed=0, capture_video=False, run_name="run", g
             maxpool=True
         )
         envs = gym.wrappers.vector.RecordEpisodeStatistics(envs)
-        envs = gym.wrappers.vector.NormalizeReward(envs, gamma=gamma)
-        envs = gym.wrappers.vector.TransformReward(envs, lambda reward: np.clip(reward, -10, 10))
+        # envs = gym.wrappers.vector.TransformReward(envs, lambda reward: np.clip(reward, -10, 10))
         envs.action_space.seed(seed)
         envs.observation_space.seed(seed)
         return envs

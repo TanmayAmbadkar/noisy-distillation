@@ -3,7 +3,7 @@
 # Array of environments to test
 conda activate spiceenv
 
-ENVS=("hopper" "halfcheetah" "humanoid" "ant")
+ENVS=("hopper" "halfcheetah" "ant" "humanoid")
 
 # Create a master directory to store the isolated logs
 # Experiment: Distilling from 7 Individual Global Noise Distributions
@@ -20,6 +20,7 @@ for env in "${ENVS[@]}"; do
             ROLLOUT_STEPS=2048
             MINIBATCH_SIZE=256
             EPOCHS=10
+            NEURONS=64
             EVAL_FREQ=100000
             ;;
         "hopper")
@@ -28,6 +29,7 @@ for env in "${ENVS[@]}"; do
             ROLLOUT_STEPS=2048
             MINIBATCH_SIZE=256
             EPOCHS=10
+            NEURONS=64
             EVAL_FREQ=100000
             ;;
         "ant")
@@ -35,7 +37,7 @@ for env in "${ENVS[@]}"; do
             NUM_ENVS=16
             ROLLOUT_STEPS=2048
             MINIBATCH_SIZE=4096
-
+            NEURONS=256
             EPOCHS=10
             EVAL_FREQ=100000
             ;;
@@ -44,6 +46,7 @@ for env in "${ENVS[@]}"; do
             NUM_ENVS=32
             ROLLOUT_STEPS=1024
             MINIBATCH_SIZE=2048
+            NEURONS=512
             EPOCHS=10
             EVAL_FREQ=100000
             ;;
@@ -61,7 +64,7 @@ for env in "${ENVS[@]}"; do
     echo "Launching parallel SB3 PPO sweep for Env: $env | Timesteps: $TIMESTEPS"
     echo "================================================="
 
-    for i in {0..4}; do
+    for i in {0..9}; do
         # Generate a random seed based on clock time
         SEED=$(date +%s%N | cut -b10-19 | awk '{print ($1 % 1000000)}')
         # Ensure seeds are unique and varied by adding index
@@ -91,7 +94,7 @@ for env in "${ENVS[@]}"; do
                 env=$env \
                 seed=$SEED \
                 distill=multi_noise \
-                model.neurons=256 \
+                model.neurons=$NEURONS \
                 "distill.distil_samples=[10000, 25000, 50000, 100000]" \
                 "model.distil_neurons=[1.0, 0.5, 0.25]" > "$LOG_FILE" 2>&1
                 

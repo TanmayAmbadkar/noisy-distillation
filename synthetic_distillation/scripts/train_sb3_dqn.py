@@ -69,6 +69,15 @@ def train_teacher(cfg, env, logger, run_dir):
     env_is_atari = cfg.env.type == "atari"
     policy_type = "CnnPolicy" if env_is_atari else "MlpPolicy"
     
+    # Configure custom network architecture sizes
+    neurons = getattr(cfg.model, "neurons", 64)
+    layers = getattr(cfg.model, "layers", 2)
+    
+    if env_is_atari:
+        policy_kwargs = {} # CnnPolicy uses default NatureCNN
+    else:
+        policy_kwargs = dict(net_arch=[neurons] * layers)
+
     model = DQN(
         policy=policy_type,
         env=sb3_env,
@@ -85,6 +94,7 @@ def train_teacher(cfg, env, logger, run_dir):
         exploration_initial_eps=getattr(cfg.algo, "exploration_initial_eps", 1.0),
         exploration_final_eps=getattr(cfg.algo, "exploration_final_eps", 0.05),
         max_grad_norm=getattr(cfg.algo, "max_grad_norm", 10),
+        policy_kwargs=policy_kwargs,
         verbose=0,
         device=device
     )

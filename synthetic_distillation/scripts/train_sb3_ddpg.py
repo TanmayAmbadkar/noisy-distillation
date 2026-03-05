@@ -63,6 +63,11 @@ def train_teacher(cfg, env, logger, run_dir):
         
     total_timesteps = cfg.algo.total_timesteps
     
+    # Configure custom network architecture sizes
+    neurons = getattr(cfg.model, "neurons", 64)
+    layers = getattr(cfg.model, "layers", 2)
+    policy_kwargs = dict(net_arch=[neurons] * layers)
+
     from src.models.sb3_wrapper import GymVectorEnvToSB3VecEnv
     sb3_env = GymVectorEnvToSB3VecEnv(env)
     
@@ -77,6 +82,7 @@ def train_teacher(cfg, env, logger, run_dir):
         gamma=cfg.algo.gamma,
         train_freq=getattr(cfg.algo, "train_freq", (1, "episode")),
         gradient_steps=getattr(cfg.algo, "gradient_steps", -1),
+        policy_kwargs=policy_kwargs,
         verbose=0,
         device=device
     )

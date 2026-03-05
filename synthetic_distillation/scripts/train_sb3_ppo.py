@@ -72,6 +72,16 @@ def train_teacher(cfg, env, logger, run_dir):
     env_is_atari = cfg.env.type == "atari"
     policy_type = "CnnPolicy" if env_is_atari else "MlpPolicy"
     
+    # Configure custom network architecture sizes
+    neurons = getattr(cfg.model, "neurons", 64)
+    layers = getattr(cfg.model, "layers", 2)
+    
+    if env_is_atari:
+        policy_kwargs = {} # CnnPolicy uses default NatureCNN unless customized
+    else:
+        policy_kwargs = dict(net_arch=[neurons] * layers)
+    
+       
     model = PPO(
         policy=policy_type,
         env=sb3_env,
@@ -83,6 +93,7 @@ def train_teacher(cfg, env, logger, run_dir):
         gae_lambda=getattr(cfg.algo, "gae_lambda", 0.95),
         clip_range=getattr(cfg.algo, "clip_eps", 0.2),
         ent_coef=getattr(cfg.algo, "entropy_coef", 0.0),
+        policy_kwargs=policy_kwargs,
         verbose=0, # We handle our own logging
         device=device
     )

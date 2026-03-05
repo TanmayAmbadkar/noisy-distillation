@@ -64,6 +64,11 @@ def train_teacher(cfg, env, logger, run_dir):
     num_envs = getattr(cfg.algo, "num_envs", 1)
     total_timesteps = cfg.algo.total_timesteps
     
+    # Configure custom network architecture sizes
+    neurons = getattr(cfg.model, "neurons", 64)
+    layers = getattr(cfg.model, "layers", 2)
+    policy_kwargs = dict(net_arch=[neurons] * layers)
+    
     # Disable reward normalization to match custom implementations
     # The environment passed in is already a SyncVectorEnv with NormalizeObservation if continuous
     from src.models.sb3_wrapper import GymVectorEnvToSB3VecEnv
@@ -82,6 +87,7 @@ def train_teacher(cfg, env, logger, run_dir):
         sub_sampling_factor=getattr(cfg.algo, "sub_sampling_factor", 1),
         n_critic_updates=getattr(cfg.algo, "n_critic_updates", 10),
         target_kl=getattr(cfg.algo, "target_kl", 0.01),
+        policy_kwargs=policy_kwargs,
         verbose=0, 
         device=device 
     )

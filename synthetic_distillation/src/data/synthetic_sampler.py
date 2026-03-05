@@ -211,23 +211,52 @@ class SyntheticSampler:
         else:
             state_shape = (4, 84, 84) # Atari default
             
-        # 1. Generate pure white noise
-        noise = np.random.normal(0, 1, size=(batch_size, *state_shape))
+        noise = torch.randn((batch_size, *state_shape), device=self.device)
         
-        # 2. Apply 3D Spatiotemporal Blur
-        # sigma tuple: (batch, temporal, spatial_y, spatial_x)
-        # Assuming shape is (T, H, W)
-        if len(state_shape) == 3:
-            noise = gaussian_filter(noise, sigma=(0, sigma_t, sigma_s, sigma_s))
-        else:
-            # Fallback for non-Atari or flattened
-            noise = gaussian_filter(noise, sigma=(0, sigma_s))
-            
-        # Normalize to [0, 1] range if it was Atari (uint8-like)
-        # or leave as N(0,1) for MuJoCo? 
-        # For now, let's keep it N(0,1) but blurred. 
-        # If the user wants 0-255 they can specify low/high in a wrapper or we can add it.
-        return torch.from_numpy(noise).float().to(self.device)
+        # Fast PyTorch Vectorized Gaussian Blur
+        if sigma_s > 0 or sigma_t > 0:
+            if len(state_shape) == 3:
+                T, H, W = state_shape
+                # Create 3D Gaussian Kernel [1, 1, Kt, Ky, Kx]
+                kernel_size_s = int(2 * np.ceil(3 * sigma_s) + 1) if sigma_s > 0 else 1
+                kernel_size_t = int(2 * np.ceil(3 * sigma_t) + 1) if sigma_t > 0 else 1
+                
+                # 1D grids
+                grid_t = torch.arange(kernel_size_t, device=self.device).float() - kernel_size_t // 2
+                grid_s = torch.arange(kernel_size_s, device=self.device).float() - kernel_size_s // 2
+                
+                # Calculate 1D Gaussian weights
+                weight_t = torch.exp(-0.5 * (grid_t / max(sigma_t, 1e-6))**2) if sigma_t > 0 else torch.ones(1, device=self.device)
+                weight_s = torch.exp(-0.5 * (grid_s / max(sigma_s, 1e-6))**2) if sigma_s > 0 else torch.ones(1, device=self.device)
+                
+                # Normalize
+                weight_t /= weight_t.sum()
+                weight_s /= weight_s.sum()
+                
+                # Outer product to make 3D kernel (t, y, x)
+                kernel_3d = weight_t.view(-1, 1, 1) * weight_s.view(1, -1, 1) * weight_s.view(1, 1, -1)
+                kernel_3d = kernel_3d.view(1, 1, len(weight_t), len(weight_s), len(weight_s))
+                
+                # Pad and Apply 3D Conv
+                # Reshape noise to [B, C=1, T, H, W]
+                # Pad to keep same shape
+                pad_t = kernel_size_t // 2
+                pad_s = kernel_size_s // 2
+                noise_padded = torch.nn.functional.pad(noise.unsqueeze(1), (pad_s, pad_s, pad_s, pad_s, pad_t, pad_t), mode='replicate')
+                noise = torch.nn.functional.conv3d(noise_padded, kernel_3d).squeeze(1)
+            else:
+                 # Standard 2D blur fallback for non-Atari
+                 kernel_size_s = int(2 * np.ceil(3 * sigma_s) + 1) if sigma_s > 0 else 1
+                 grid_s = torch.arange(kernel_size_s, device=self.device).float() - kernel_size_s // 2
+                 weight_s = torch.exp(-0.5 * (grid_s / max(sigma_s, 1e-6))**2) if sigma_s > 0 else torch.ones(1, device=self.device)
+                 weight_s /= weight_s.sum()
+                 kernel_2d = weight_s.view(-1, 1) * weight_s.view(1, -1)
+                 kernel_2d = kernel_2d.view(1, 1, len(weight_s), len(weight_s))
+                 
+                 noise_padded = torch.nn.functional.pad(noise.unsqueeze(1), (kernel_size_s//2, kernel_size_s//2, kernel_size_s//2, kernel_size_s//2), mode='replicate')
+                 noise = torch.nn.functional.conv2d(noise_padded, kernel_2d).squeeze(1)
+                 
+        return noise
 
     def _sample_st_ar1(self, batch_size):
         sampling_cfg = self.cfg.distill.get("sampling", {})
@@ -243,21 +272,21 @@ class SyntheticSampler:
         spatial_shape = state_shape[1:] if len(state_shape) == 3 else state_shape
         
         frames = []
-        # Initial frame (t=0)
-        current_frame = np.random.normal(0, 1, size=(batch_size, *spatial_shape))
+        # Native PyTorch Generation
+        current_frame = torch.randn((batch_size, *spatial_shape), device=self.device)
         frames.append(current_frame)
         
         for t in range(1, T):
-            innovation = np.random.normal(0, 1, size=(batch_size, *spatial_shape))
+            innovation = torch.randn((batch_size, *spatial_shape), device=self.device)
             current_frame = rho * current_frame + sigma * innovation
             frames.append(current_frame)
             
-        noise = np.stack(frames, axis=1) if len(state_shape) == 3 else frames[0]
-        return torch.from_numpy(noise).float().to(self.device)
+        noise = torch.stack(frames, dim=1) if len(state_shape) == 3 else frames[0]
+        return noise
 
     def _sample_st_moving(self, batch_size):
         """
-        Translating Blob: Generates a 2D Gaussian blob that moves linearly across frames.
+        Translating Blob: Vectorized PyTorch implementation.
         """
         if self.trajectory_states is not None:
             state_shape = self.trajectory_states.shape[1:]
@@ -266,28 +295,36 @@ class SyntheticSampler:
             
         T, H, W = state_shape if len(state_shape) == 3 else (1, 84, 84)
         
-        noise = np.zeros((batch_size, T, H, W))
+        # Random starting positions, velocities, and sigmas per batch
+        y = torch.randint(0, H, (batch_size,), device=self.device, dtype=torch.float32)
+        x = torch.randint(0, W, (batch_size,), device=self.device, dtype=torch.float32)
+        vy = torch.randint(-3, 4, (batch_size,), device=self.device, dtype=torch.float32)
+        vx = torch.randint(-3, 4, (batch_size,), device=self.device, dtype=torch.float32)
+        blob_sigma = torch.empty((batch_size,), device=self.device).uniform_(2, 5).view(-1, 1, 1, 1)
+
+        # Create coordinate grids
+        grid_y, grid_x = torch.meshgrid(torch.arange(H, device=self.device), torch.arange(W, device=self.device), indexing='ij')
         
-        for b in range(batch_size):
-            # Random starting position
-            y, x = np.random.randint(0, H), np.random.randint(0, W)
-            # Random velocity
-            vy, vx = np.random.randint(-3, 4), np.random.randint(-3, 4)
-            # Random size
-            blob_sigma = np.random.uniform(2, 5)
-            
-            for t in range(T):
-                # Update position
-                cur_y = (y + vy * t) % H
-                cur_x = (x + vx * t) % W
-                
-                # Create a single pixel impulse
-                frame = np.zeros((H, W))
-                frame[int(cur_y), int(cur_x)] = 1.0
-                
-                # Blur to create blob
-                noise[b, t] = gaussian_filter(frame, sigma=blob_sigma)
+        # Broadcast grids to [B, T, H, W]
+        grid_y = grid_y.unsqueeze(0).unsqueeze(0).expand(batch_size, T, H, W)
+        grid_x = grid_x.unsqueeze(0).unsqueeze(0).expand(batch_size, T, H, W)
+
+        # Calculate positions over time: shape [B, T]
+        t = torch.arange(T, device=self.device, dtype=torch.float32).unsqueeze(0).expand(batch_size, T)
         
-        # Normalize/Scale to be visible (N(0,1) roughly)
-        noise = (noise - noise.mean()) / (noise.std() + 1e-6)
-        return torch.from_numpy(noise).float().to(self.device)
+        cur_y = (y.unsqueeze(1) + vy.unsqueeze(1) * t) % H
+        cur_x = (x.unsqueeze(1) + vx.unsqueeze(1) * t) % W
+        
+        # Calculate distances to center (with periodic boundary proxy if needed, but naive is fine for blobs)
+        dy = grid_y - cur_y.unsqueeze(2).unsqueeze(3)
+        dx = grid_x - cur_x.unsqueeze(2).unsqueeze(3)
+        
+        # Generate Gaussian blobs algebraically instead of impulse + convolution
+        noise = torch.exp(-0.5 * (dy**2 + dx**2) / (blob_sigma**2))
+        
+        # Normalize
+        noise_mean = noise.mean(dim=(1,2,3), keepdim=True)
+        noise_std = noise.std(dim=(1,2,3), keepdim=True) + 1e-6
+        noise = (noise - noise_mean) / noise_std
+        
+        return noise

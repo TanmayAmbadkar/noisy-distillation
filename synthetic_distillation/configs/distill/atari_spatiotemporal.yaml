@@ -4,7 +4,7 @@
 name: "atari_spatiotemporal"
 mode: "atari_spatiotemporal"
 loss: "kl_div"  # Atari students usually use KL or MSE on logits
-epochs: 100
+epochs: 15
 batch_size: 256
 distil_samples: [25000, 50000, 100000]
 
